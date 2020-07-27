@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" data-page="install1">
+<head>
+    <meta charset="UTF-8">
+    <title>账户中心</title>
+
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet/less" type="text/css" href="../css/install.less" />
+    <!--<link rel="stylesheet" href="../css/install.css" >-->
+
+    <!--<script src="lib/rem.js"></script>-->
+    <script src="../lib/jquery-2.2.3.min.js"></script>
+    <script src="../lib/less.js"></script>
+    <script src="../lib/less.min.js"></script>
+
+    <!--<link rel="stylesheet/less" type="text/css" href="../css/bg.less" />-->
+    <link rel="stylesheet" href="../css/bg.css" >
+    <script src="../js/bg.js"></script>
+
+    <link rel="stylesheet" href="../lib/layui/css/layui.css">
+    <script src="../lib/layui/layui.js"></script>
+
+</head>
+<body>
+<div id="bgt"></div>
+<!--back-->
+<section id="back">
+    <a href="javascript:history.back(-1)"></a>
+</section>
+<!--block-->
+<section class="block">
+    <a data-status="1" href="javascript:void(0)">昵称 <span data-val="这是一个昵称">这是一个昵称</span><p></p></a>
+    <a data-status="2" href="javascript:void(0)">性别 <span data-val="男">男</span><p></p></a>
+    <a data-status="3" href="javascript:void(0)">生日 <span data-val="2020.03.09">2020.03.09</span><p></p></a>
+    <a data-status="4" href="javascript:void(0)">地区 <span data-val="浙江省杭州市余杭区太平家园XX栋XX单元XXX">浙江省杭州市余杭区太平家园XX栋XX单元XXX</span><p></p></a>
+    <a href="install-1-1.html">账户绑定 <span></span><p></p></a>
+</section>
+<section id="submit">提&nbsp;交</section>
+
+<!--alert-->
+<section id="alertK">
+    <div data-status="1" class="text">
+        <div>
+            <input type="text" placeholder="昵称">
+        </div>
+        <div>
+            <div class="nope" onclick="nope(this)">取消</div>
+            <div class="Yep" onclick="yep(this,1)">保存</div>
+        </div>
+    </div>
+    <div data-status="2" class="check active">
+        <div class="title">性别</div>
+        <a href="javascript:void(0)" onclick="checkThis(this)">
+            <input type="radio" name="sex" value="男" id="chooseSex1">
+            <label for="chooseSex1"></label>
+            <label for="chooseSex1">男</label>
+        </a>
+        <a href="javascript:void(0)" onclick="checkThis(this)">
+            <input type="radio" name="sex" value="女" id="chooseSex2">
+            <label for="chooseSex2"></label>
+            <label for="chooseSex2">女</label>
+        </a>
+    </div>
+    <div data-status="3" class="text tap">
+        <div>
+            <span>年</span>
+            <input type="number" placeholder="">
+            <span>月</span>
+            <input type="number" placeholder="">
+            <span>日</span>
+            <input type="number" placeholder="">
+        </div>
+        <div>
+            <div class="nope" onclick="nope(this)">取消</div>
+            <div class="Yep" onclick="yep(this,3)">保存</div>
+        </div>
+    </div>
+    <div data-status="4" class="text">
+        <div>
+            <input type="text" placeholder="地区">
+        </div>
+        <div>
+            <div class="nope" onclick="nope(this)">取消</div>
+            <div class="Yep" onclick="yep(this,4)">保存</div>
+        </div>
+    </div>
+</section>
+
+
+<script>
+    let $body=$('body');
+    $body.on('click','.block>a',function () {
+        let $alertK=$('#alertK');
+        let value=$(this).find('span').attr('data-val');
+        if($(this).attr('data-status')){
+            $alertK.show();
+            $alertK.find('[data-status='+$(this).attr('data-status')+']').addClass('active').siblings().removeClass('active');
+            switch ($(this).attr('data-status')) {
+                case '1' :case '4':
+                    $alertK.find('[data-status='+$(this).attr('data-status')+']').find('input').val(value);
+                    break;
+                case '2':
+                    $alertK.find('[data-status='+$(this).attr('data-status')+']').find('input[value='+value+']').prop('checked',true);
+                    break;
+                case '3':
+                    $alertK.find('[data-status='+$(this).attr('data-status')+']').find('input').each(function (ind,val) {
+                   $(val).val(value.split('.')[ind])
+                    })
+            }
+            if($(this).attr('data-status')==='2'){
+                $alertK.find('[data-status='+$(this).attr('data-status')+']').find('input[value='+value+']').prop('checked',true);
+            }else {
+                $alertK.find('[data-status='+$(this).attr('data-status')+']').find('input');
+            }
+        }else {
+
+        }
+    });
+
+    function yep(_this,num) {
+        let value = '';
+        if(num === 3){
+            let arr=[];
+            $(_this).parent().siblings().find('input').each(function (ind,val) {
+                arr.push($(val).val())
+            });
+            value = arr.join('.');
+        }else {
+            value =$(_this).parent().siblings().find('input').val();
+        }
+        $('.block>a[data-status='+num+']').find('span').attr('data-val',value).text(value);
+        $(_this).parent().siblings().find('input').val('').parents('#alertK').hide();
+    }
+
+    function nope(_this) {
+        $(_this).parent().siblings().find('input').val('').parents('#alertK').hide();
+    }
+
+    function checkThis(_this) {
+        let num = $(_this).parent().attr('data-status');
+        let value = $(_this).children('input').val();
+        $('.block>a[data-status='+num+']').find('span').attr('data-val',value).text(value);
+        $(_this).children('input').prop('checked',true).parents('#alertK').hide();
+    }
+
+</script>
+</body>
+</html>

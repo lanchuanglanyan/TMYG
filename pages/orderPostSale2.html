@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" data-page="orderPostSale">
+<head>
+    <meta charset="UTF-8">
+    <title>物流信息</title>
+
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--<link rel="stylesheet/less" type="text/css" href="../css/orderPostSale.less" />-->
+    <link rel="stylesheet" href="../css/orderPostSale.css" >
+
+    <!--<script src="lib/rem.js"></script>-->
+    <script src="../lib/jquery-2.2.3.min.js"></script>
+    <script src="../lib/less.js"></script>
+    <script src="../lib/less.min.js"></script>
+
+    <!--<link rel="stylesheet/less" type="text/css" href="../css/bg.less" />-->
+    <link rel="stylesheet" href="../css/bg.css" >
+    <script src="../js/bg.js"></script>
+
+    <link rel="stylesheet" href="../lib/layui/css/layui.css">
+    <script src="../lib/layui/layui.js"></script>
+
+</head>
+<body>
+<div id="bgt"></div>
+<a class="backPage" href="javascript:history.back(-1)"></a>
+<!--title-->
+<section id="title">
+    <div>
+        <div>
+            <div style='background-image: url("../img/personal/goodsImg2.png")'></div>
+            <div>
+                <div>2019新款冬季黑色毛衣潮薄款针 织套头衫修身显瘦长袖上衣</div>
+                <div>
+                    <div><span>黑色</span>；<span>S</span></div>
+                </div>
+            </div>
+            <p>×<span>1</span></p>
+        </div>
+    </div>
+</section>
+
+<!--PostSaleList-->
+<section class=" refund PostSaleList">
+    <div class="chooseReason">
+        <div>退款原因</div>
+        <div class="radioReason" data-radio="checkedId1">请选择</div>
+        <div></div>
+    </div>
+    <div>
+        <div>
+            <div>退款金额：</div>
+            <div style="color: #D9001F">￥<span>299.00</span></div>
+        </div>
+        <div>
+            <div>退款说明：</div>
+            <div>
+                <textarea placeholder="选填" name=""></textarea>
+            </div>
+        </div>
+    </div>
+    <div></div>
+</section>
+<section class=" return PostSaleList">
+    <div class="chooseReason">
+        <div>退货原因</div>
+        <div class="radioReason" data-radio="checkedId1">请选择</div>
+        <div></div>
+    </div>
+    <div>
+        <div>
+            <div>退款金额：</div>
+            <div style="color: #D9001F">￥<span>299.00</span></div>
+        </div>
+        <div>
+            <div>退货说明：</div>
+            <div>
+                <textarea placeholder="选填" name=""></textarea>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div>上传凭证：</div>
+        <div>
+            <div><img src="../img/personal/goodsImg2.png" alt=""><p class="delete"></p></div>
+            <div><img src="../img/personal/goodsImg2.png" alt=""><p class="delete"></p></div>
+            <div class="add">
+                <input type="file" name="file" accept="image/*">
+            </div>
+            <p></p>
+        </div>
+    </div>
+</section>
+<section class="act barter PostSaleList">
+    <div class="chooseReason">
+        <div>换货原因</div>
+        <div class="radioReason" data-radio="checkedId1">请选择</div>
+        <div></div>
+    </div>
+    <a href="javascript:void(0)">
+        <div>收货地址</div>
+        <div>
+            <div><div>这是一个收货人名称</div><div>17766233001</div></div>
+            <div>浙江省杭州市余杭区星桥惠都家园1幢502室</div>
+        </div>
+        <div></div>
+    </a>
+    <div>
+        <div>换货说明：</div>
+        <div>
+            <textarea placeholder="选填" name=""></textarea>
+        </div>
+
+    </div>
+    <div>
+        <div>上传凭证：</div>
+        <div>
+            <div><img src="../img/personal/goodsImg2.png" alt=""><p class="delete"></p></div>
+            <div><img src="../img/personal/goodsImg2.png" alt=""><p class="delete"></p></div>
+            <div class="add">
+                <input type="file" name="file" accept="image/*">
+            </div>
+            <p></p>
+        </div>
+    </div>
+</section>
+
+<!--PostSaleGo-->
+<a href="javascript:void(0)" id="PostSaleGo"></a>
+
+<!--alert-->
+<section id="alertK">
+    <div class="alert">
+        <div class="title">退款/退货/换货原因</div>
+        <div class="chooseK">
+            <div onclick="changeRadio(this)">
+                <input type="radio" name="reason" id="checkId1">
+                <label for="checkId1"></label>
+                <label class="val" for="checkId1">这是一个退货原因1</label>
+            </div>
+            <div onclick="changeRadio(this)">
+                <input type="radio" name="reason" id="checkId2">
+                <label for="checkId2"></label>
+                <label class="val" for="checkId2">这是一个退货原因2</label>
+            </div>
+            <div onclick="changeRadio(this)">
+                <input type="radio" name="reason" id="checkId3">
+                <label for="checkId3"></label>
+                <label class="val" for="checkId3">这是一个退货原因3</label>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="../js/orderPostSale.js"></script>
+</body>
+</html>

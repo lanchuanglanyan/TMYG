@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en" data-page="choice">
+<head>
+    <meta charset="UTF-8">
+    <title>发现好货</title>
+
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--<link rel="stylesheet/less" type="text/css" href="../css/choice.less" />-->
+    <link rel="stylesheet" href="../css/choice.css" >
+
+    <!--<script src="lib/rem.js"></script>-->
+    <script src="../lib/jquery-2.2.3.min.js"></script>
+    <script src="../lib/less.js"></script>
+    <script src="../lib/less.min.js"></script>
+
+    <!--<link rel="stylesheet/less" type="text/css" href="../css/bg.less" />-->
+    <link rel="stylesheet" href="../css/bg.css" >
+    <script src="../js/bg.js"></script>
+
+    <link rel="stylesheet" href="../lib/layui/css/layui.css">
+    <script src="../lib/layui/layui.js"></script>
+
+</head>
+<body>
+<!--tab-->
+<section id="tab">
+    <a data-status="choose-guide" href="javascript:void(0)" class="active">选购指南<p></p></a>
+    <a data-status="boutique-group-buy" href="javascript:void(0)">精品团购<p></p></a>
+    <a data-status="flash-sale" href="javascript:void(0)">限时抢购<p></p></a>
+    <a data-status="goods-recommendation" href="javascript:void(0)">好物推荐<p></p></a>
+</section>
+<!--list-->
+<section id="list">
+    <!--choose-guide-->
+    <div data-status="choose-guide" class="active" style="background-color: #D9001F">
+        <div class="bg" style='background-image: url("../img/choice/choose-guide_bg.png");'></div>
+        <div class="list">
+            <a href="javascript:void(0)" style='background-image: url("../img/choice/choose-guide_title1.png");'></a>
+            <div>
+                <div>
+                    <a href="javascript:void(0)">
+                        <div style='background-image: url("../img/choice/choose-guide_goods1.png");'></div>
+                        <div>冬被加厚保暖春秋被芯冬被加厚保暖春秋被芯</div>
+                        <div><span>VIP￥<span>399</span></span><span>￥<span>499</span></span></div>
+                    </a>
+                    <a href="javascript:void(0)">
+                        <div style='background-image: url("../img/choice/choose-guide_goods1.png");'></div>
+                        <div>冬被加厚保暖春秋被芯冬被加厚保暖春秋被芯</div>
+                        <div><span>VIP￥<span>399</span></span><span>￥<span>499</span></span></div>
+                    </a>
+                    <a href="javascript:void(0)">
+                        <div style='background-image: url("../img/choice/choose-guide_goods1.png");'></div>
+                        <div>冬被加厚保暖春秋被芯冬被加厚保暖春秋被芯</div>
+                        <div><span>VIP￥<span>399</span></span><span>￥<span>499</span></span></div>
+                    </a>
+                    <a href="javascript:void(0)">
+                        <div style='background-image: url("../img/choice/choose-guide_goods1.png");'></div>
+                        <div>冬被加厚保暖春秋被芯冬被加厚保暖春秋被芯</div>
+                        <div><span>VIP￥<span>399</span></span><span>￥<span>499</span></span></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="list">
+            <a href="javascript:void(0)" style='background-image: url("../img/choice/choose-guide_title2.png");'></a>
+            <div>
+                <div>
+                    <a href="javascript:void(0)">
+                        <div style='background-image: url("../img/choice/choose-guide_goods2.png");'></div>
+                        <div>冬被加厚保暖春秋被芯冬被加厚保暖春秋被芯</div>
+                        <div><span>VIP￥<span>399</span></span><span>￥<span>499</span></span></div>
+                    </a>
+                    <a href="javascript:void(0)">
+                        <div style='background-image: url("../img/choice/choose-guide_goods2.png");'></div>
+                        <div>冬被加厚保暖春秋被芯冬被加厚保暖春秋被芯</div>
+                        <div><span>VIP￥<span>399</span></span><span>￥<span>499</span></span></div>
+                    </a>
+                    <a href="javascript:void(0)">
+                        <div style='background-image: url("../img/choice/choose-guide_goods2.png");'></div>
+                        <div>冬被加厚保暖春秋被芯冬被加厚保暖春秋被芯</div>
+                        <div><span>VIP￥<span>399</span></span><span>￥<span>499</span></span></div>
+                    </a>
+                    <a href="javascript:void(0)">
+                        <div style='background-image: url("../img/choice/choose-guide_goods2.png");'></div>
+                        <div>冬被加厚保暖春秋被芯冬被加厚保暖春秋被芯</div>
+                        <div><span>VIP￥<span>399</span></span><span>￥<span>499</span></span></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="list">
+            <a href="javascript:void(0)" style='background-image: url("../img/choice/choose-guide_title3.png");'></a>
+            <div>
+                <div>
+                    <a href="javascript:void(0)">
+                        <div style='background-image: url("../img/choice/choose-guide_goods3.png");'></div>
+                        <div>冬被加厚保暖春秋被芯冬被加厚保暖春秋被芯</div>
+                        <div><span>VIP￥<span>399</span></span><span>￥<span>499</span></span></div>
+                    </a>
+                    <a href="javascript:void(0)">
+                        <div style='background-image: url("../img/choice/choose-guide_goods3.png");'></div>
+                        <div>冬被加厚保暖春秋被芯冬被加厚保暖春秋被芯</div>
+                        <div><span>VIP￥<span>399</span></span><span>￥<span>499</span></span></div>
+                    </a>
+                    <a href="javascript:void(0)">
+                        <div style='background-image: url("../img/choice/choose-guide_goods3.png");'></div>
+                        <div>冬被加厚保暖春秋被芯冬被加厚保暖春秋被芯</div>
+                        <div><span>VIP￥<span>399</span></span><span>￥<span>499</span></span></div>
+                    </a>
+                    <a href="javascript:void(0)">
+                        <div style='background-image: url("../img/choice/choose-guide_goods3.png");'></div>
+                        <div>冬被加厚保暖春秋被芯冬被加厚保暖春秋被芯</div>
+                        <div><span>VIP￥<span>399</span></span><span>￥<span>499</span></span></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--boutique-group-buy-->
+    <div data-status="boutique-group-buy" class="">
+        <div class="bg" style='background-image: url("../img/choice/boutique-group-buy_bg.png");'></div>
+        <div class="module" style="background-color: #D9001F">
+            <div class="cart">
+                <a href="javascript:void(0)">新年<br>精选 <p></p></a>
+                <a href="javascript:void(0)">团购<br>精选 <p></p></a>
+                <a href="javascript:void(0)">秒杀<br>精选 <p></p></a>
+                <a href="javascript:void(0)">圣诞<br>精选 <p></p></a>
+                <a href="javascript:void(0)">这是<br>精选 <p></p></a>
+            </div>
+            <div class="discount-module">
+                <div>
+                    <div>
+                        <div class="discount-module-cart">
+                            <a href="javascript:void(0)" style='background-image: url("../img/choice/boutique-group-buy_1.png");'></a>
+                        </div>
+                        <div class="discount-module-cart">
+                            <a href="javascript:void(0)" style='background-image: url("../img/choice/boutique-group-buy_2.png");'></a>
+                        </div>
+                    </div>
+                    <div class="discount-module-cart">
+                        <a href="javascript:void(0)" style='background-image: url("../img/choice/boutique-group-buy_3.png");'></a>
+                    </div>
+                </div>
+                <div class="discount-module-cart">
+                    <a href="javascript:void(0)" style='background-image: url("../img/choice/boutique-group-buy_4.png");'></a>
+                </div>
+            </div>
+        </div>
+        <div class="list" style="background-color: #106351">
+            <div class="title" style='background-image: url("../img/choice/boutique-group-buy_Title.png");'></div>
+
+            <div class="goods">
+                <div style='background-image: url("../img/choice/boutique-group-buy_goodsImg.png");'></div>
+                <div>
+                    <div>
+                        <div>距结束<span>2</span>天<span>4</span>小时</div>
+                        <div>已团购<span>100</span>件</div>
+                    </div>
+                    <div>
+                        <div>大码羽绒服</div>
+                        <div>冬新款狐狸毛亮面羽绒服</div>
+                    </div>
+                    <div>
+                        <div>团购价<span class="money">￥<span>259</span></span></div>
+                        <div>原<span style="opacity: 0">原</span>价<span class="money">￥<span>518</span></span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="goods">
+                <div style='background-image: url("../img/choice/boutique-group-buy_goodsImg.png");'></div>
+                <div>
+                    <div>
+                        <div>距结束<span>2</span>天<span>4</span>小时</div>
+                        <div>已团购<span>100</span>件</div>
+                    </div>
+                    <div>
+                        <div>大码羽绒服</div>
+                        <div>冬新款狐狸毛亮面羽绒服</div>
+                    </div>
+                    <div>
+                        <div>团购价<span class="money">￥<span>259</span></span></div>
+                        <div>原<span style="opacity: 0">原</span>价<span class="money">￥<span>518</span></span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="goods">
+                <div style='background-image: url("../img/choice/boutique-group-buy_goodsImg.png");'></div>
+                <div>
+                    <div>
+                        <div>距结束<span>2</span>天<span>4</span>小时</div>
+                        <div>已团购<span>100</span>件</div>
+                    </div>
+                    <div>
+                        <div>大码羽绒服</div>
+                        <div>冬新款狐狸毛亮面羽绒服</div>
+                    </div>
+                    <div>
+                        <div>团购价<span class="money">￥<span>259</span></span></div>
+                        <div>原<span style="opacity: 0">原</span>价<span class="money">￥<span>518</span></span></div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="javascript:void(0)" style='background-image: url("../img/choice/bt.png");' class="adsense"></a>
+
+            <div class="goods">
+                <div style='background-image: url("../img/choice/boutique-group-buy_goodsImg.png");'></div>
+                <div>
+                    <div>
+                        <div>距结束<span>2</span>天<span>4</span>小时</div>
+                        <div>已团购<span>100</span>件</div>
+                    </div>
+                    <div>
+                        <div>大码羽绒服</div>
+                        <div>冬新款狐狸毛亮面羽绒服</div>
+                    </div>
+                    <div>
+                        <div>团购价<span class="money">￥<span>259</span></span></div>
+                        <div>原<span style="opacity: 0">原</span>价<span class="money">￥<span>518</span></span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="goods">
+                <div style='background-image: url("../img/choice/boutique-group-buy_goodsImg.png");'></div>
+                <div>
+                    <div>
+                        <div>距结束<span>2</span>天<span>4</span>小时</div>
+                        <div>已团购<span>100</span>件</div>
+                    </div>
+                    <div>
+                        <div>大码羽绒服</div>
+                        <div>冬新款狐狸毛亮面羽绒服</div>
+                    </div>
+                    <div>
+                        <div>团购价<span class="money">￥<span>259</span></span></div>
+                        <div>原<span style="opacity: 0">原</span>价<span class="money">￥<span>518</span></span></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!--flash-sale-->
+    <div data-status="flash-sale" style="background-color: #E9E9E9">
+        <div class="bg" style='background-image: url("../img/choice/flash-sale_bg.png");'></div>
+        <div class="tab" style='background-image: url("../img/choice/flash-sale_bg2.png");'>
+            <div class="title" style='background-image: url("../img/choice/flash-sale_tab.png");'></div>
+            <div class="tabListK" style='background-image: url("../img/choice/flash-sale_tabList.png");'>
+                <div id="tabList">
+
+                </div>
+            </div>
+        </div>
+        <div class="list">
+            <a href="javascript:void(0)">
+                <div style='background-image: url("../img/choice/flash-sale_goodsImg.png");'></div>
+                <div>
+                    <div>冬新款狐狸毛亮面羽绒服</div>
+                    <div>冬新款狐狸毛亮面羽绒服</div>
+                    <div class="layui-progress" lay-filter="list1">
+                        <div class="layui-progress-bar" lay-percent="80%">
+                            <span>剩余<span class="number">100</span>件</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div>秒杀价<span>￥<span>259</span></span></div>
+                        <div>原价<span>￥<span>518</span></span></div>
+                    </div>
+                </div>
+            </a>
+            <a href="javascript:void(0)">
+                <div style='background-image: url("../img/choice/flash-sale_goodsImg.png");'></div>
+                <div>
+                    <div>冬新款狐狸毛亮面羽绒服</div>
+                    <div>冬新款狐狸毛亮面羽绒服</div>
+                    <div class="layui-progress" lay-filter="list2">
+                        <div class="layui-progress-bar" lay-percent="80%">
+                            <span>剩余<span class="number">100</span>件</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div>秒杀价<span>￥<span>259</span></span></div>
+                        <div>原价<span>￥<span>518</span></span></div>
+                    </div>
+                </div>
+            </a>
+            <a href="javascript:void(0)">
+                <div style='background-image: url("../img/choice/flash-sale_goodsImg.png");'></div>
+                <div>
+                    <div>冬新款狐狸毛亮面羽绒服</div>
+                    <div>冬新款狐狸毛亮面羽绒服</div>
+                    <div class="layui-progress" lay-filter="list3">
+                        <div class="layui-progress-bar" lay-percent="80%">
+                            <span>剩余<span class="number">100</span>件</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div>秒杀价<span>￥<span>259</span></span></div>
+                        <div>原价<span>￥<span>518</span></span></div>
+                    </div>
+                </div>
+            </a>
+            <a href="javascript:void(0)">
+                <div style='background-image: url("../img/choice/flash-sale_goodsImg.png");'></div>
+                <div>
+                    <div>冬新款狐狸毛亮面羽绒服</div>
+                    <div>冬新款狐狸毛亮面羽绒服</div>
+                    <div class="layui-progress" lay-filter="list4">
+                        <div class="layui-progress-bar" lay-percent="80%">
+                            <span>剩余<span class="number">100</span>件</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div>秒杀价<span>￥<span>259</span></span></div>
+                        <div>原价<span>￥<span>518</span></span></div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="javascript:void(0)" style='background-image: url("../img/choice/bt.png");' class="adsense"></a>
+
+            <a href="javascript:void(0)">
+                <div style='background-image: url("../img/choice/flash-sale_goodsImg.png");'></div>
+                <div>
+                    <div>冬新款狐狸毛亮面羽绒服</div>
+                    <div>冬新款狐狸毛亮面羽绒服</div>
+                    <div class="layui-progress" lay-filter="list5">
+                        <div class="layui-progress-bar" lay-percent="80%">
+                            <span>剩余<span class="number">100</span>件</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div>秒杀价<span>￥<span>259</span></span></div>
+                        <div>原价<span>￥<span>518</span></span></div>
+                    </div>
+                </div>
+            </a>
+            <a href="javascript:void(0)">
+                <div style='background-image: url("../img/choice/flash-sale_goodsImg.png");'></div>
+                <div>
+                    <div>冬新款狐狸毛亮面羽绒服</div>
+                    <div>冬新款狐狸毛亮面羽绒服</div>
+                    <div class="layui-progress" lay-filter="list6">
+                        <div class="layui-progress-bar" lay-percent="80%">
+                            <span>剩余<span class="number">100</span>件</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div>秒杀价<span>￥<span>259</span></span></div>
+                        <div>原价<span>￥<span>518</span></span></div>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+
+
+    </div>
+    <!--goods-recommendation-->
+    <div data-status="goods-recommendation">
+        <a href="javascript:void(0)" data-id="goodsId">
+            <div style='background-image: url("../img/index/all_goods1.png")'></div>
+            <div class="name">2019秋冬新款西装领宽松针织外…</div>
+            <div>
+                <div>￥<span class="original_price">499</span></div>
+                <div>
+                    <div>VIP￥<span class="present_price">399</span></div>
+                    <div><span class="payment_number">30</span>人付款</div>
+                </div>
+            </div>
+        </a>
+        <a href="javascript:void(0)" data-id="goodsId">
+            <div style='background-image: url("../img/index/all_goods1.png")'></div>
+            <div class="name">2019秋冬新款西装领宽松针织外…</div>
+            <div>
+                <div>￥<span class="original_price">499</span></div>
+                <div>
+                    <div>VIP￥<span class="present_price">399</span></div>
+                    <div><span class="payment_number">30</span>人付款</div>
+                </div>
+            </div>
+        </a>
+        <a href="javascript:void(0)" data-id="goodsId">
+            <div style='background-image: url("../img/index/all_goods1.png")'></div>
+            <div class="name">2019秋冬新款西装领宽松针织外…</div>
+            <div>
+                <div>￥<span class="original_price">499</span></div>
+                <div>
+                    <div>VIP￥<span class="present_price">399</span></div>
+                    <div><span class="payment_number">30</span>人付款</div>
+                </div>
+            </div>
+        </a>
+        <a href="javascript:void(0)" data-id="goodsId">
+            <div style='background-image: url("../img/index/all_goods1.png")'></div>
+            <div class="name">2019秋冬新款西装领宽松针织外…</div>
+            <div>
+                <div>￥<span class="original_price">499</span></div>
+                <div>
+                    <div>VIP￥<span class="present_price">399</span></div>
+                    <div><span class="payment_number">30</span>人付款</div>
+                </div>
+            </div>
+        </a>
+        <a href="javascript:void(0)" data-id="goodsId">
+            <div style='background-image: url("../img/index/all_goods1.png")'></div>
+            <div class="name">2019秋冬新款西装领宽松针织外…</div>
+            <div>
+                <div>￥<span class="original_price">499</span></div>
+                <div>
+                    <div>VIP￥<span class="present_price">399</span></div>
+                    <div><span class="payment_number">30</span>人付款</div>
+                </div>
+            </div>
+        </a>
+        <a href="javascript:void(0)" data-id="goodsId">
+            <div style='background-image: url("../img/index/all_goods1.png")'></div>
+            <div class="name">2019秋冬新款西装领宽松针织外…</div>
+            <div>
+                <div>￥<span class="original_price">499</span></div>
+                <div>
+                    <div>VIP￥<span class="present_price">399</span></div>
+                    <div><span class="payment_number">30</span>人付款</div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+</section>
+
+
+<!--footer-->
+<section id="footer">
+    <a href="javascript:void(0)"></a>
+    <div>
+        <a href="../index.html">
+            <div class="nav1" style='background-image: url("../img/nav/nav1_1.png");background-size: 36%,36%;'></div>
+            <div class="nav2" style='background-image: url("../img/nav/nav1_2.png");background-size: 36%,36%;'></div>
+            <div class="txt">首页</div>
+        </a>
+        <a href="classification.html">
+            <div class="nav1" style='background-image: url("../img/nav/nav2_1.png");background-size: 33%,33%;'></div>
+            <div class="nav2" style='background-image: url("../img/nav/nav2_2.png");background-size: 33%,33%;'></div>
+            <div class="txt">分类</div>
+        </a>
+        <a href="javascript:void(0)">优选</a>
+        <a href="shoppingCart.html">
+            <div class="nav1" style='background-image: url("../img/nav/nav3_1.png");background-size: 40%,30%;'></div>
+            <div class="nav2" style='background-image: url("../img/nav/nav3_2.png");background-size: 40%,30%;'></div>
+            <div class="txt">购物车</div>
+            <!--<p id="goodsNumber">1</p>-->
+        </a>
+        <a href="personal.html">
+            <div class="nav1" style='background-image: url("../img/nav/nav4_1.png");background-size: 30%,30%;'></div>
+            <div class="nav2" style='background-image: url("../img/nav/nav4_2.png");background-size: 30%,30%;'></div>
+            <div class="txt">个人</div>
+        </a>
+    </div>
+</section>
+
+
+
+
+<script src="../js/choice.js"></script>
+<script>
+    //layui
+    layui.use('element', function() {
+        var element = layui.element;
+
+    });
+</script>
+</body>
+</html>

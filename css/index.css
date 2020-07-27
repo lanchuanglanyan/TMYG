@@ -35,10 +35,29 @@ a:hover {
   text-decoration: none;
 }
 html[data-page="index"] {
-  background-color: #F5F5F5;
+  background-color: white;
+  overflow: scroll;
+  scrollbar-track-color: transparent;
+  -ms-scrollbar-track-color: transparent;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+html[data-page="index"] #bgt {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  position: fixed;
+  z-index: 4;
+  left: 0;
+  top: 0;
 }
 html[data-page="index"]::-webkit-scrollbar {
   display: none;
+}
+html[data-page="index"]::-webkit-scrollbar {
+  display: none;
+  opacity: 0;
+  color: transparent;
 }
 html[data-page="index"] #search {
   position: fixed;
@@ -54,10 +73,23 @@ html[data-page="index"] #search {
   background-color: transparent;
   padding-top: 2vw;
 }
+html[data-page="index"] #search > a {
+  float: left;
+  display: block;
+  width: 6vw;
+  height: 6vw;
+  background-image: url("../img/index/location.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  margin-left: 2.5vw;
+  margin-top: 1vw;
+}
 html[data-page="index"] #search > div {
-  width: 94.6vw;
+  width: 85vw;
   height: 8vw;
-  margin: 0 auto;
+  margin: 0 2vw 0 11vw;
   border-radius: 4vw;
   background-color: rgba(255, 255, 255, 0.5);
   overflow: hidden;
@@ -81,7 +113,7 @@ html[data-page="index"] #search > div > div > input {
   padding-left: 3.6vw;
 }
 html[data-page="index"] #search > div > div > input::-webkit-input-placeholder {
-  color: #FFFFFF;
+  color: rgba(255, 255, 255, 0.5);
 }
 html[data-page="index"] #search > div > a {
   display: block;
@@ -99,6 +131,12 @@ html[data-page="index"] #search > div > a {
 }
 html[data-page="index"] #view {
   padding: 12vw 0 16vw 0;
+  height: 100%;
+  overflow: scroll;
+  scrollbar-track-color: transparent;
+  -ms-scrollbar-track-color: transparent;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 html[data-page="index"] #view #banner {
   width: 100%;
@@ -238,7 +276,6 @@ html[data-page="index"] #view #block > div:nth-of-type(2) > a > div:first-child 
   height: 3.2vw;
   background-color: #D9001F;
   position: relative;
-  top: 0.3vw;
   margin-right: 1.3vw;
 }
 html[data-page="index"] #view #block > div:nth-of-type(1) > a > div:first-child > div:last-child,
@@ -248,12 +285,13 @@ html[data-page="index"] #view #block > div:nth-of-type(2) > a > div:first-child 
   color: #333333;
   font-weight: bold;
   font-family: Arial;
+  line-height: 3.7vw;
 }
 html[data-page="index"] #view #block > div:nth-of-type(1) > a > div:nth-of-type(2),
 html[data-page="index"] #view #block > div:nth-of-type(2) > a > div:nth-of-type(2) {
   width: 100%;
   height: auto;
-  margin-top: 1.2vw;
+  margin-top: 1vw;
   font-size: 3.2vw;
   color: #666666;
   font-weight: normal;
@@ -418,7 +456,7 @@ html[data-page="index"] #view #new_title > div:first-child {
   height: 3.2vw;
   background-color: #D9001F;
   position: relative;
-  top: 0.3vw;
+  top: 0.8vw;
   margin-right: 1.3vw;
 }
 html[data-page="index"] #view #new_title > div:last-child {
@@ -554,7 +592,7 @@ html[data-page="index"] #view #allGoods > div:last-child > a > div:first-child {
 html[data-page="index"] #view #allGoods > div:last-child > a > div:nth-of-type(2) {
   width: 45.3vw;
   height: auto;
-  font-size: 2.9vw;
+  font-size: 3.5vw;
   color: #333333;
   font-weight: normal;
   font-family: Arial;
@@ -563,44 +601,67 @@ html[data-page="index"] #view #allGoods > div:last-child > a > div:nth-of-type(2
   white-space: nowrap;
   margin-top: 1vw;
 }
+html[data-page="index"] #view #allGoods > div:last-child > a > div:nth-of-type(2) > span {
+  display: inline-block;
+  width: 3.5vw;
+  height: 3.5vw;
+  position: relative;
+  top: 0.5vw;
+  margin-right: 0.5vw;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
 html[data-page="index"] #view #allGoods > div:last-child > a > div:last-child {
   margin-top: 1.5vw;
 }
-html[data-page="index"] #view #allGoods > div:last-child > a > div:last-child > div {
-  float: left;
-}
 html[data-page="index"] #view #allGoods > div:last-child > a > div:last-child > div:first-child {
-  font-size: 2.9vw;
+  font-size: 4vw;
   color: #999999;
   font-weight: normal;
   font-family: Arial;
   margin-right: 2vw;
 }
-html[data-page="index"] #view #allGoods > div:last-child > a > div:last-child > div:nth-of-type(2) {
+html[data-page="index"] #view #allGoods > div:last-child > a > div:last-child > div:last-child {
+  overflow: hidden;
+}
+html[data-page="index"] #view #allGoods > div:last-child > a > div:last-child > div:last-child > div {
+  float: left;
+}
+html[data-page="index"] #view #allGoods > div:last-child > a > div:last-child > div:last-child > div:first-child {
+  margin-left: 1vw;
   position: relative;
   top: -0.5vw;
-  font-size: 2.9vw;
+  font-size: 4vw;
   color: #D9001F;
   font-weight: normal;
   font-family: Arial;
 }
-html[data-page="index"] #view #allGoods > div:last-child > a > div:last-child > div:nth-of-type(2) > span {
-  font-size: 4vw;
+html[data-page="index"] #view #allGoods > div:last-child > a > div:last-child > div:last-child > div:first-child > span {
+  font-size: 4.5vw;
   color: #D9001F;
   font-weight: bold;
   font-family: Arial;
 }
-html[data-page="index"] #view #allGoods > div:last-child > a > div:last-child > div:last-child {
+html[data-page="index"] #view #allGoods > div:last-child > a > div:last-child > div:last-child > div:last-child {
+  position: relative;
+  top: 0.8vw;
   float: right;
-  font-size: 2.2vw;
+  font-size: 3.3vw;
   color: #999999;
   font-weight: normal;
   font-family: Arial;
 }
+html[data-page="index"] #view::-webkit-scrollbar {
+  display: none;
+  opacity: 0;
+  color: transparent;
+}
 html[data-page="index"] #footer {
   width: 100%;
-  height: 13.1vw;
-  background-image: url("../img/nav/nav.png");
+  height: 18.3vw;
+  background-image: url("../img/nav/nav2.png");
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -609,8 +670,10 @@ html[data-page="index"] #footer {
   left: 0;
   bottom: 0;
   z-index: 3;
+  padding-top: 5vw;
 }
-html[data-page="index"] #footer > div:first-child {
+html[data-page="index"] #footer > a {
+  display: block;
   width: 13.5vw;
   height: 13.3vw;
   background-image: url("../img/nav/add2.png");
@@ -624,23 +687,24 @@ html[data-page="index"] #footer > div:first-child {
   z-index: 3;
   transform: translateX(-50%);
 }
-html[data-page="index"] #footer > div:last-child > a {
+html[data-page="index"] #footer > div > a {
   width: 20%;
   height: 13.1vw;
   float: left;
   text-align: center;
 }
-html[data-page="index"] #footer > div:last-child > a:nth-of-type(3) {
-  line-height: 17vw;
+html[data-page="index"] #footer > div > a:nth-of-type(3) {
   font-size: 2.7vw;
   color: #333333;
   font-weight: normal;
   font-family: Arial;
+  line-height: 17vw;
 }
-html[data-page="index"] #footer > div:last-child > a:not(:nth-of-type(3)) {
+html[data-page="index"] #footer > div > a:not(:nth-of-type(3)) {
   position: relative;
 }
-html[data-page="index"] #footer > div:last-child > a:not(:nth-of-type(3)) > div:first-child {
+html[data-page="index"] #footer > div > a:not(:nth-of-type(3)) > div.nav1 {
+  display: none;
   width: 20vw;
   height: 8.2vw;
   background-size: 100% 100%;
@@ -649,7 +713,16 @@ html[data-page="index"] #footer > div:last-child > a:not(:nth-of-type(3)) > div:
   background-color: transparent;
   background-position: 50% 90%;
 }
-html[data-page="index"] #footer > div:last-child > a:not(:nth-of-type(3)) > div:last-child {
+html[data-page="index"] #footer > div > a:not(:nth-of-type(3)) > div.nav2 {
+  width: 20vw;
+  height: 8.2vw;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: 50% 90%;
+}
+html[data-page="index"] #footer > div > a:not(:nth-of-type(3)) > div.txt {
   font-size: 2.7vw;
   color: #333333;
   font-weight: normal;
@@ -657,7 +730,13 @@ html[data-page="index"] #footer > div:last-child > a:not(:nth-of-type(3)) > div:
   text-align: center;
   line-height: 5.1vw;
 }
-html[data-page="index"] #footer > div:last-child > a:not(:nth-of-type(3)) > p {
+html[data-page="index"] #footer > div > a:not(:nth-of-type(3)).active > div.nav1 {
+  display: block;
+}
+html[data-page="index"] #footer > div > a:not(:nth-of-type(3)).active > div.nav2 {
+  display: none;
+}
+html[data-page="index"] #footer > div > a:not(:nth-of-type(3)) > p {
   background-color: #D9001F;
   border-radius: 50%;
   width: 5vw;
@@ -667,6 +746,7 @@ html[data-page="index"] #footer > div:last-child > a:not(:nth-of-type(3)) > p {
   font-weight: normal;
   font-family: Arial;
   line-height: 4.4vw;
+  padding: 0.1vw 1.2vw;
   position: absolute;
   right: 3.5vw;
   top: 0.5vw;

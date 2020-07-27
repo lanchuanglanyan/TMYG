@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="a9bc7210-cfab-4ef5-9205-56fa76928488" name="test.cashier.tmcsio.cn" url="http://39.100.110.171">
+        <fileTransfer host="39.100.110.171" port="22" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="6bcac34b-7083-41ce-9a11-b7feabcaf8be" name="生产" url="http://39.100.110.171">
+        <fileTransfer host="39.100.110.171" port="22" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

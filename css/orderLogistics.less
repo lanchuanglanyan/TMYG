@@ -1,0 +1,175 @@
+.div(@width:100%,@height:auto){
+  width: @width;
+  height: @height;
+}
+.fonts(@fs:0.16rem,@color:black,@fw:normal,@ff:Arial){font-size: @fs;color: @color;font-weight: @fw;font-family: @ff;line-height: @fs}
+@hide:{display: none};
+.backimg(@x:100%,@y:100%){
+  background-size: @x @y;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+.scroll(@bgc:transparent,@none:none){
+  overflow: scroll;
+  &::-webkit-scrollbar{
+    display: @none;
+    opacity: 0;
+    color: @bgc;
+  }
+  scrollbar-track-color: @bgc;
+  -ms-scrollbar-track-color: @bgc;
+  scrollbar-width: @none;
+  -ms-overflow-style: @none;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  //background-color: transparent;
+}
+html,body{
+  .div(100%,100%);
+  //background-color: transparent;
+  -moz-user-select:none;/*火狐*/
+  -webkit-user-select:none;/*webkit浏览器*/
+  -ms-user-select:none;/*IE10*/
+  //user-select:none;
+}
+
+
+div,img,input,textarea,span,a{
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+div,input,textarea,span,a:focus,a:active,a:hover{
+  text-decoration: none;
+  //background-color: rgba(0,0,0,1);
+}
+
+
+
+html[data-page="orderLogistics"] {
+  background-color: #F5F5F5;
+  .scroll();
+
+  #bgt {
+    .div(100%, 100%);
+    //display: none;
+    background-color: white;
+    position: fixed;
+    z-index: 4;
+    left: 0;
+    top: 0;
+  }
+
+  #title{
+    .div(100%,37.3vw);
+    background-image: url("../img/order/order_logistics_bg.png");
+    .backimg();
+    padding-top: 18vw;
+    padding-left: 5vw;
+
+    &>div{
+      .div(60%);
+      .fonts(2.7vw,#FFFFFF);
+      &>div:first-child{
+        margin-bottom: 2.7vw;
+      }
+      &>div:last-child{
+        line-height: 5vw;
+      }
+      span:first-child{
+        margin-right: 2vw;
+      }
+    }
+
+  }
+  #orderDetails{
+    .div(94.7vw);
+    margin: 2.7vw auto;
+    padding: 2.7vw;
+    border-radius: 1.3vw;
+    background-color: white;
+
+    &>a{
+      display: block;
+      .fonts(3.2vw,white);
+      padding: 1vw 1.5vw;
+      background-color: #D9001F;
+      border-radius: 0.5vw;
+      float: right;
+    }
+    &>div{
+      .fonts(2.7vw,#333333);
+      overflow: hidden;
+      padding-top: 0.3vw;
+      &:not(:last-child){
+        padding-bottom: 2.4vw;
+      }
+      &>span{
+        display: block;
+        float: left;
+        &:first-child{
+          .div(16vw);
+          text-align:justify;
+          text-align-last:justify;
+          margin-right: 1vw;
+        }
+        &:last-child{
+          .div(58vw);
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+      }
+    }
+  }
+  #orderLogistics{
+    .div(94.7vw);
+    margin: 0 auto;
+
+    &>p{
+      .fonts(4vw,#333333);
+      margin-bottom: 2.7vw;
+    }
+    &>div{
+      .div(88vw);
+      margin: 0 auto;
+      position: relative;
+      border-left: 0.2vw dotted #EA384D;
+      &>div{
+        &:first-child{
+          .div(2.7vw,2.7vw);
+          background-image: url("../img/order/order_logistics3.png");
+          .backimg();
+          margin-right: 5vw;
+          transform: translateX(-50%);
+          position: absolute;
+          top: 3.2vw;
+        }
+        &:last-child{
+          .div(80vw);
+          margin-left: 5vw;
+          padding-top: 2.5vw;
+          padding-bottom: 2.5vw;
+          &>div{
+            &:first-child{
+              .fonts(3.2vw,#333333);
+              line-height: 4.5vw;
+              margin-bottom: 1.5vw;
+            }
+            &:last-child{
+              .fonts(3.5vw,#333333);
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

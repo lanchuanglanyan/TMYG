@@ -1,0 +1,410 @@
+.div(@width:100%,@height:auto){
+  width: @width;
+  height: @height;
+}
+.fonts(@fs:0.16rem,@color:black,@fw:normal,@ff:Arial){font-size: @fs;color: @color;font-weight: @fw;font-family: @ff;line-height: @fs}
+@hide:{display: none};
+.backimg(@x:100%,@y:100%){
+  background-size: @x @y;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+.scroll(@bgc:transparent,@none:none){
+  overflow: scroll;
+  &::-webkit-scrollbar{
+    display: @none;
+    opacity: 0;
+    color: @bgc;
+  }
+  scrollbar-track-color: @bgc;
+  -ms-scrollbar-track-color: @bgc;
+  scrollbar-width: @none;
+  -ms-overflow-style: @none;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  //background-color: transparent;
+}
+html,body{
+  .div(100%,100%);
+  //background-color: transparent;
+  -moz-user-select:none;/*火狐*/
+  -webkit-user-select:none;/*webkit浏览器*/
+  -ms-user-select:none;/*IE10*/
+  //user-select:none;
+}
+
+
+div,img,input,textarea,span,a{
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+div,input,textarea,span,a:focus,a:active,a:hover{
+  text-decoration: none;
+  //background-color: rgba(0,0,0,1);
+}
+
+
+html[data-page="install"],html[data-page="install1"],html[data-page="install2"],html[data-page="install3"],html[data-page="install1_1"] {
+  background-color: #F5F5F5;
+
+  #back{
+    .div(100%,10.7vw);
+    background-color: white;
+    position: relative;
+    margin-bottom: 1.3vw;
+    &>a{
+      display: block;
+      .div(2.7vw,5.1vw);
+      background-image: url("../img/back.png");
+      .backimg();
+      position: absolute;
+      left: 2.5vw;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  .block{
+      .div();
+      margin-bottom: 1.3vw;
+      background-color: white;
+      padding: 0 5.3vw;
+      &>a{
+        display: block;
+        padding: 4.2vw 0;
+        &:not(:last-child){
+          border-bottom: 0.1vw solid #F5F5F5;
+        }
+        overflow: hidden;
+        .fonts(3.5vw,#333333);
+        position: relative;
+        //text-align: right;
+        &>span{
+          float: right;
+          color: #999999;
+          margin-right: 4.5vw;
+          &.span-block{
+            display: block;
+            .div(8vw,8vw);
+            border-radius: 50%;
+            background-image: url('../img/personal/userHead.png');
+            .backimg();
+          }
+        }
+        &>p{
+          .div(1.9vw,3.2vw);
+          background-image: url("../img/personal/g2.png");
+          .backimg();
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        &>div{
+          float: right;
+          margin-right: 2vw;
+          .layui-form-switch{
+            height: 4vw;
+            margin: 0;
+          }
+          .layui-form-switch{
+            border: none;
+            background-color: rgba(0,0,0,0.3);
+
+            i{
+              position: absolute;
+              left: 0;
+              top: 0;
+              width: 5.3vw;
+              height: 5.3vw;
+              transform: translate(-25%,-12.5%);
+              background-color: white;
+              box-shadow: 0 0 1vw rgba(0,0,0,0.3);
+
+            }
+          }
+          .layui-form-onswitch{
+            border: none;
+            background-color: rgba(217,0,31,0.5);
+            //opacity: 0.5;
+            padding: 0;
+
+            i{
+              background-color: #D9001F;
+              left: 100%;
+              //right: 0;
+              //top: 0;
+              //width: 5.3vw;
+              //height: 5.3vw;
+              //transform: translate(-25%,-12.5%);
+              margin-left: -2.65vw;
+              box-shadow: 0 0 1vw rgba(199,26,35,0.5);
+            }
+          }
+        }
+      }
+    }
+  .txt{
+    .fonts(3.2vw,#666666);
+    margin: 2.7vw 0 0 5.3vw;
+  }
+  #submit{
+    position: fixed;
+    bottom: 1.3vw;
+    left: 50%;
+    transform: translateX(-50%);
+    .div(94.7vw,10.7vw);
+    background-image: linear-gradient(to right, #E88560 , #D9001F);
+    box-shadow: 0 2vw 4vw rgba(217, 0, 31, 0.2);
+    border: 0.5vw solid white;
+    border-radius: 5.4vw;
+    text-align: center;
+    .fonts(3.7vw,white);
+    line-height: 10.7vw;
+  }
+
+  #alertK{
+    position: fixed;
+    left: 0;
+    top: 0;
+    .div(100%,100%);
+    background-color: rgba(0,0,0,0.78);
+    display: none;
+
+    &>div{
+      display: none;
+      .div(89.3vw);
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      background-color: white;
+      border-radius: 1.3vw;
+      padding: 5.3vw 8vw;
+      &.active{
+        display: block;
+      }
+
+      &.text>div{
+        &:first-child{
+          .div(100%,6.7vw);
+          border-bottom: 0.1vw solid rgba(204, 204, 204, 1);
+          margin-bottom: 8vw;
+          margin-top: 8vw;
+          &>input{
+            display: block;
+            border: none;
+            .div(100%,100%);
+            .fonts(4vw,#999999);
+            &::-webkit-input-placeholder{
+              color: #999999;
+            }
+          }
+        }
+        &:last-child{
+          .div(100%);
+          &>div{
+            float: left;
+            .div(50%,5.3vw);
+            text-align: center;
+            .fonts(3.7vw,#999999);
+            line-height: 5.3vw;
+            &:first-child{
+              border-right: 0.1vw solid #CCCCCC;
+            }
+            &.Yep{
+              color: #D51630;
+            }
+          }
+        }
+      }
+      &.tap>div:first-child{
+        .fonts(4vw,#333333);
+        border-bottom: none;
+        text-align: center;
+        &>span{
+          //float: left;
+          margin-right: 1.5vw;
+          &:not(:first-child){
+            margin-left: 4.5vw;
+          }
+        }
+        &>input{
+          display: inline-block;
+          //float: left;
+          .div(18%,100%);
+          border-bottom: 0.1vw solid rgba(204, 204, 204, 1);
+          text-align: center;
+        }
+      }
+      &.check{
+        &>div{
+          text-align: center;
+          .fonts(4.3vw,#333333);
+          margin-bottom: 5.3vw;
+        }
+        &>a{
+          display: block;
+          .div(100%,4.8vw);
+          overflow: hidden;
+          .fonts(4.3vw,#333333);
+          line-height: 4.8vw;
+          position: relative;
+          &:last-child{
+            margin-top: 5.3vw;
+          }
+          &>label{
+            float: left;
+          }
+          &>input{
+            float: right;
+          }
+          &>input[type=radio]{
+            display: none;
+          }
+          &>input[type=radio] +label{
+            display: block;
+            .div(4.8vw,4.8vw);
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: white;
+            border: 0.3vw solid #666666;
+            border-radius: 50%;
+          }
+          &>input[type=radio]:checked +label{
+            border: none;
+          }
+          &>input[type=radio]:checked +label::before{
+            .div(4.8vw,4.8vw);
+            display: block;
+            content: "\2714";
+            background-image: url("../img/shoppingCart/checked.png");
+            .backimg();
+            color: transparent;
+          }
+        }
+      }
+      &.choose{
+        &>div{
+          text-align: center;
+          .fonts(4.3vw,#333333);
+          margin-bottom: 5.3vw;
+          &:last-child{
+            .div(100%);
+            &>div{
+              float: left;
+              .div(50%,5.3vw);
+              text-align: center;
+              .fonts(3.7vw,#999999);
+              line-height: 5.3vw;
+              &:first-child{
+                border-right: 0.1vw solid #CCCCCC;
+              }
+              &.Yep{
+                color: #D51630;
+              }
+            }
+          }
+
+        }
+      }
+    }
+  }
+
+  &[data-page="install3"]{
+    .block{
+      .div();
+      background-color: white;
+      padding: 0 0 0 5.3vw;
+      &>a{
+        display: block;
+        padding: 4.2vw 0;
+        &:not(:last-child){
+          border-bottom: 0.1vw solid #F5F5F5;
+        }
+        overflow: hidden;
+        .fonts(3.7vw,#333333);
+        position: relative;
+        //text-align: right;
+        &>span{
+          float: none;
+          color: #333333;
+          margin: 0 0 0 2.7vw;
+          line-height: 5vw;
+        }
+        &>div{
+          float: left;
+          .div(4.8vw,4.8vw);
+          position: relative;
+          margin-right: 0;
+          &>input[type=radio]{
+            display: none;
+          }
+          &>input[type=radio] +label{
+            display: block;
+            .div(4.8vw,4.8vw);
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: white;
+            border: 0.3vw solid #666666;
+            border-radius: 50%;
+          }
+          &>input[type=radio]:checked +label{
+            border: none;
+          }
+          &>input[type=radio]:checked +label::before{
+            .div(4.8vw,4.8vw);
+            display: block;
+            content: "\2714";
+            background-image: url("../img/shoppingCart/checked.png");
+            .backimg();
+            color: transparent;
+          }
+        }
+      }
+    }
+    .txt{
+      .fonts(3.2vw,#666666);
+      margin: 2.7vw 0 2.7vw 5.3vw;
+    }
+    .text{
+      .div(100%);
+      background-color: white;
+      padding: 2.7vw 5.3vw;
+
+      &>textarea{
+        resize: none;
+        .div(100%,20vw);
+        border: none;
+        .fonts(3.7vw,#333333);
+        &::-webkit-input-placeholder{
+          color: #999999;
+        }
+
+        &::-webkit-scrollbar{
+          display: none;
+          opacity: 0;
+          color: transparent;
+        }
+        scrollbar-track-color: transparent;
+        -ms-scrollbar-track-color: transparent;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+      }
+      &>p{
+        text-align: right;
+      }
+    }
+
+  }
+}

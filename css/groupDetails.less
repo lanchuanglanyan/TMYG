@@ -1,0 +1,183 @@
+.div(@width:100%,@height:auto){
+  width: @width;
+  height: @height;
+}
+.fonts(@fs:0.16rem,@color:black,@fw:normal,@ff:Arial){font-size: @fs;color: @color;font-weight: @fw;font-family: @ff}
+@hide:{display: none};
+.backimg(@x:100%,@y:100%){
+  background-size: @x @y;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  //background-color: transparent;
+}
+html,body{
+  .div(100%,100%);
+  //background-color: transparent;
+  -moz-user-select:none;/*火狐*/
+  -webkit-user-select:none;/*webkit浏览器*/
+  -ms-user-select:none;/*IE10*/
+  //user-select:none;
+}
+
+
+div,img,input,textarea,span,a{
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+div,input,textarea,span,a:focus,a:active,a:hover{
+  text-decoration: none;
+  //background-color: rgba(0,0,0,1);
+}
+
+
+html[data-page="groupDetails"]{
+  background-color: #F5F5F5;
+
+  #bgt{
+    .div(100%,100%);
+    //display: none;
+    background-color: white;
+    position: fixed;
+    z-index: 4;
+    left: 0;
+    top: 0;
+  }
+
+  #goodsInfo{
+    .div();
+    background-color: white;
+    padding: 2.7vw 5.3vw;
+    margin-bottom: 8vw;
+    overflow: hidden;
+    &>div{
+      float: left;
+      &:first-child{
+        .div(21.3vw,21.3vw);
+        .backimg();
+        margin-right: 2.7vw;
+      }
+      &:last-child{
+        .div(65vw);
+        &>div{
+          &:first-child{
+            .fonts(3.5vw,#333333);
+            line-height: 6vw;
+          }
+          &:last-child{
+            margin-top: 2.5vw;
+            &>span{
+              display: inline-block;
+              margin-right: 3vw;
+              &:first-child{
+                position: relative;
+                bottom: 0.5vw;
+                .fonts(2.7vw,white);
+                line-height: 5.4vw;
+                background-color: #D50F2A;
+                border-radius: 1vw;
+                padding: 0 1.5vw;
+              }
+              &:nth-of-type(2){
+                position: relative;
+                top: 0.2vw;
+                .fonts(3.5vw,#D50F2A);
+                &>span{
+                  font-size: 4.8vw;
+                }
+              }
+              &:last-child{
+                text-decoration: line-through;
+                .fonts(3.5vw,#666666);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  #groupInfo{
+    &>div{
+      .div();
+      &>div{
+        text-align: center;
+        &:first-child{
+          .fonts(6.4vw,#333333);
+          margin-bottom: 2.7vw;
+
+        }
+        &:nth-of-type(2){
+          .fonts(4vw,#666666);
+          &>span{
+            margin: 0 0.5vw;
+            display: inline-block;
+            color: white;
+            background-color: #D50F2A;
+            padding: 0.8vw;
+            border-radius: 1vw;
+          }
+        }
+        &:last-child{
+          margin: 8vw auto 3vw;
+          //overflow: hidden;
+          &>a{
+            float: left;
+            display: inline-block;
+            .div(15vw,15vw);
+            .backimg();
+            margin: 0 2.5vw 5vw;
+            &>span{
+              display: inline-block;
+              .fonts(3.5vw,white);
+              background-color: #D50F2A;
+              padding: 0.2vw 1vw;
+              border-radius: 0.5vw;
+              position: relative;
+              top: 11vw;
+            }
+          }
+          &>p{
+            clear: both;
+          }
+        }
+      }
+    }
+    &>a{
+      display: block;
+      border-radius: 7vw;
+      .div(94.7vw);
+      .fonts(4.8vw,white);
+      line-height: 4.8vw;
+      letter-spacing: 0.5vw;
+      background-color: #D50F2A;
+      text-align: center;
+      padding: 3vw 0;
+      margin: 0 auto;
+    }
+  }
+  .backPgae{
+    float: right;
+    margin-top: 3vw;
+    margin-right: 7vw;
+    display: inline-block;
+    background-color: rgba(0,0,0,0.1);
+    .fonts(3.2vw,white);
+    //line-height: 3.2vw;
+    padding: 1vw 2vw;
+    border-radius: 1vw;
+  }
+}
+
+
+
+
+
+

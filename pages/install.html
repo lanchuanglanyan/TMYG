@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" data-page="install">
+<head>
+    <meta charset="UTF-8">
+    <title>设置</title>
+
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet/less" type="text/css" href="../css/install.less" />
+    <!--<link rel="stylesheet" href="../css/install.css" >-->
+
+    <!--<script src="lib/rem.js"></script>-->
+    <script src="../lib/jquery-2.2.3.min.js"></script>
+    <script src="../lib/less.js"></script>
+    <script src="../lib/less.min.js"></script>
+
+    <!--<link rel="stylesheet/less" type="text/css" href="../css/bg.less" />-->
+    <link rel="stylesheet" href="../css/bg.css" >
+    <script src="../js/bg.js"></script>
+
+    <link rel="stylesheet" href="../lib/layui/css/layui.css">
+    <script src="../lib/layui/layui.js"></script>
+</head>
+<body>
+<div id="bgt"></div>
+
+<!--back-->
+<section id="back">
+    <a href="javascript:history.back(-1)"></a>
+</section>
+<!--block-->
+<section class="block">
+    <a href="install-1.html">账号中心 <span></span><p></p></a>
+    <a href="install-2.html">活动推送 <span></span><p></p></a>
+    <a href="javascript:void(0)" onclick="clearCache()">清除本地缓存 <span class="cache">83.20 M</span><p></p></a>
+</section>
+<section class="block">
+    <a href="install-3.html">意见反馈 <span></span><p></p></a>
+    <a href="javascript:void(0)">关于 <span>版本号20.1.13</span><p></p></a>
+</section>
+
+<div id="alertK">
+    <div class="choose active">
+        <div>确定清除本地缓存？</div>
+        <div>
+            <div class="nope" onclick="nope()">取消</div>
+            <div class="Yep" onclick="yep()">保存</div>
+        </div>
+    </div>
+</div>
+<script>
+    function clearCache() {
+        $('#alertK').show();
+    }
+    function nope() {
+        $('#alertK').hide();
+    }
+    function yep() {
+        $('.cache').text('0M')
+        $('#alertK').hide();
+    }
+</script>
+</body>
+</html>

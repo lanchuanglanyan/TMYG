@@ -1,0 +1,438 @@
+.div(@width:100%,@height:auto){
+  width: @width;
+  height: @height;
+}
+.fonts(@fs:0.16rem,@color:black,@fw:normal,@ff:Arial){font-size: @fs;color: @color;font-weight: @fw;font-family: @ff}
+@hide:{display: none};
+.backimg(@x:100%,@y:100%){
+  background-size: @x @y;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  //background-color: transparent;
+}
+html,body{
+  .div(100%,100%);
+  //background-color: transparent;
+  -moz-user-select:none;/*火狐*/
+  -webkit-user-select:none;/*webkit浏览器*/
+  -ms-user-select:none;/*IE10*/
+  //user-select:none;
+}
+
+div,img,input,textarea,span,a{
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+div,input,textarea,span,a:focus,a:active,a:hover{
+  text-decoration: none;
+  //background-color: rgba(0,0,0,1);
+}
+
+
+
+html[data-page="evaluation"]{
+  background-color: #F4F4F4;
+
+  .backPgae{
+    .div(4.5vw,4.5vw);
+    position: fixed;
+    right: 4vw;
+    top: 4vw;
+    z-index: 2;
+    background-image: url("../img/back2.png");
+    .backimg();
+  }
+
+  #title{
+    padding: 5.1vw 5.3vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #F4F4F4;
+    //.div(89.4vw);
+    &>div{
+      &:first-child{
+        .fonts(4.5vw,#333333,bold);
+      }
+      &:last-child{
+        overflow: hidden;
+        &>span{
+          display: inline-block;
+          .fonts(3.2vw,#333333);
+          background-color: white;
+          padding: 1.3vw 2.7vw;
+          border-radius: 4.5vw;
+          margin-right: 4.5vw;
+          margin-top: 3.5vw;
+          &.active{
+            color: #FFFFFF;
+            background-color: #EA384D;
+          }
+        }
+      }
+    }
+  }
+  #view{
+    padding-top: 33vw;
+    &>div{
+      margin-top: 6vw;
+      padding: 0 5.3vw;
+      border-bottom: 0.2vw solid white;
+      &>div{
+        &:first-child{
+          overflow: hidden;
+          margin-bottom: 5.3vw;
+          &>div{
+            float: left;
+            &:first-child{
+              overflow: hidden;
+              &>div{
+                float: left;
+                &:first-child{
+                  .div(10.1vw,10.1vw);
+                  .backimg();
+                }
+                &:last-child{
+                  margin-top: 1.3vw;
+                  margin-left: 1vw;
+                  &>div{
+                    &:first-child{
+                      .fonts(2.7vw,#333333);
+                      background-color: #F4F4F4;
+
+                    }
+                    &:last-child{
+                      overflow: hidden;
+                      &>div{
+                        float: left;
+                        .div(2.4vw,2.4vw);
+                        .backimg();
+                        background-image: url("../img/details/userCredit.png");
+                        margin-right: 1vw;
+                        margin-top: 0.5vw;
+                      }
+                    }
+                  }
+
+                }
+              }
+            }
+            &:last-child{
+              float: right;
+              .fonts(3.7vw,#999999);
+              margin-top: 2vw;
+            }
+          }
+        }
+        &[data-user='userComment']{
+          &>div{
+            &:first-child{
+              &>div{
+                &:first-child{
+                  .fonts(3.5vw,#333333);
+                  margin-bottom: 5.3vw;
+                }
+                &:last-child{
+                  overflow: hidden;
+                  &>img{
+                    float: left;
+                    display: block;
+                    .div(30%);
+                    margin-right: 5%;
+                    margin-bottom: 5.3vw;
+                    border-radius: 0.5vw;
+                    border: none;
+                    &:last-child{
+                      margin-right: 0;
+                    }
+                  }
+                }
+              }
+            }
+            &:last-child{
+              &>div{
+                &:first-child{
+                  .fonts(2.7vw,#EA384D);
+                  margin-bottom: 5vw;
+                }
+                &:nth-of-type(2){
+                  .fonts(3.5vw,#333333);
+                  margin-bottom: 5.3vw;
+                }
+                &:last-child{
+                  overflow: hidden;
+                  &>img{
+                    float: left;
+                    display: block;
+                    .div(30%);
+                    margin-right: 5%;
+                    margin-bottom: 5.3vw;
+                    border-radius: 0.5vw;
+                    border: none;
+                    &:last-child{
+                      margin-right: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        &:last-child{
+          .fonts(2.7vw,#999999);
+          margin-bottom: 2vw;
+        }
+      }
+    }
+  }
+
+
+  #footer{
+    .div(100%,13.2vw);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 15;
+    background-color: #F4F4F4;
+
+    &>a{
+      float: left;
+      .backimg();
+
+      &#customer,&#collection{
+        .div(5.9vw,6.4vw);
+        margin-left: 4vw;
+        &#collection{margin-left: 5.3vw}
+        margin-top: 3.5vw;
+      }
+      &#shopCart,&#buy,&#assemble{
+        float: right;
+        .div(36vw,10.5vw);
+        margin-right: 1.3vw;
+        margin-top: 1.3vw;
+      }
+      &.activity{
+        display: none;
+        &.active{
+          display: block;
+        }
+      }
+    }
+  }
+
+  #alertK{
+    .div(100%,100%);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+
+    &>div{
+      display: none;
+      .div(100vw,80vh);
+      //position: absolute;
+      //bottom: 0;
+      //left: 0;
+      //z-index: 10;
+      position: relative;
+      margin-top: 20vh;
+      background-color: #F4F4F4;
+      border-radius: 8vw 8vw 0 0;
+      padding-left: 5.3vw;
+      padding-right: 5.3vw;
+
+      &.active{
+        display: block;
+      }
+      &>.back{
+        .div(4.5vw,4.5vw);
+        background-image: url("../img/back2.png");
+        .backimg();
+        //float: right;
+        //margin-top: 5.3vw;
+        position: absolute;
+        right: 5.3vw;
+        top: 5.3vw;
+        z-index: 2;
+      }
+
+      &.choose{
+        &>div{
+          &.chooseMessage{
+            padding: 0 2.7vw;
+            overflow: hidden;
+            position: relative;
+            bottom: 8vw;
+            &>div{
+              float: left;
+              &:first-child{
+                .div(29.9vw,29.3vw);
+                border-radius: 1.3vw;
+                overflow: hidden;
+                background-color: white;
+                &>img{
+                  .div(100%,100%);
+                  display: block;
+                  border: none;
+                }
+              }
+              &:last-child{
+                padding-top: 9vw;
+                margin-left: 2.7vw;
+                &>div{
+                  &:first-child{
+                    &>span{
+                      &:first-child{
+                        .fonts(4.3vw,#CB2D3E);
+                        &>span{
+                          .fonts(8vw,#CB2D3E);
+                        }
+                      }
+                      &:last-child{
+                        .fonts(3.5vw,#666666);
+                        &>span{
+                          .fonts(4.9vw,#666666);
+                        }
+                      }
+                    }
+                  }
+                  &:nth-of-type(2){
+                    .fonts(2.9vw,#999999);
+                  }
+                  &:last-child{
+                    margin-top: 1vw;
+                    .fonts(3.5vw,#666666);
+                  }
+
+                }
+              }
+            }
+          }
+          &.chooseSpecs{
+            overflow-y: scroll;
+            &::-webkit-scrollbar {
+              display: none;
+            }
+
+            .div(100%,115vw);
+            padding-bottom: 15vw;
+
+
+            &>div{
+              .div(100%);
+              overflow: hidden;
+              &>div{
+                &>div{
+                  //float: left;
+                  &:first-child{
+                    .div(50%);
+                    //margin-right: 5%;
+                    margin-bottom: 5.5vw;
+                    .fonts(4vw,#666666);
+                  }
+                }
+                &:not(.chooseNumber)>div{
+                  &:last-child{
+                    //.div(78%);
+                    overflow: hidden;
+                    &>span{
+                      float: left;
+                      margin-right: 5.5vw;
+                      margin-bottom: 5.5vw;
+                      display: inline-block;
+                      padding: 1.3vw 2.4vw;
+                      border-radius: 0.5vw;
+                      background-color: white;
+                      .fonts(3.5vw,#666666);
+                      &.active{
+                        background-color: #EA384D;
+                        color: #FFFFFF;
+                      }
+                    }
+                  }
+                }
+                &.chooseNumber>div{
+                  margin-bottom: 5.5vw;
+                  &#chooseNumber{
+                    &>div{
+                      .el-input__inner{
+                        border-color: #F4F4F4;
+                        height: 7.8vw;
+                        line-height: 7.5vw;
+                        font-size: 3.2vw;
+                      }
+                      &.el-input-number--mini{
+                        width: 26.7vw;
+                        line-height: 7.5vw;
+
+                        &>span{
+                          &.el-input-number__decrease{
+                            width: 7.5vw;
+                            font-size: 3.2vw;
+                            border-radius: 0;
+                            background-color: #CCCCCC;
+                            color: white;
+                            border: none;
+                            &.is-disabled{
+                              color: white;
+                            }
+                          }
+                          &.el-input-number__increase{
+                            width: 7.5vw;
+                            font-size: 3.2vw;
+                            border-radius: 0;
+                            background-color: #EA384D;
+                            color: white;
+                            border: none;
+                          }
+
+                        }
+                      }
+                    }
+                  }
+
+
+                }
+              }
+            }
+          }
+          &#chooseYep{
+            .div(96vw,10.5vw);
+            position: absolute;
+            left: 2vw;
+            bottom: 1.3vw;
+            z-index: 1;
+            background-image: url("../img/details/chooseYep.png");
+            .backimg();
+          }
+
+        }
+      }
+    }
+  }
+
+
+  @media screen and (min-width:600px) and (max-width:1024px){
+    #alertK .chooseSpecs{
+      .div(100%,50vh)!important;
+      padding-bottom: 0!important;
+    }
+  }
+
+}
+
+
+
+
+

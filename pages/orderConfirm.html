@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" data-page="orderConfirm">
+<head>
+    <meta charset="UTF-8">
+    <title>确认订单</title>
+
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--<link rel="stylesheet/less" type="text/css" href="../css/orderConfirm.less" />-->
+    <link rel="stylesheet" href="../css/orderConfirm.css" >
+
+    <!--<script src="lib/rem.js"></script>-->
+    <script src="../lib/jquery-2.2.3.min.js"></script>
+    <script src="../lib/less.js"></script>
+    <script src="../lib/less.min.js"></script>
+
+    <!--<link rel="stylesheet/less" type="text/css" href="../css/bg.less" />-->
+    <link rel="stylesheet" href="../css/bg.css" >
+    <script src="../js/bg.js"></script>
+
+    <link rel="stylesheet" href="../lib/layui/css/layui.css">
+    <script src="../lib/layui/layui.js"></script>
+
+</head>
+<body>
+<div id="bgt"></div>
+
+<!--title-->
+<section id="title">
+    <a href="javascript:history.back(-1)"><span></span>确认订单</a>
+</section>
+<!--address-->
+<section id="address">
+    <a href="myAddress.html" class="null ">
+        <div class="txt">您还没有设置收获地址，请点击设置</div>
+        <div class="go"></div>
+        <div class="border"></div>
+    </a>
+    <a href="myAddress.html" class="had active">
+        <div>
+            <div><span data-user="username">这是一个收货名称</span>&nbsp;&nbsp;<span data-user="userphone">13588888888</span></div>
+            <div data-user="useraddress">浙江省杭州市余杭区星桥惠都家园1幢502室</div>
+        </div>
+        <div class="go"></div>
+        <div class="border"></div>
+    </a>
+</section>
+<!--orderGoods-->
+<section id="orderGoodsList">
+    <div data-id="orderGoodsId_1">
+        <div class="goods">
+            <div style='background-image: url("../img/details/goodsImg2.png")'></div>
+            <div>
+                <div data-goods="goodsName">2019新款冬季黑色毛衣潮薄款针织套头衫修身显瘦长袖上衣</div>
+                <div data-goods="goodsSpec"><span>黑色</span>;<span>S</span></div>
+                <div data-goods="goodsMoney">￥<span>299.00</span></div>
+            </div>
+            <p>×<span class="goodsNumber">1</span></p>
+        </div>
+        <div class="delivery">
+            <div>配送方式</div>
+            <div>普通配送</div>
+            <div>免配送费</div>
+            <div></div>
+        </div>
+        <div class="red-packet" data-redPacket="">
+            <div>使用红包</div>
+            <div>商店铺红包<span class="number">3</span>个</div>
+            <div>-￥<span class="money">0</span></div>
+            <div></div>
+        </div>
+        <div class="token">
+            <div>使用唐币</div>
+            <div><input type="text" placeholder="10唐币可用"></div>
+            <div></div>
+        </div>
+        <div class="gift">
+            <div>赠送礼品</div>
+            <div>精品袜一双</div>
+        </div>
+        <div class="remarks">
+            <div>订单备注</div>
+            <div><input type="text" placeholder="选填，请先和商家协商一致"></div>
+        </div>
+        <div class="subtotal">
+            <span>共<span>1</span>件</span>
+            <span>小计：<span>￥<span data-goods="goodsMoneyK">284<span class="money_decimal">.00</span></span></span></span>
+        </div>
+    </div>
+    <div data-id="orderGoodsId_2">
+        <div class="goods">
+            <div style='background-image: url("../img/details/goodsImg2.png")'></div>
+            <div>
+                <div data-goods="goodsName">2019新款冬季黑色毛衣潮薄款针织套头衫修身显瘦长袖上衣</div>
+                <div data-goods="goodsSpec"><span>黑色</span>;<span>S</span></div>
+                <div data-goods="goodsMoney">￥<span>299.00</span></div>
+            </div>
+            <p>×<span class="goodsNumber">1</span></p>
+        </div>
+        <div class="delivery">
+            <div>配送方式</div>
+            <div>普通配送</div>
+            <div>免配送费</div>
+            <div></div>
+        </div>
+        <div class="red-packet" data-redPacket="">
+            <div>使用红包</div>
+            <div>商店铺红包<span class="number">3</span>个</div>
+            <div>-￥<span class="money">0</span></div>
+            <div></div>
+        </div>
+        <div class="token">
+            <div>使用唐币</div>
+            <div><input type="text" placeholder="10唐币可用"></div>
+            <div></div>
+        </div>
+        <div class="gift">
+            <div>赠送礼品</div>
+            <div>精品袜一双</div>
+        </div>
+        <div class="remarks">
+            <div>订单备注</div>
+            <div><input type="text" placeholder="选填，请先和商家协商一致"></div>
+        </div>
+        <div class="subtotal">
+            <span>共<span>1</span>件</span>
+            <span>小计：<span>￥<span data-goods="goodsMoneyK">284<span class="money_decimal">.00</span></span></span></span>
+        </div>
+    </div>
+    <div data-id="orderGoodsId_3">
+        <div class="goods">
+            <div style='background-image: url("../img/details/goodsImg2.png")'></div>
+            <div>
+                <div data-goods="goodsName">2019新款冬季黑色毛衣潮薄款针织套头衫修身显瘦长袖上衣</div>
+                <div data-goods="goodsSpec"><span>黑色</span>;<span>S</span></div>
+                <div data-goods="goodsMoney">￥<span>299.00</span></div>
+            </div>
+            <p>×<span class="goodsNumber">1</span></p>
+        </div>
+        <div class="delivery">
+            <div>配送方式</div>
+            <div>普通配送</div>
+            <div>免配送费</div>
+            <div></div>
+        </div>
+        <div class="red-packet" data-redPacket="">
+            <div>使用红包</div>
+            <div>无可用红包</div>
+            <div></div>
+        </div>
+        <div class="token">
+            <div>使用唐币</div>
+            <div><input type="text" placeholder="10唐币可用"></div>
+            <div></div>
+        </div>
+        <div class="gift">
+            <div>赠送礼品</div>
+            <div>精品袜一双</div>
+        </div>
+        <div class="remarks">
+            <div>订单备注</div>
+            <div><input type="text" placeholder="选填，请先和商家协商一致"></div>
+        </div>
+        <div class="subtotal">
+            <span>共<span>1</span>件</span>
+            <span>小计：<span>￥<span data-goods="goodsMoneyK">284<span class="money_decimal">.00</span></span></span></span>
+        </div>
+    </div>
+    <p>本订单由唐目云店发货并提供售后服务</p>
+</section>
+<!--goBuy-->
+<section id="goBuy">
+    <div>共<span class="number">1</span>件</div>
+    <div>共计：￥<span class="money">0<span class="money_decimal">.00</span></span></div>
+    <a href="orderPay.html"></a>
+</section>
+
+<!--alertK-->
+<section id="alertK">
+    <div class="alert red-packet">
+        <a href="javascript:void(0)" class="back"></a>
+        <div class="red-packet-K">
+
+        </div>
+    </div>
+</section>
+
+<script src="../js/orderConfirm.js"></script>
+</body>
+</html>

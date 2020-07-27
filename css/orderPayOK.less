@@ -1,0 +1,125 @@
+.div(@width:100%,@height:auto){
+  width: @width;
+  height: @height;
+}
+.fonts(@fs:0.16rem,@color:black,@fw:normal,@ff:Arial){font-size: @fs;color: @color;font-weight: @fw;font-family: @ff}
+@hide:{display: none};
+.backimg(@x:100%,@y:100%){
+  background-size: @x @y;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+.scroll(@bgc:transparent,@none:none){
+  overflow: scroll;
+  &::-webkit-scrollbar{
+    display: @none;
+    opacity: 0;
+    color: @bgc;
+  }
+  scrollbar-track-color: @bgc;
+  -ms-scrollbar-track-color: @bgc;
+  scrollbar-width: @none;
+  -ms-overflow-style: @none;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  //background-color: transparent;
+}
+html,body{
+  .div(100%,100%);
+  //background-color: transparent;
+  -moz-user-select:none;/*火狐*/
+  -webkit-user-select:none;/*webkit浏览器*/
+  -ms-user-select:none;/*IE10*/
+  //user-select:none;
+}
+
+
+div,img,input,textarea,span,a{
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+div,input,textarea,span,a:focus,a:active,a:hover{
+  text-decoration: none;
+  //background-color: rgba(0,0,0,1);
+}
+
+
+
+
+html[data-page="orderPayOK"] {
+  background-color: #F5F5F5;
+  padding-top: 7.2vw;
+
+  #bgt {
+    .div(100%, 100%);
+    //display: none;
+    background-color: white;
+    position: fixed;
+    z-index: 4;
+    left: 0;
+    top: 0;
+  }
+
+  #page{
+    .div(94.7vw);
+    margin: 0 auto ;
+    background-image: url("../img/order/payOKBanckground.png");
+    .backimg();
+    padding: 13.3vw 2.7vw;
+
+    &>div{
+      &:first-child{
+        .div(22.9vw,22.9vw);
+        background-image: url("../img/order/payOKLogo.png");
+        .backimg();
+        margin: 0 auto 5.3vw;
+      }
+      &:nth-of-type(2){
+        text-align: center;
+        .fonts(4.8vw,#000000);
+        margin-bottom: 21.3vw;
+      }
+      &:nth-of-type(3){
+        &>div{
+          overflow: hidden;
+          margin-bottom: 5.3vw;
+          &>div{
+            .fonts(3.7vw,#666666);
+            line-height: 3.7vw;
+            &:first-child{
+              .div(30%);
+              float: left;
+            }
+            &:last-child{
+              .div(60%);
+              text-align: right;
+              float: right;
+            }
+          }
+        }
+      }
+    }
+    &>a{
+      display: block;
+      .div(62.9vw,19.7vw);
+      background-image: url("../img/order/payOK.png");
+      .backimg();
+      margin: 0 auto;
+    }
+  }
+
+
+  //@media screen and (min-width:600px) and (max-width:1024px){
+  //  #page{
+  //
+  //  }
+  //}
+  
+}

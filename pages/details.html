@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en" data-page="details">
+<head>
+    <meta charset="UTF-8">
+    <title>商品详情</title>
+
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--<link rel="stylesheet/less" type="text/css" href="../css/details.less" />-->
+    <link rel="stylesheet" href="../css/details.css" >
+
+    <!--<script src="lib/rem.js"></script>-->
+    <script src="../lib/jquery-2.2.3.min.js"></script>
+    <script src="../lib/less.js"></script>
+    <script src="../lib/less.min.js"></script>
+
+    <link rel="stylesheet" href="../lib/layui/css/layui.css">
+    <script src="../lib/layui/layui.js"></script>
+
+    <!--element-ui-->
+    <!-- 引入vue-->
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui@2.13.0/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui@2.13.0/lib/index.js"></script>
+
+    <!--html2canvas-->
+    <!--<script src="https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>-->
+    <script src="../lib/html2canvas.js"></script>
+</head>
+<body>
+<section id="view">
+    <!--Display map-->
+    <section id="displayMap">
+        <div>
+            <div id="bannerD">
+
+            </div>
+            <div id="bannerT">
+                <a href="javascript:void(0)" style="background-image: url('../img/details/display_map1.png');"></a>
+                <a href="javascript:void(0)" style="background-image: url('../img/details/display_map1.png');"></a>
+                <a href="javascript:void(0)" style="background-image: url('../img/details/display_map1.png');"></a>
+                <a href="javascript:void(0)" style="background-image: url('../img/details/display_map1.png');"></a>
+            </div>
+        </div>
+        <a id="backPage" href="javascript:history.back(-1)"></a>
+        <a id="share" href="javascript:void(0)"></a>
+    </section>
+    <!--活动信息展示-->
+    <section id="information">
+        <!--普通样式-->
+        <section id="normalStyle">
+            <div></div>
+            <div>
+                <div class="informationTitle">男式轻薄棉弹修身修身短袖T恤衫</div>
+                <div class="informationTxt">倍感弹力的面料，穿着更随性</div>
+            </div>
+            <div>
+                <div>￥<span class="original_price">199</span></div>
+                <div>VIP￥<span class="present_price">99</span></div>
+            </div>
+        </section>
+        <!--优惠活动样式-->
+        <section id="activityStyle">
+            <div>
+                <div style='background-image: url("../img/details/activityLogo.png")'></div>
+                <div>
+                    <p>
+                        <span><span>活动价:</span><span>￥<span class="present_price">9900</span></span></span>
+                        <span><span>原<span></span>价:</span><span>￥<span class="original_price">19900</span></span></span>
+
+                    </p>
+                </div>
+                <div id="activityTime">
+                    <div>距结束</div>
+                    <div>
+                        <span class="activityD">11</span>天<span class="activityH">23</span>小时<span class="activityM">23</span>分
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="informationTitle"><span style='background-image: url("../img/activity/group.png")'></span>男式轻薄棉弹修身修身短袖T恤衫</div>
+                <div>
+                    <div>
+                        <div>还剩<span>99</span>件</div>
+                        <div>参团数量：<span>1000</span>件</div>
+                    </div>
+                    <div class="activity">
+                        <div>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                        </div>
+                        <div>
+                            <div>
+                                <div>参团价</div>
+                                <div>满&nbsp;<span>2</span>&nbsp;人团购价&nbsp;<span>99</span>&nbsp;元</div>
+                            </div>
+                            <div>
+                                <div>活动说明</div>
+                                <div>拍下商品请在唐目-我的团购里面查看以参团的商品</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <!--VIP-->
+    <section id="VIP">
+        <section class="vip">
+            <div>
+                <div>唐目VIP专享价 ￥<span class="present_price">99</span></div>
+                <div>开通会员立省￥<span class="discount">100</span></div>
+            </div>
+            <a href="javascript:void(0)">
+                <div>开通VIP</div>
+                <div></div>
+            </a>
+        </section>
+        <section class="partner">
+            <div>
+                <div>唐目VIP专享价 ￥<span class="present_price">99</span></div>
+                <div>开通会员立省￥<span class="discount">100</span></div>
+            </div>
+            <a href="javascript:void(0)">
+                <div>开通合伙人</div>
+                <div></div>
+            </a>
+        </section>
+        <section class="share act">
+            <div>
+                <div>您已开通合伙人</div>
+                <div>分享海报赚分佣</div>
+            </div>
+            <a href="javascript:
+            $('#alertK').show();
+            $('.poster').addClass('active');
+            $('.anim').show();
+            canvasHtml();
+">
+                <div>生成海报</div>
+                <div></div>
+            </a>
+        </section>
+    </section>
+    <!--parameter-->
+    <section id="parameter">
+        <a data-name="activity" href="javascript:void(0)">
+            <div class="title">运费</div>
+            <div class="txt"><span>￥<span id="freight">8.00</span></span></div>
+            <div class="go"></div>
+        </a>
+        <a data-name="commission" href="javascript:void(0)">
+            <div class="title">分佣</div>
+            <div class="txt">合伙人分佣金<span id="commission">￥8.00</span></div>
+            <div class="go"></div>
+        </a>
+        <a data-name="service" href="javascript:alertT('service')">
+            <div class="title">服务</div>
+            <div class="txt">7天无理由退货</div>
+            <div class="go"></div>
+        </a>
+        <a data-name="choose" href="javascript:alertT('choose')">
+            <div class="title">选择</div>
+            <div class="txt">选择颜色、分类、参数</div>
+            <div class="go"></div>
+        </a>
+    </section>
+    <!--拼团活动时展示用户拼团信息-->
+    <section id="groupPresentation">
+        <div>小伙伴正在拼团，可直接参与</div>
+        <div>
+            <div>
+                <div data-user="userHead" style='background-image:url("../img/personal/userHead.png")'></div>
+                <div data-user="userName">这是*****户名</div>
+            </div>
+            <div>
+                <div>
+                    <div>还差<span class="lackNumber">1</span><span>人</span>成团</div>
+                    <div>剩余<span class="hour">24</span>:<span class="min">59</span>:<span class="sec">59</span></div>
+                </div>
+                <a href="groupDetails.html" style='background-image: url("../img/details/goGroup.png")'></a>
+            </div>
+        </div>
+    </section>
+    <!--evaluate-->
+    <section id="evaluate">
+        <div>
+            <div>用户评价<span>(<span id="evaluateNumber">2662</span>)</span></div>
+            <a href="evaluation.html">查看全部<span></span></a>
+        </div>
+        <a href="javascript:void(0)">
+            <div>
+                <div data-user="userHead" style='background-image: url("../img/details/userHead.png")'></div>
+                <div data-user="userName" style='background-image: url("../img/details/userK.png")'>爱****月</div>
+                <div data-user="userCredit">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div>
+                <div data-user="evaluate">垂感很好，面料亲肤柔软轻薄透气，穿着舒适。</div>
+                <div>
+                    <span data-user="evaluateDate">2019.09.10 11:00</span>
+                    <span data-user="choose">黄色;M</span>
+                </div>
+            </div>
+        </a>
+    </section>
+    <!--details-->
+    <section id="details">
+        <div class="details_nav">
+            <div data-active="details_img" class=" tab active">详情</div>
+            <div data-active="details_parameter" class="tab">参数</div>
+        </div>
+        <div class="details_T">
+            <div class="details_img active">
+                <img src="../img/details/d1.jpg" alt="">
+                <img src="../img/details/d2.jpg" alt="">
+                <img src="../img/details/d3.jpg" alt="">
+                <img src="../img/details/d4.jpg" alt="">
+                <img src="../img/details/d5.jpg" alt="">
+            </div>
+            <div class="details_parameter ">
+                <div>
+                    <div>颜色分类</div>
+                    <div>
+                        <span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>
+                    </div>
+                </div>
+                <div>
+                    <div>颜色分类</div>
+                    <div>
+                        <span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>
+                    </div>
+                </div>
+                <div>
+                    <div>颜色分类</div>
+                    <div>
+                        <span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>
+                    </div>
+                </div>
+                <div>
+                    <div>颜色分类</div>
+                    <div>
+                        <span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>
+                    </div>
+                </div>
+                <div>
+                    <div>颜色分类</div>
+                    <div>
+                        <span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>
+                    </div>
+                </div>
+                <div>
+                    <div>颜色分类</div>
+                    <div>
+                        <span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>
+                    </div>
+                </div>
+                <div>
+                    <div>颜色分类</div>
+                    <div>
+                        <span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>
+                    </div>
+                </div>
+                <div>
+                    <div>颜色分类</div>
+                    <div>
+                        <span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>
+                    </div>
+                </div>
+                <div>
+                    <div>颜色分类</div>
+                    <div>
+                        <span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>
+                    </div>
+                </div>
+                <div>
+                    <div>颜色分类</div>
+                    <div>
+                        <span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>
+                    </div>
+                </div>
+                <div>
+                    <div>颜色分类</div>
+                    <div>
+                        <span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>
+                    </div>
+                </div>
+                <div>
+                    <div>颜色分类</div>
+                    <div>
+                        <span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>
+                    </div>
+                </div>
+                <div>
+                    <div>颜色分类</div>
+                    <div>
+                        <span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>
+                    </div>
+                </div>
+                <div>
+                    <div>颜色分类</div>
+                    <div>
+                        <span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>
+                    </div>
+                </div>
+                <div>
+                    <div>颜色分类</div>
+                    <div>
+                        <span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>,<span>小花牛</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+
+<!--footer-->
+<section id="footer">
+    <a id="customer" href="javascript:void(0)" style='background-image: url("../img/details/customer.png")'></a>
+    <a id="collection" href="javascript:void(0)" style='background-image: url("../img/details/love.png")'></a>
+    <a id="buy" class="activity " data-activity="id1" href="javascript:void(0)" onclick="pay($(this))" style='background-image: url("../img/details/buy.png")'></a>
+    <a id="assemble" class="activity active" data-activity="id2" href="javascript:void(0)" onclick="pay($(this))" style='background-image: url("../img/details/assemble.png")'></a>
+    <a id="shopCart" href="javascript:void(0)" onclick="pay($(this))" style='background-image: url("../img/details/shopping_cart.png")'></a>
+</section>
+
+<!--alert-->
+<section id="alertK">
+    <!--服务-->
+    <div class="alert service">
+        <div class="back"></div>
+        <div class="fuw">
+            <div>基础服务</div>
+            <div>
+                <div></div>
+                <div>
+                    <div>7天无理由</div>
+                    <div>
+                        满足7天无理由退换货申请的前提下，商品需要买家承担退换货邮费
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div></div>
+                <div>
+                    <div>7天无理由</div>
+                    <div>
+                        满足7天无理由退换货申请的前提下，商品需要买家承担退换货邮费
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div></div>
+                <div>
+                    <div>7天无理由</div>
+                    <div>
+                        满足7天无理由退换货申请的前提下，商品需要买家承担退换货邮费
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div></div>
+                <div>
+                    <div>7天无理由</div>
+                    <div>
+                        满足7天无理由退换货申请的前提下，商品需要买家承担退换货邮费
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--选择-->
+    <div class="alert choose">
+        <div class="back"></div>
+        <div class="chooseMessage">
+            <div>
+                <img src="../img/details/messageK.png" id="chooseImgK">
+            </div>
+            <div>
+                <div id="chooseMoney">
+                    <span>￥<span class="original_price">1909</span></span>
+                    <span>/</span>
+                    <span>VIP￥<span class="present_price">268</span></span>
+                </div>
+                <div>库存<span id="stock">100</span>件</div>
+                <div id="chooseThis">已选&nbsp;&nbsp;
+                    <span data-choose="id1">红色</span>&nbsp;/
+                    <span data-choose="id2">M</span>
+                </div>
+            </div>
+        </div>
+        <div class="chooseSpecs">
+            <div id="chooseK">
+                <div class="chooseK" data-choose="id1">
+                    <div data-specs="key">颜色</div>
+                    <div data-specs="value">
+                        <span class="active">黑色</span>
+                        <span>红色</span>
+                        <span>白色</span>
+                        <span>黄色</span>
+                        <span>蓝色</span>
+                        <span>灰色</span>
+                    </div>
+                </div>
+                <div class="chooseK" data-choose="id2">
+                    <div data-specs="key">尺码</div>
+                    <div data-specs="value">
+                        <span class="active">S</span>
+                        <span>M</span>
+                        <span>L</span>
+                        <span>XL</span>
+                        <span>XXL</span>
+                    </div>
+                </div>
+                <div class="chooseNumber">
+                    <div>数量</div>
+                    <div id="chooseNumber">
+                        <template>
+                            <el-input-number size="mini" v-model="num" @change="handleChange" :min="1"></el-input-number>
+                        </template>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--<div id="chooseYep">-->
+
+        <!--</div>-->
+    </div>
+
+    <!--海报-->
+    <div class="alert poster">
+        <!--<div></div>-->
+        <img src="../img/details/logo.png" alt="">
+        <div>
+            <!--<div style='background-image: url("../img/details/display_map1.png");'></div>-->
+            <img src="../img/details/display_map1.png" alt="">
+            <div>冬新款狐狸毛亮面羽绒服</div>
+            <div>冬新款狐狸毛亮面羽绒服</div>
+            <div>
+                <div>秒杀价<span>￥<span>259</span></span></div>
+                <div>原价<span>￥<span>510</span></span></div>
+            </div>
+        </div>
+        <div>
+            <!--<div style='background-image: url("../img/details/qrCode.png")'></div>-->
+            <img src="../img/details/qrCode.png" alt="">
+            <div>
+                长按图片，识别二维码
+                查看商品详情
+            </div>
+        </div>
+
+        <img crossOrigin='anonymous' id="shareImg" src="" alt="">
+
+
+        <div class="anim" data-html2canvas-ignore>
+            <div class="spinner"></div>
+        </div>
+
+    </div>
+</section>
+<script src="../js/details.js"></script>
+<script type="text/javascript">
+
+
+
+    //禁止遮罩层穿透
+    $('#alertK')[0].addEventListener('click', function (event) {
+        if($(event.target).is('.alert')||$(event.target).is('.alert *')){
+
+        }else {
+            $('#alertK').find('.alert').removeClass('active').parent().hide();
+        }
+    },{ passive: false });
+
+    var Main = {
+        data() {
+            return {
+                num: 1
+            };
+        },
+        methods: {
+            handleChange(value) {
+                console.log(value);
+            }
+        }
+    };
+    var Ctor = Vue.extend(Main);
+    new Ctor().$mount('#chooseNumber')
+</script>
+</body>
+</html>

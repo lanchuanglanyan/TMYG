@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" data-page="shoppingCart">
+<head>
+    <meta charset="UTF-8">
+    <title>购物车</title>
+
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--<link rel="stylesheet/less" type="text/css" href="../css/shoppingCart.less" />-->
+    <link rel="stylesheet" href="../css/shoppingCart.css" >
+
+    <!--<script src="lib/rem.js"></script>-->
+    <script src="../lib/jquery-2.2.3.min.js"></script>
+    <script src="../lib/less.js"></script>
+    <script src="../lib/less.min.js"></script>
+
+    <!--<link rel="stylesheet/less" type="text/css" href="../css/bg.less" />-->
+    <link rel="stylesheet" href="../css/bg.css" >
+    <script src="../js/bg.js"></script>
+
+    <link rel="stylesheet" href="../lib/layui/css/layui.css">
+    <script src="../lib/layui/layui.js"></script>
+
+    <!--element-ui-->
+    <!-- 引入vue-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui@2.13.0/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui@2.13.0/lib/index.js"></script>
+
+</head>
+<body>
+<div id="bgt"></div>
+<!--title-->
+<section id="title">
+    <div>购物车</div>
+    <div>共<span class="number">60</span>件宝贝</div>
+</section>
+<!--list-->
+<section id="list">
+
+    <div class="goods" data-goodsId="id1">
+        <div>
+            <div>
+                <input type="checkbox" id="checkId1">
+                <label for="checkId1"></label>
+            </div>
+            <a onclick="changeCheckBox(this)" href="javascript:void(0)" style='background-image: url("../img/details/goodsImg2.png")'></a>
+            <div>
+                <a onclick="changeCheckBox(this)" href="javascript:void(0)">2019新款冬季黑色毛衣潮薄款针织套头衫修身显瘦长袖上衣</a>
+                <div>
+                    <span class="chooseThis">
+                        <span>黑色;S</span>
+                        <span></span>
+                    </span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div>VIP￥<span>399</span></div>
+            <div id="chooseId1">
+                <template>
+                    <el-input-number size="mini" v-model="num" @click.native="clickThis" @change="handleChange" :min="1" :step="0"></el-input-number>
+                </template>
+            </div>
+        </div>
+    </div>
+    <div class="goods" data-goodsId="id2">
+        <div>
+            <div>
+                <input type="checkbox" id="checkId2">
+                <label for="checkId2"></label>
+            </div>
+            <a onclick="changeCheckBox(this)" href="javascript:void(0)" style='background-image: url("../img/details/goodsImg2.png")'></a>
+            <div>
+                <a onclick="changeCheckBox(this)" href="javascript:void(0)">2019新款冬季黑色毛衣潮薄款针织套头衫修身显瘦长袖上衣</a>
+                <div>
+                    <span class="chooseThis">
+                        <span>黑色;S</span>
+                        <span></span>
+                    </span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div>VIP￥<span>399</span></div>
+            <div id="chooseId2">
+                <template>
+                    <el-input-number size="mini" v-model="num" @click.native="clickThis" @change="handleChange" :min="1" :step="0"></el-input-number>
+                </template>
+            </div>
+        </div>
+    </div>
+    <div class="goods" data-goodsId="id3">
+        <div>
+            <div>
+                <input type="checkbox" id="checkId3">
+                <label for="checkId3"></label>
+            </div>
+            <a onclick="changeCheckBox(this)" href="javascript:void(0)" style='background-image: url("../img/details/goodsImg2.png")'></a>
+            <div>
+                <a onclick="changeCheckBox(this)" href="javascript:void(0)">2019新款冬季黑色毛衣潮薄款针织套头衫修身显瘦长袖上衣</a>
+                <div>
+                    <span class="chooseThis">
+                        <span>黑色;S</span>
+                        <span></span>
+                    </span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div>VIP￥<span>399</span></div>
+            <div id="chooseId3">
+                <template>
+                    <el-input-number size="mini" v-model="num" @click.native="clickThis" @change="handleChange" :min="1" :step="0"></el-input-number>
+                </template>
+            </div>
+        </div>
+    </div>
+    <div class="goods" data-goodsId="id4">
+        <div>
+            <div>
+                <input type="checkbox" id="checkId4">
+                <label for="checkId4"></label>
+            </div>
+            <a onclick="changeCheckBox(this)" href="javascript:void(0)" style='background-image: url("../img/details/goodsImg2.png")'></a>
+            <div>
+                <a onclick="changeCheckBox(this)" href="javascript:void(0)">2019新款冬季黑色毛衣潮薄款针织套头衫修身显瘦长袖上衣</a>
+                <div>
+                    <span class="chooseThis">
+                        <span>黑色;S</span>
+                        <span></span>
+                    </span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div>VIP￥<span>399</span></div>
+            <div id="chooseId4">
+                <template>
+                    <el-input-number size="mini" v-model="num" @click.native="clickThis" @change="handleChange" :min="1" :step="0"></el-input-number>
+                </template>
+            </div>
+        </div>
+    </div>
+
+</section>
+<!--goBuy-->
+<section id="goBuy">
+    <div>
+        <input onclick="checkBoxAll(this)" type="checkbox" id="checkAll">
+        <label for="checkAll"></label>
+        <label for="checkAll">全选</label>
+    </div>
+    <div>合计:&nbsp;￥<span class="money">299</span></div>
+    <a href="orderConfirm.html"></a>
+</section>
+
+<section id="alertK">
+    <!--选择-->
+    <div class="active alert choose">
+        <div class="back"></div>
+        <div class="chooseMessage">
+            <div>
+                <img src="../img/details/messageK.png" id="chooseImgK">
+            </div>
+            <div>
+                <div id="chooseMoney">
+                    <span>￥<span class="original_price">1909</span></span>
+                    <span>/</span>
+                    <span>VIP￥<span class="present_price">268</span></span>
+                </div>
+                <div>库存<span id="stock">100</span>件</div>
+                <div id="chooseThis">已选&nbsp;&nbsp;
+                    <span data-choose="id1">红色</span>&nbsp;/
+                    <span data-choose="id2">M</span>
+                </div>
+            </div>
+        </div>
+        <div class="chooseSpecs">
+            <div id="chooseK">
+                <div class="chooseK" data-choose="id1">
+                    <div data-specs="key">颜色</div>
+                    <div data-specs="value">
+                        <span class="active">黑色</span>
+                        <span>红色</span>
+                        <span>白色</span>
+                        <span>黄色</span>
+                        <span>蓝色</span>
+                        <span>灰色</span>
+                    </div>
+                </div>
+                <div class="chooseK" data-choose="id2">
+                    <div data-specs="key">尺码</div>
+                    <div data-specs="value">
+                        <span class="active">S</span>
+                        <span>M</span>
+                        <span>L</span>
+                        <span>XL</span>
+                        <span>XXL</span>
+                    </div>
+                </div>
+                <div class="chooseNumber">
+                    <div>数量</div>
+                    <div id="chooseNumber">
+                        <template>
+                            <el-input-number size="mini" v-model="num" @change="handleChange" :min="1"></el-input-number>
+                        </template>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="chooseYep">
+
+        </div>
+    </div>
+
+</section>
+<!--footer-->
+<section id="footer">
+    <div>
+        <a href="../index.html">
+            <div class="nav1" style='background-image: url("../img/nav/nav1_1.png");background-size: 36%,36%;'></div>
+            <div class="nav2" style='background-image: url("../img/nav/nav1_2.png");background-size: 36%,36%;'></div>
+            <div class="txt">首页</div>
+        </a>
+        <a href="classification.html">
+            <div class="nav1" style='background-image: url("../img/nav/nav2_1.png");background-size: 33%,33%;'></div>
+            <div class="nav2" style='background-image: url("../img/nav/nav2_2.png");background-size: 33%,33%;'></div>
+            <div class="txt">分类</div>
+        </a>
+        <a href="choice.html">
+            <div class="logo"></div>
+            <div class="txt">优选</div>
+            <!--<p id="goodsNumber">1</p>-->
+        </a>
+        <a class="active" href="javascript:void(0)">
+            <div class="nav1" style='background-image: url("../img/nav/nav3_1.png");background-size: 40%,30%;'></div>
+            <div class="nav2" style='background-image: url("../img/nav/nav3_2.png");background-size: 40%,30%;'></div>
+            <div class="txt">购物车</div>
+            <!--<p id="goodsNumber">1</p>-->
+        </a>
+        <a href="personal.html">
+            <div class="nav1" style='background-image: url("../img/nav/nav4_1.png");background-size: 30%,30%;'></div>
+            <div class="nav2" style='background-image: url("../img/nav/nav4_2.png");background-size: 30%,30%;'></div>
+            <div class="txt">个人</div>
+        </a>
+    </div>
+</section>
+
+
+
+<script src="../js/shoppingCart.js"></script>
+<script>
+
+    //选择checkbox
+    function changeCheckBox(_this) {
+        var _prop=$(_this).parents('.goods').find('input[type=checkbox]').prop('checked');
+        $(_this).parents('.goods').find('input[type=checkbox]').prop('checked',!_prop);
+    }
+    //全选
+    function checkBoxAll(_this){
+        var _prop=$(_this).prop('checked');
+        $('#list>.goods').each(function (ind,val) {
+            $(val).find('input[type=checkbox]').prop('checked',_prop);
+        });
+    }
+
+    //禁止遮罩层穿透
+    $('#alertK')[0].addEventListener('click', function (event) {
+        if($(event.target).is('.alert')||$(event.target).is('.alert *')){
+
+        }else {
+            $('#alertK').hide();
+        }
+    },{ passive: false });
+
+    var Main = {
+        data() {
+            return {
+                num: 1
+            };
+        },
+        methods: {
+            handleChange(value) {
+                console.log(value);
+            },
+            clickThis(event) {
+                var $name=$(event.target).attr('class');
+                if($name==='el-icon-plus'||$name==='el-input-number__increase'){
+                    this.num +=1;
+                }else if($name==='el-icon-minus'||$name==='el-input-number__decrease'){
+                    this.num -=1;
+                }
+            }
+        }
+    };
+    var Ctor = Vue.extend(Main);
+    new Ctor().$mount('#chooseNumber');
+
+    $('#list>div').each(function (ind,val) {
+        new Ctor().$mount('#chooseId'+(ind+1));
+    });
+</script>
+</body>
+</html>

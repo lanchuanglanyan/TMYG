@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" data-page="install2">
+<head>
+    <meta charset="UTF-8">
+    <title>活动推送</title>
+
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet/less" type="text/css" href="../css/install.less" />
+    <!--<link rel="stylesheet" href="../css/install.css" >-->
+
+    <!--<script src="lib/rem.js"></script>-->
+    <script src="../lib/jquery-2.2.3.min.js"></script>
+    <script src="../lib/less.js"></script>
+    <script src="../lib/less.min.js"></script>
+
+    <!--<link rel="stylesheet/less" type="text/css" href="../css/bg.less" />-->
+    <link rel="stylesheet" href="../css/bg.css" >
+    <script src="../js/bg.js"></script>
+
+    <link rel="stylesheet" href="../lib/layui/css/layui.css">
+    <script src="../lib/layui/layui.js"></script>
+
+</head>
+<body>
+<div id="bgt"></div>
+<!--back-->
+<section id="back">
+    <a href="javascript:history.back(-1)"></a>
+</section>
+<!--block-->
+<section class="block">
+    <a href="javascript:void(0)">
+        短信
+        <div class="layui-form">
+            <input type="checkbox" name="xxx"  lay-skin="switch">
+        </div>
+    </a>
+    <a href="javascript:void(0)">
+        系统通知
+        <div class="layui-form">
+            <input type="checkbox" name="xxx" checked lay-skin="switch">
+        </div>
+    </a>
+</section>
+<p class="txt">温馨提示：通过以上渠道，可及时获取活动、优惠等消息。</p>
+<section id="submit">提&nbsp;交</section>
+
+<script>
+    let $body=$('body');
+    layui.use('form', function(){
+        var form = layui.form;
+
+    });
+</script>
+</body>
+</html>

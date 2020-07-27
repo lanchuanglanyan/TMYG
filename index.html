@@ -7,8 +7,10 @@
     <meta name="renderer" content="webkit">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <link rel="stylesheet/less" type="text/css" href="css/index.less" />
-    <!--<link rel="stylesheet" href="css/index.css" >-->
+    <link rel="stylesheet" href="css/animate.min.css" >
+
+    <!--<link rel="stylesheet/less" type="text/css" href="css/index.less" />-->
+    <link rel="stylesheet" href="css/index.css" >
 
     <!--<script src="lib/rem.js"></script>-->
     <script src="lib/jquery-2.2.3.min.js"></script>
@@ -20,11 +22,13 @@
 
 </head>
 <body>
+<div id="bgt"></div>
 <!--search-->
 <section id="search">
+    <a href="javascript:void(0)"></a>
     <div>
         <div>
-            <input type="text" placeholder="有品质放心买，价格优放开买……">
+            <input type="text" onfocus="goSearch(this)" placeholder="有品质放心买，价格优放开买……">
         </div>
         <a href="javascript:void(0)"></a>
     </div>
@@ -47,23 +51,23 @@
     </section>
     <!--type-->
     <section id="type">
-        <a href="javascript:void(0)">
+        <a href="pages/classification.html">
             <div style="background-image: url('img/index/type1.png');"></div>
             <div>女装</div>
         </a>
-        <a href="javascript:void(0)">
+        <a href="pages/classification.html">
             <div style="background-image: url('img/index/type2.png');"></div>
             <div>男装</div>
         </a>
-        <a href="javascript:void(0)">
+        <a href="pages/classification.html">
             <div style="background-image: url('img/index/type3.png');"></div>
             <div>童装</div>
         </a>
-        <a href="javascript:void(0)">
+        <a href="pages/classification.html">
             <div style="background-image: url('img/index/type4.png');"></div>
             <div>针织品</div>
         </a>
-        <a href="javascript:void(0)">
+        <a href="pages/classification.html">
             <div style="background-image: url('img/index/type5.png');"></div>
             <div>家纺</div>
         </a>
@@ -264,71 +268,10 @@
                 <div class="name">2019秋冬新款西装领宽松针织外…</div>
                 <div>
                     <div>￥<span class="original_price">499</span></div>
-                    <div>VIP￥<span class="present_price">399</span></div>
-                    <div><span class="payment_number">30</span>人付款</div>
-                </div>
-            </a>
-            <a href="javascript:void(0)" data-id="goodsId">
-                <div style='background-image: url("img/index/all_goods1.png")'></div>
-                <div class="name">2019秋冬新款西装领宽松针织外…</div>
-                <div>
-                    <div>￥<span class="original_price">499</span></div>
-                    <div>VIP￥<span class="present_price">399</span></div>
-                    <div><span class="payment_number">30</span>人付款</div>
-                </div>
-            </a>
-            <a href="javascript:void(0)" data-id="goodsId">
-                <div style='background-image: url("img/index/all_goods1.png")'></div>
-                <div class="name">2019秋冬新款西装领宽松针织外…</div>
-                <div>
-                    <div>￥<span class="original_price">499</span></div>
-                    <div>VIP￥<span class="present_price">399</span></div>
-                    <div><span class="payment_number">30</span>人付款</div>
-                </div>
-            </a>
-            <a href="javascript:void(0)" data-id="goodsId">
-                <div style='background-image: url("img/index/all_goods1.png")'></div>
-                <div class="name">2019秋冬新款西装领宽松针织外…</div>
-                <div>
-                    <div>￥<span class="original_price">499</span></div>
-                    <div>VIP￥<span class="present_price">399</span></div>
-                    <div><span class="payment_number">30</span>人付款</div>
-                </div>
-            </a>
-            <a href="javascript:void(0)" data-id="goodsId">
-                <div style='background-image: url("img/index/all_goods1.png")'></div>
-                <div class="name">2019秋冬新款西装领宽松针织外…</div>
-                <div>
-                    <div>￥<span class="original_price">499</span></div>
-                    <div>VIP￥<span class="present_price">399</span></div>
-                    <div><span class="payment_number">30</span>人付款</div>
-                </div>
-            </a>
-            <a href="javascript:void(0)" data-id="goodsId">
-                <div style='background-image: url("img/index/all_goods1.png")'></div>
-                <div class="name">2019秋冬新款西装领宽松针织外…</div>
-                <div>
-                    <div>￥<span class="original_price">499</span></div>
-                    <div>VIP￥<span class="present_price">399</span></div>
-                    <div><span class="payment_number">30</span>人付款</div>
-                </div>
-            </a>
-            <a href="javascript:void(0)" data-id="goodsId">
-                <div style='background-image: url("img/index/all_goods1.png")'></div>
-                <div class="name">2019秋冬新款西装领宽松针织外…</div>
-                <div>
-                    <div>￥<span class="original_price">499</span></div>
-                    <div>VIP￥<span class="present_price">399</span></div>
-                    <div><span class="payment_number">30</span>人付款</div>
-                </div>
-            </a>
-            <a href="javascript:void(0)" data-id="goodsId">
-                <div style='background-image: url("img/index/all_goods1.png")'></div>
-                <div class="name">2019秋冬新款西装领宽松针织外…</div>
-                <div>
-                    <div>￥<span class="original_price">499</span></div>
-                    <div>VIP￥<span class="present_price">399</span></div>
-                    <div><span class="payment_number">30</span>人付款</div>
+                    <div>
+                        <div>VIP￥<span class="present_price">399</span></div>
+                        <div><span class="payment_number">30</span>人付款</div>
+                    </div>
                 </div>
             </a>
         </div>
@@ -337,29 +280,39 @@
 </section>
 <!--footer-->
 <section id="footer">
-    <div></div>
+    <a href="pages/choice.html"></a>
     <div>
-        <a href="javascript:void(0)">
-            <div style='background-image: url("img/nav/nav1_2.png");background-size: 36%,36%;'></div>
-            <div>首页</div>
+        <a class="active" href="javascript:void(0)">
+            <div class="nav1" style='background-image: url("img/nav/nav1_1.png");background-size: 36%,36%;'></div>
+            <div class="nav2" style='background-image: url("img/nav/nav1_2.png");background-size: 36%,36%;'></div>
+            <div class="txt">首页</div>
         </a>
-        <a href="javascript:void(0)">
-            <div style='background-image: url("img/nav/nav2_2.png");background-size: 33%,33%;'></div>
-            <div>分类</div>
+        <a href="pages/classification.html">
+            <div class="nav1" style='background-image: url("img/nav/nav2_1.png");background-size: 33%,33%;'></div>
+            <div class="nav2" style='background-image: url("img/nav/nav2_2.png");background-size: 33%,33%;'></div>
+            <div class="txt">分类</div>
         </a>
-        <a href="javascript:void(0)">优选</a>
-        <a href="javascript:void(0)">
-            <div style='background-image: url("img/nav/nav3_2.png");background-size: 40%,30%;'></div>
-            <div>购物车</div>
+        <a href="pages/choice.html">优选</a>
+        <a href="pages/shoppingCart.html">
+            <div class="nav1" style='background-image: url("img/nav/nav3_1.png");background-size: 40%,30%;'></div>
+            <div class="nav2" style='background-image: url("img/nav/nav3_2.png");background-size: 40%,30%;'></div>
+            <div class="txt">购物车</div>
             <p id="goodsNumber">1</p>
         </a>
-        <a href="javascript:void(0)">
-            <div style='background-image: url("img/nav/nav4_2.png");background-size: 30%,30%;'></div>
-            <div>个人</div>
+        <a href="pages/personal.html">
+            <div class="nav1" style='background-image: url("img/nav/nav4_1.png");background-size: 30%,30%;'></div>
+            <div class="nav2" style='background-image: url("img/nav/nav4_2.png");background-size: 30%,30%;'></div>
+            <div class="txt">个人</div>
         </a>
     </div>
 </section>
 
 <script src="js/index.js"></script>
+<script>
+    function goSearch(_this) {
+        let value = $(_this).val();
+        document.location.href='pages/searchPage.html?searchName='+encodeURI(value)
+    }
+</script>
 </body>
 </html>

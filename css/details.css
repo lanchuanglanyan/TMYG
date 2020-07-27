@@ -34,4 +34,1333 @@ a:active,
 a:hover {
   text-decoration: none;
 }
+html[data-page="details"] {
+  background-color: #F4F4F4;
+  overflow-y: scroll;
+}
+html[data-page="details"]::-webkit-scrollbar {
+  display: none;
+}
+html[data-page="details"] #view #displayMap {
+  position: relative;
+}
+html[data-page="details"] #view #displayMap > div:first-child {
+  width: 100%;
+  height: 106.7vw;
+  position: relative;
+  overflow: hidden;
+}
+html[data-page="details"] #view #displayMap > div:first-child > #bannerT {
+  position: absolute;
+  width: 400%;
+  height: 106.7vw;
+  top: 0;
+  left: 0;
+}
+html[data-page="details"] #view #displayMap > div:first-child > #bannerT > a {
+  display: block;
+  width: 100vw;
+  height: 100%;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  float: left;
+}
+html[data-page="details"] #view #displayMap > div:first-child > #bannerD {
+  position: absolute;
+  z-index: 2;
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  left: 25vw;
+  bottom: 12vw;
+}
+html[data-page="details"] #view #displayMap > div:first-child > #bannerD > div {
+  float: left;
+  width: 1.5vw;
+  height: 1.5vw;
+  margin: 0 2vw;
+  border-radius: 50%;
+  background-color: rgba(180, 180, 180, 0.3);
+}
+html[data-page="details"] #view #displayMap > div:first-child > #bannerD > div.active {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+html[data-page="details"] #view #displayMap > a {
+  display: block;
+  position: absolute;
+  top: 2vw;
+}
+html[data-page="details"] #view #displayMap > a#backPage {
+  width: 5vw;
+  height: 9vw;
+  background-image: url("../img/details/back1.png");
+  background-size: 50% 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  left: 5.3vw;
+}
+html[data-page="details"] #view #displayMap > a#share {
+  top: 4vw;
+  width: 4.3vw;
+  height: 4.3vw;
+  background-image: url("../img/details/share.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  right: 5.3vw;
+}
+html[data-page="details"] #view #information {
+  position: relative;
+  z-index: 3;
+  margin-top: -9.1vw;
+}
+html[data-page="details"] #view #information > section {
+  display: none;
+}
+html[data-page="details"] #view #information #normalStyle {
+  display: block;
+}
+html[data-page="details"] #view #information #normalStyle > div:first-child {
+  width: 100vw;
+  height: 9.1vw;
+  background-image: url("../img/details/normalTitle.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+html[data-page="details"] #view #information #normalStyle > div:nth-of-type(2) > div {
+  width: 100%;
+  height: auto;
+  padding-left: 5.3vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: 1.2vw;
+}
+html[data-page="details"] #view #information #normalStyle > div:nth-of-type(2) > div:first-child {
+  font-size: 4.3vw;
+  color: #333333;
+  font-weight: normal;
+  font-family: Arial;
+}
+html[data-page="details"] #view #information #normalStyle > div:nth-of-type(2) > div:last-child {
+  font-size: 3.7vw;
+  color: darkgray;
+  font-weight: lighter;
+  font-family: Arial;
+}
+html[data-page="details"] #view #information #normalStyle > div:last-child {
+  overflow: hidden;
+  margin: 2vw 0 2vw 5.3vw;
+}
+html[data-page="details"] #view #information #normalStyle > div:last-child > div {
+  float: left;
+}
+html[data-page="details"] #view #information #normalStyle > div:last-child > div:first-child {
+  margin-right: 3.2vw;
+  font-size: 5vw;
+  color: black;
+  font-weight: normal;
+  font-family: Arial;
+  line-height: 12vw;
+}
+html[data-page="details"] #view #information #normalStyle > div:last-child > div:first-child > span {
+  font-size: 6vw;
+  color: black;
+  font-weight: normal;
+  font-family: Arial;
+}
+html[data-page="details"] #view #information #normalStyle > div:last-child > div:last-child {
+  font-size: 4.3vw;
+  color: #CB2D3E;
+  font-weight: normal;
+  font-family: Arial;
+}
+html[data-page="details"] #view #information #normalStyle > div:last-child > div:last-child > span {
+  font-size: 8vw;
+  color: #CB2D3E;
+  font-weight: normal;
+  font-family: Arial;
+}
+html[data-page="details"] #view #information #activityStyle > div:first-child {
+  width: 100%;
+  height: 14.7vw;
+  background-image: url("../img/details/activityTitle.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  position: relative;
+}
+html[data-page="details"] #view #information #activityStyle > div:first-child > div {
+  float: left;
+}
+html[data-page="details"] #view #information #activityStyle > div:first-child > div:first-child {
+  width: 16.1vw;
+  height: 14.7vw;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+html[data-page="details"] #view #information #activityStyle > div:first-child > div:nth-of-type(2) {
+  width: 53vw;
+  height: 14.7vw;
+  position: relative;
+}
+html[data-page="details"] #view #information #activityStyle > div:first-child > div:nth-of-type(2) > p {
+  position: absolute;
+  left: 2.6vw;
+  top: 50%;
+  transform: translateY(-50%);
+}
+html[data-page="details"] #view #information #activityStyle > div:first-child > div:nth-of-type(2) > p > span:first-child {
+  font-size: 2vw;
+  color: white;
+  font-weight: normal;
+  font-family: Arial;
+}
+html[data-page="details"] #view #information #activityStyle > div:first-child > div:nth-of-type(2) > p > span:first-child > span:last-child {
+  position: relative;
+  top: 0.5vw;
+  font-size: 4.3vw;
+  color: white;
+  font-weight: normal;
+  font-family: Arial;
+}
+html[data-page="details"] #view #information #activityStyle > div:first-child > div:nth-of-type(2) > p > span:first-child > span:last-child > span {
+  font-size: 6vw;
+  color: white;
+  font-weight: normal;
+  font-family: Arial;
+}
+html[data-page="details"] #view #information #activityStyle > div:first-child > div:nth-of-type(2) > p > span:first-child > span:first-child {
+  font-size: 2vw;
+  color: white;
+  font-weight: normal;
+  font-family: Arial;
+  position: relative;
+  line-height: 5vw;
+}
+html[data-page="details"] #view #information #activityStyle > div:first-child > div:nth-of-type(2) > p > span:last-child > span:first-child {
+  font-size: 2vw;
+  color: white;
+  font-weight: normal;
+  font-family: Arial;
+  position: relative;
+  bottom: 0.2vw;
+  line-height: 3vw;
+}
+html[data-page="details"] #view #information #activityStyle > div:first-child > div:nth-of-type(2) > p > span:last-child > span:first-child > span {
+  color: #D50F2A;
+}
+html[data-page="details"] #view #information #activityStyle > div:first-child > div:nth-of-type(2) > p > span:last-child > span:last-child {
+  font-size: 3.5vw;
+  color: white;
+  font-weight: normal;
+  font-family: Arial;
+  line-height: 3vw;
+}
+html[data-page="details"] #view #information #activityStyle > div:first-child > div:last-child {
+  width: 30vw;
+  height: auto;
+  text-align: center;
+  font-size: 2.5vw;
+  color: #FFFFFF;
+  font-weight: normal;
+  font-family: Arial;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+html[data-page="details"] #view #information #activityStyle > div:last-child > div {
+  width: 100%;
+  height: auto;
+  padding-left: 5.3vw;
+  margin-top: 1.2vw;
+}
+html[data-page="details"] #view #information #activityStyle > div:last-child > div:first-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 4.3vw;
+  color: #333333;
+  font-weight: normal;
+  font-family: Arial;
+}
+html[data-page="details"] #view #information #activityStyle > div:last-child > div:first-child > span {
+  display: inline-block;
+  width: 4.8vw;
+  height: 4.8vw;
+  margin-right: 1.3vw;
+  position: relative;
+  top: 0.8vw;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+html[data-page="details"] #view #information #activityStyle > div:last-child > div:last-child {
+  width: 89.5vw;
+  height: auto;
+  margin: 2.7vw auto;
+  background-color: white;
+  border-radius: 0.5vw;
+  padding: 2.7vw 0;
+}
+html[data-page="details"] #view #information #activityStyle > div:last-child > div:last-child > div:first-child {
+  padding: 0 2.7vw;
+  overflow: hidden;
+}
+html[data-page="details"] #view #information #activityStyle > div:last-child > div:last-child > div:first-child > div:first-child {
+  float: left;
+  font-size: 4.5vw;
+  color: #333333;
+  font-weight: bold;
+  font-family: Arial;
+}
+html[data-page="details"] #view #information #activityStyle > div:last-child > div:last-child > div:first-child > div:first-child > span {
+  color: #D50F2A;
+}
+html[data-page="details"] #view #information #activityStyle > div:last-child > div:last-child > div:first-child > div:last-child {
+  float: right;
+  font-size: 2.9vw;
+  color: #333333;
+  font-weight: normal;
+  font-family: Arial;
+  margin-top: 0.8vw;
+}
+html[data-page="details"] #view #information #activityStyle > div:last-child > div:last-child > div:last-child > div:first-child {
+  margin: 2vw 0 2.7vw;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+html[data-page="details"] #view #information #activityStyle > div:last-child > div:last-child > div:last-child > div:first-child > p {
+  float: left;
+  background-color: white;
+  width: 70%;
+  height: 0.1vw;
+}
+html[data-page="details"] #view #information #activityStyle > div:last-child > div:last-child > div:last-child > div:first-child > p:first-child,
+html[data-page="details"] #view #information #activityStyle > div:last-child > div:last-child > div:last-child > div:first-child > p:last-child {
+  width: 15%;
+  background-color: #F4F4F4;
+}
+html[data-page="details"] #view #information #activityStyle > div:last-child > div:last-child > div:last-child > div:last-child {
+  padding: 0 2.7vw;
+}
+html[data-page="details"] #view #information #activityStyle > div:last-child > div:last-child > div:last-child > div:last-child > div {
+  margin-top: 2vw;
+  overflow: hidden;
+}
+html[data-page="details"] #view #information #activityStyle > div:last-child > div:last-child > div:last-child > div:last-child > div > div {
+  float: left;
+  font-size: 3vw;
+  color: #666666;
+  font-weight: normal;
+  font-family: Arial;
+}
+html[data-page="details"] #view #information #activityStyle > div:last-child > div:last-child > div:last-child > div:last-child > div > div:first-child {
+  width: 14vw;
+  height: auto;
+  text-align-last: justify;
+  text-align: justify;
+  text-justify: distribute-all-lines;
+  margin-right: 5vw;
+}
+html[data-page="details"] #view #information #activityStyle > div:last-child > div:last-child > div:last-child > div:last-child > div > div:last-child {
+  width: 65vw;
+  height: auto;
+}
+html[data-page="details"] #view #information #activityStyle > div:last-child > div:last-child > div:last-child > div:last-child > div > div:last-child > span {
+  color: #D50F2A;
+}
+html[data-page="details"] #view #VIP > section {
+  display: none;
+  width: 92.3vw;
+  height: 19.9vw;
+  background-image: url("../img/details/VIP.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  margin: 0 auto;
+}
+html[data-page="details"] #view #VIP > section.act {
+  display: block;
+}
+html[data-page="details"] #view #VIP > section > div {
+  float: left;
+  width: 69%;
+  height: 16vw;
+  margin-left: 2%;
+}
+html[data-page="details"] #view #VIP > section > div > div {
+  margin-left: 2.7vw;
+}
+html[data-page="details"] #view #VIP > section > div > div:first-child {
+  margin-top: 3vw;
+  margin-bottom: 0.5vw;
+  font-size: 4vw;
+  color: #FFED51;
+  font-weight: normal;
+  font-family: Arial;
+}
+html[data-page="details"] #view #VIP > section > div > div:last-child {
+  font-size: 2.9vw;
+  color: #FFFFFF;
+  font-weight: normal;
+  font-family: Arial;
+}
+html[data-page="details"] #view #VIP > section > a {
+  float: left;
+  width: 28%;
+  height: 16vw;
+}
+html[data-page="details"] #view #VIP > section > a > div {
+  margin-top: 6vw;
+}
+html[data-page="details"] #view #VIP > section > a > div:first-child {
+  float: left;
+  font-size: 3.7vw;
+  color: #FFFFFF;
+  font-weight: bold;
+  font-family: Arial;
+  margin-left: 6vw;
+}
+html[data-page="details"] #view #VIP > section > a > div:last-child {
+  margin-top: 7.2vw;
+  width: 1.5vw;
+  height: 2.7vw;
+  float: right;
+  background-image: url("../img/details/go1.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  margin-right: 2.4vw;
+}
+html[data-page="details"] #view #VIP > section.partner > a > div:first-child {
+  margin-left: 2vw;
+}
+html[data-page="details"] #view #parameter {
+  width: 89.3vw;
+  height: auto;
+  margin: 0 auto;
+}
+html[data-page="details"] #view #parameter > a {
+  display: block;
+  width: 89.3vw;
+  height: auto;
+  overflow: hidden;
+  margin-bottom: 5vw;
+}
+html[data-page="details"] #view #parameter > a > div {
+  float: left;
+}
+html[data-page="details"] #view #parameter > a > div:first-child {
+  font-size: 3.2vw;
+  color: #666666;
+  font-weight: normal;
+  font-family: Arial;
+  margin-right: 5.3vw;
+}
+html[data-page="details"] #view #parameter > a > div:nth-of-type(2) {
+  font-size: 3.2vw;
+  color: #666666;
+  font-weight: normal;
+  font-family: Arial;
+  margin-right: 5.3vw;
+}
+html[data-page="details"] #view #parameter > a > div:nth-of-type(2) > span {
+  font-size: 3.2vw;
+  color: #D50F2A;
+  font-weight: bold;
+  font-family: Arial;
+}
+html[data-page="details"] #view #parameter > a > div:last-child {
+  float: right;
+  width: 1.5vw;
+  height: 3.2vw;
+  background-image: url("../img/details/g2.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  margin-top: 0.5vw;
+}
+html[data-page="details"] #view #groupPresentation {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  padding: 3vw 3.2vw 4vw;
+}
+html[data-page="details"] #view #groupPresentation > div:first-child {
+  font-size: 4vw;
+  color: #333333;
+  font-weight: bold;
+  font-family: Arial;
+  margin-bottom: 2.5vw;
+}
+html[data-page="details"] #view #groupPresentation > div:last-child {
+  overflow: hidden;
+}
+html[data-page="details"] #view #groupPresentation > div:last-child > div:first-child {
+  overflow: hidden;
+  float: left;
+}
+html[data-page="details"] #view #groupPresentation > div:last-child > div:first-child > div {
+  float: left;
+}
+html[data-page="details"] #view #groupPresentation > div:last-child > div:first-child > div:first-child {
+  width: 10.7vw;
+  height: 10.7vw;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+html[data-page="details"] #view #groupPresentation > div:last-child > div:first-child > div:last-child {
+  font-size: 4vw;
+  color: #333333;
+  font-weight: normal;
+  font-family: Arial;
+  line-height: 10.7vw;
+}
+html[data-page="details"] #view #groupPresentation > div:last-child > div:last-child {
+  float: right;
+}
+html[data-page="details"] #view #groupPresentation > div:last-child > div:last-child > div {
+  margin-right: 2.7vw;
+  float: left;
+}
+html[data-page="details"] #view #groupPresentation > div:last-child > div:last-child > div > div:first-child {
+  font-size: 4vw;
+  color: #333333;
+  font-weight: normal;
+  font-family: Arial;
+}
+html[data-page="details"] #view #groupPresentation > div:last-child > div:last-child > div > div:first-child > span {
+  color: #D50F2A;
+}
+html[data-page="details"] #view #groupPresentation > div:last-child > div:last-child > div > div:last-child {
+  font-size: 3.2vw;
+  color: #999999;
+  font-weight: normal;
+  font-family: Arial;
+  text-align: right;
+}
+html[data-page="details"] #view #groupPresentation > div:last-child > div:last-child > a {
+  float: right;
+  display: block;
+  width: 24vw;
+  height: 6.7vw;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  position: relative;
+  top: 2vw;
+}
+html[data-page="details"] #view #evaluate {
+  width: 89.3vw;
+  height: auto;
+  margin: 3vw auto 0;
+}
+html[data-page="details"] #view #evaluate > div {
+  overflow: hidden;
+}
+html[data-page="details"] #view #evaluate > div > div {
+  float: left;
+  font-size: 4vw;
+  color: #333333;
+  font-weight: normal;
+  font-family: Arial;
+}
+html[data-page="details"] #view #evaluate > div > div > span {
+  margin-left: 1vw;
+  font-size: 3.2vw;
+  color: #A4A4A4;
+  font-weight: normal;
+  font-family: Arial;
+}
+html[data-page="details"] #view #evaluate > div > a {
+  margin-top: 0.5vw;
+  float: right;
+  display: block;
+  font-size: 3.2vw;
+  color: #A4A4A4;
+  font-weight: normal;
+  font-family: Arial;
+}
+html[data-page="details"] #view #evaluate > div > a > span {
+  display: inline-block;
+  width: 1.5vw;
+  height: 3.2vw;
+  background-image: url("../img/details/g2.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  margin-left: 1vw;
+  position: relative;
+  top: 0.2vw;
+}
+html[data-page="details"] #view #evaluate > a {
+  position: relative;
+  display: block;
+  width: 89.3vw;
+  height: auto;
+  margin-top: 12.5vw;
+  margin-bottom: 6.7vw;
+}
+html[data-page="details"] #view #evaluate > a > div:first-child > div {
+  position: absolute;
+}
+html[data-page="details"] #view #evaluate > a > div:first-child > div[data-user="userHead"] {
+  width: 12.5vw;
+  height: 12.5vw;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  z-index: 3;
+  left: 2.4vw;
+  top: -8.3vw;
+}
+html[data-page="details"] #view #evaluate > a > div:first-child > div[data-user="userName"] {
+  width: 23vw;
+  height: 8vw;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  z-index: 2;
+  left: 10.7vw;
+  top: -5.5vw;
+  font-size: 2.1vw;
+  color: #333333;
+  font-weight: normal;
+  font-family: Arial;
+  text-align: center;
+  line-height: 8vw;
+}
+html[data-page="details"] #view #evaluate > a > div:first-child > div[data-user="userCredit"] {
+  left: 13.6vw;
+  top: 4vw;
+}
+html[data-page="details"] #view #evaluate > a > div:first-child > div[data-user="userCredit"] > div {
+  float: left;
+  width: 2.5vw;
+  height: 2.4vw;
+  background-image: url("../img/details/userCredit.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  margin-right: 1vw;
+}
+html[data-page="details"] #view #evaluate > a > div:last-child {
+  width: 89.3vw;
+  height: auto;
+  background-color: white;
+  border-radius: 2.7vw;
+  padding: 10vw 5.3vw 4vw;
+}
+html[data-page="details"] #view #evaluate > a > div:last-child > div {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+html[data-page="details"] #view #evaluate > a > div:last-child > div:first-child {
+  font-size: 3.5vw;
+  color: #333333;
+  font-weight: normal;
+  font-family: Arial;
+}
+html[data-page="details"] #view #evaluate > a > div:last-child > div:last-child {
+  margin-top: 4vw;
+}
+html[data-page="details"] #view #evaluate > a > div:last-child > div:last-child > span {
+  font-size: 2.7vw;
+  color: #999999;
+  font-weight: normal;
+  font-family: Arial;
+}
+html[data-page="details"] #view #evaluate > a > div:last-child > div:last-child > span:first-child {
+  margin-right: 2vw;
+}
+html[data-page="details"] #view #details {
+  width: 100%;
+  height: auto;
+}
+html[data-page="details"] #view #details > div:first-child {
+  width: 100%;
+  height: 12vw;
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 0.2vw solid rgba(0, 0, 0, 0.3);
+}
+html[data-page="details"] #view #details > div:first-child.position {
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+html[data-page="details"] #view #details > div:first-child > div {
+  float: left;
+  width: 50%;
+  height: 100%;
+  font-size: 3.5vw;
+  color: #333333;
+  font-weight: normal;
+  font-family: Arial;
+  line-height: 12vw;
+  text-align: center;
+}
+html[data-page="details"] #view #details > div:first-child > div.active {
+  color: #D50F2A;
+}
+html[data-page="details"] #view #details > div:last-child > div {
+  display: none;
+}
+html[data-page="details"] #view #details > div:last-child > div.active {
+  display: block;
+}
+html[data-page="details"] #view #details > div:last-child > div:first-child {
+  padding-bottom: 13.2vw;
+}
+html[data-page="details"] #view #details > div:last-child > div:first-child > img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+  border: none;
+}
+html[data-page="details"] #view #details > div:last-child > div:last-child {
+  width: 100%;
+  height: auto;
+  min-height: 100.05vh;
+  background-color: white;
+  padding-left: 2.7vw;
+  padding-right: 2.7vw;
+  padding-bottom: 14vw;
+}
+html[data-page="details"] #view #details > div:last-child > div:last-child > div {
+  overflow: hidden;
+  margin-top: 2.7vw;
+}
+html[data-page="details"] #view #details > div:last-child > div:last-child > div > div {
+  float: left;
+  font-size: 3.2vw;
+  color: #999999;
+  font-weight: normal;
+  font-family: Arial;
+}
+html[data-page="details"] #view #details > div:last-child > div:last-child > div > div:first-child {
+  width: 22.3vw;
+  height: auto;
+}
+html[data-page="details"] #view #details > div:last-child > div:last-child > div > div:last-child {
+  font-size: 3.5vw;
+  color: #333333;
+  font-weight: normal;
+  font-family: Arial;
+  width: 72.3vw;
+  height: auto;
+}
+html[data-page="details"] #view::-webkit-scrollbar {
+  display: none;
+}
+html[data-page="details"] #footer {
+  width: 100%;
+  height: 13.2vw;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 15;
+  background-color: #F4F4F4;
+}
+html[data-page="details"] #footer > a {
+  float: left;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+html[data-page="details"] #footer > a#customer,
+html[data-page="details"] #footer > a#collection {
+  width: 5.9vw;
+  height: 6.4vw;
+  margin-left: 4vw;
+  margin-top: 3.5vw;
+}
+html[data-page="details"] #footer > a#customer#collection,
+html[data-page="details"] #footer > a#collection#collection {
+  margin-left: 5.3vw;
+}
+html[data-page="details"] #footer > a#shopCart,
+html[data-page="details"] #footer > a#buy,
+html[data-page="details"] #footer > a#assemble {
+  float: right;
+  width: 36vw;
+  height: 10.5vw;
+  margin-right: 1.3vw;
+  margin-top: 1.3vw;
+}
+html[data-page="details"] #footer > a.activity {
+  display: none;
+}
+html[data-page="details"] #footer > a.activity.active {
+  display: block;
+}
+html[data-page="details"] #alertK {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+html[data-page="details"] #alertK > div:not(.poster) {
+  display: none;
+  width: 100vw;
+  height: 80vh;
+  position: relative;
+  margin-top: 20vh;
+  background-color: #F4F4F4;
+  border-radius: 8vw 8vw 0 0;
+  padding-left: 5.3vw;
+  padding-right: 5.3vw;
+}
+html[data-page="details"] #alertK > div:not(.poster).active {
+  display: block;
+}
+html[data-page="details"] #alertK > div:not(.poster) > .back {
+  width: 4.5vw;
+  height: 4.5vw;
+  background-image: url("../img/back2.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  position: absolute;
+  right: 5.3vw;
+  top: 5.3vw;
+  z-index: 2;
+}
+html[data-page="details"] #alertK > div:not(.poster).service {
+  padding-top: 4vw;
+}
+html[data-page="details"] #alertK > div:not(.poster).service > div:last-child {
+  width: 100%;
+  height: 70vh;
+  overflow-y: scroll;
+}
+html[data-page="details"] #alertK > div:not(.poster).service > div:last-child::-webkit-scrollbar {
+  display: none;
+}
+html[data-page="details"] #alertK > div:not(.poster).service > div:last-child > div:first-child {
+  font-size: 5vw;
+  color: #333333;
+  font-weight: normal;
+  font-family: Arial;
+  text-align: center;
+  margin-bottom: 5vw;
+}
+html[data-page="details"] #alertK > div:not(.poster).service > div:last-child > div:not(:first-child) {
+  overflow: hidden;
+  margin-bottom: 5vw;
+}
+html[data-page="details"] #alertK > div:not(.poster).service > div:last-child > div:not(:first-child) > div {
+  float: left;
+}
+html[data-page="details"] #alertK > div:not(.poster).service > div:last-child > div:not(:first-child) > div:first-child {
+  width: 3.5vw;
+  height: 3.5vw;
+  margin-top: 0.8vw;
+  margin-right: 5.3vw;
+  background-image: url("../img/details/has.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+html[data-page="details"] #alertK > div:not(.poster).service > div:last-child > div:not(:first-child) > div:last-child {
+  width: 80vw;
+  height: auto;
+}
+html[data-page="details"] #alertK > div:not(.poster).service > div:last-child > div:not(:first-child) > div:last-child > div {
+  font-size: 3.7vw;
+  color: #666666;
+  font-weight: normal;
+  font-family: Arial;
+}
+html[data-page="details"] #alertK > div:not(.poster).service > div:last-child > div:not(:first-child) > div:last-child > div:first-child {
+  margin-bottom: 3vw;
+}
+html[data-page="details"] #alertK > div:not(.poster).service > div:last-child > div:not(:first-child) > div:last-child > div:last-child {
+  line-height: 6vw;
+}
+html[data-page="details"] #alertK > div:not(.poster).choose > div.chooseMessage {
+  padding: 0 2.7vw;
+  overflow: hidden;
+  position: relative;
+  bottom: 8vw;
+}
+html[data-page="details"] #alertK > div:not(.poster).choose > div.chooseMessage > div {
+  float: left;
+}
+html[data-page="details"] #alertK > div:not(.poster).choose > div.chooseMessage > div:first-child {
+  width: 29.9vw;
+  height: 29.3vw;
+  border-radius: 1.3vw;
+  overflow: hidden;
+  background-color: white;
+}
+html[data-page="details"] #alertK > div:not(.poster).choose > div.chooseMessage > div:first-child > img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: none;
+}
+html[data-page="details"] #alertK > div:not(.poster).choose > div.chooseMessage > div:last-child {
+  padding-top: 9vw;
+  margin-left: 2.7vw;
+}
+html[data-page="details"] #alertK > div:not(.poster).choose > div.chooseMessage > div:last-child > div:first-child > span:last-child {
+  font-size: 3.5vw;
+  color: #CB2D3E;
+  font-weight: normal;
+  font-family: Arial;
+}
+html[data-page="details"] #alertK > div:not(.poster).choose > div.chooseMessage > div:last-child > div:first-child > span:last-child > span {
+  font-size: 6vw;
+  color: #CB2D3E;
+  font-weight: normal;
+  font-family: Arial;
+}
+html[data-page="details"] #alertK > div:not(.poster).choose > div.chooseMessage > div:last-child > div:first-child > span:first-child {
+  font-size: 3.5vw;
+  color: #666666;
+  font-weight: normal;
+  font-family: Arial;
+}
+html[data-page="details"] #alertK > div:not(.poster).choose > div.chooseMessage > div:last-child > div:first-child > span:first-child > span {
+  font-size: 4.9vw;
+  color: #666666;
+  font-weight: normal;
+  font-family: Arial;
+}
+html[data-page="details"] #alertK > div:not(.poster).choose > div.chooseMessage > div:last-child > div:first-child > span:nth-of-type(2) {
+  font-size: 5vw;
+  color: #999999;
+  font-weight: normal;
+  font-family: Arial;
+  margin: 0 0.5vw;
+}
+html[data-page="details"] #alertK > div:not(.poster).choose > div.chooseMessage > div:last-child > div:nth-of-type(2) {
+  font-size: 2.9vw;
+  color: #999999;
+  font-weight: normal;
+  font-family: Arial;
+}
+html[data-page="details"] #alertK > div:not(.poster).choose > div.chooseMessage > div:last-child > div:last-child {
+  margin-top: 1vw;
+  font-size: 3.5vw;
+  color: #666666;
+  font-weight: normal;
+  font-family: Arial;
+}
+html[data-page="details"] #alertK > div:not(.poster).choose > div.chooseSpecs {
+  overflow-y: scroll;
+  width: 100%;
+  height: 115vw;
+  padding-bottom: 15vw;
+}
+html[data-page="details"] #alertK > div:not(.poster).choose > div.chooseSpecs::-webkit-scrollbar {
+  display: none;
+}
+html[data-page="details"] #alertK > div:not(.poster).choose > div.chooseSpecs > div {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+html[data-page="details"] #alertK > div:not(.poster).choose > div.chooseSpecs > div > div > div:first-child {
+  width: 50%;
+  height: auto;
+  margin-bottom: 5.5vw;
+  font-size: 4vw;
+  color: #666666;
+  font-weight: normal;
+  font-family: Arial;
+}
+html[data-page="details"] #alertK > div:not(.poster).choose > div.chooseSpecs > div > div:not(.chooseNumber) > div:last-child {
+  overflow: hidden;
+}
+html[data-page="details"] #alertK > div:not(.poster).choose > div.chooseSpecs > div > div:not(.chooseNumber) > div:last-child > span {
+  float: left;
+  margin-right: 5.5vw;
+  margin-bottom: 5.5vw;
+  display: inline-block;
+  padding: 1.3vw 2.4vw;
+  border-radius: 0.5vw;
+  background-color: white;
+  font-size: 3.5vw;
+  color: #666666;
+  font-weight: normal;
+  font-family: Arial;
+}
+html[data-page="details"] #alertK > div:not(.poster).choose > div.chooseSpecs > div > div:not(.chooseNumber) > div:last-child > span.active {
+  background-color: #EA384D;
+  color: #FFFFFF;
+}
+html[data-page="details"] #alertK > div:not(.poster).choose > div.chooseSpecs > div > div.chooseNumber > div {
+  margin-bottom: 5.5vw;
+}
+html[data-page="details"] #alertK > div:not(.poster).choose > div.chooseSpecs > div > div.chooseNumber > div#chooseNumber > div .el-input__inner {
+  border-color: #F4F4F4;
+  height: 7.8vw;
+  line-height: 7.5vw;
+  font-size: 3.2vw;
+}
+html[data-page="details"] #alertK > div:not(.poster).choose > div.chooseSpecs > div > div.chooseNumber > div#chooseNumber > div.el-input-number--mini {
+  width: 26.7vw;
+  line-height: 7.5vw;
+}
+html[data-page="details"] #alertK > div:not(.poster).choose > div.chooseSpecs > div > div.chooseNumber > div#chooseNumber > div.el-input-number--mini > span.el-input-number__decrease {
+  width: 7.5vw;
+  font-size: 3.2vw;
+  border-radius: 0;
+  background-color: #CCCCCC;
+  color: white;
+  border: none;
+}
+html[data-page="details"] #alertK > div:not(.poster).choose > div.chooseSpecs > div > div.chooseNumber > div#chooseNumber > div.el-input-number--mini > span.el-input-number__decrease.is-disabled {
+  color: white;
+}
+html[data-page="details"] #alertK > div:not(.poster).choose > div.chooseSpecs > div > div.chooseNumber > div#chooseNumber > div.el-input-number--mini > span.el-input-number__increase {
+  width: 7.5vw;
+  font-size: 3.2vw;
+  border-radius: 0;
+  background-color: #EA384D;
+  color: white;
+  border: none;
+}
+html[data-page="details"] #alertK > div:not(.poster).choose > div#chooseYep {
+  width: 96vw;
+  height: 10.5vw;
+  position: absolute;
+  left: 2vw;
+  bottom: 1.3vw;
+  z-index: 1;
+  background-image: url("../img/details/chooseYep.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+html[data-page="details"] #alertK > .poster {
+  display: none;
+  width: 70vw;
+  height: 130vw;
+  background-color: white;
+  position: absolute;
+  left: 15vw;
+  top: 50%;
+  transform: translateY(-50%);
+}
+html[data-page="details"] #alertK > .poster.active {
+  display: block;
+}
+html[data-page="details"] #alertK > .poster > img:first-child {
+  width: 8vw;
+  height: 8vw;
+  margin: 4vw auto 3vw;
+  display: block;
+}
+html[data-page="details"] #alertK > .poster > div:nth-of-type(1) {
+  margin-left: 4vw;
+  width: 62vw;
+  height: 93vw;
+  border: 1px solid #CCCCCC;
+}
+html[data-page="details"] #alertK > .poster > div:nth-of-type(1) > img {
+  width: 100%;
+  height: 68vw;
+}
+html[data-page="details"] #alertK > .poster > div:nth-of-type(1) > div {
+  text-align: center;
+  margin-bottom: 2vw;
+}
+html[data-page="details"] #alertK > .poster > div:nth-of-type(1) > div:nth-of-type(1) {
+  font-size: 4vw;
+  color: #333333;
+  font-weight: normal;
+  font-family: Arial;
+  margin-bottom: 1.5vw;
+}
+html[data-page="details"] #alertK > .poster > div:nth-of-type(1) > div:nth-of-type(2) {
+  font-size: 2.8vw;
+  color: #666666;
+  font-weight: normal;
+  font-family: Arial;
+}
+html[data-page="details"] #alertK > .poster > div:nth-of-type(1) > div:last-child {
+  width: 50vw;
+  height: auto;
+  margin: 0 auto;
+  overflow: hidden;
+}
+html[data-page="details"] #alertK > .poster > div:nth-of-type(1) > div:last-child > div {
+  float: left;
+  width: 23vw;
+  height: auto;
+  font-size: 2.8vw;
+  color: #333333;
+  font-weight: normal;
+  font-family: Arial;
+  line-height: 2.8vw;
+  padding: 1.5vw 1vw 1vw;
+  border-radius: 3.5vw;
+  border: 1px solid #333333;
+}
+html[data-page="details"] #alertK > .poster > div:nth-of-type(1) > div:last-child > div > span {
+  font-size: 3.5vw;
+}
+html[data-page="details"] #alertK > .poster > div:nth-of-type(1) > div:last-child > div:first-child {
+  padding: 1.6vw 1vw 1vw;
+  border: none;
+  margin-right: 4vw;
+  color: white;
+  background-color: #D9001F;
+}
+html[data-page="details"] #alertK > .poster > div:nth-of-type(2) {
+  margin-left: 4vw;
+  margin-top: 4vw;
+  position: relative;
+}
+html[data-page="details"] #alertK > .poster > div:nth-of-type(2) > img {
+  width: 15vw;
+  height: 15vw;
+}
+html[data-page="details"] #alertK > .poster > div:nth-of-type(2) > div {
+  width: 30vw;
+  height: auto;
+  font-size: 3vw;
+  color: #999999;
+  font-weight: normal;
+  font-family: Arial;
+  position: absolute;
+  bottom: 0;
+  left: 17vw;
+}
+html[data-page="details"] #alertK > .poster > div:last-child {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+html[data-page="details"] #alertK > .poster > div:last-child .spinner {
+  width: 20vw;
+  height: 20vw;
+  background-color: #67CF22;
+  margin: 55vw auto 0;
+  animation: rotateplane 0.8s infinite ease-in-out;
+}
+html[data-page="details"] #alertK > .poster > div:last-child .cale {
+  animation: scale1 0.6s ease-in-out forwards;
+}
+@keyframes scale1 {
+  100% {
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+    opacity: 0.5;
+  }
+}
+@keyframes rotateplane {
+  0% {
+    transform: perspective(40vw) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(40vw) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    background-color: deepskyblue;
+    transform: perspective(40vw) rotateX(-180deg) rotateY(0deg);
+    -webkit-transform: perspective(40vw) rotateX(-180deg) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+  }
+}
+html[data-page="details"] #alertK > .poster > #shareImg {
+  width: 100%;
+  height: 100%;
+}
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  html[data-page="details"] #alertK .chooseSpecs {
+    width: 100% !important;
+    height: 50vh !important;
+    padding-bottom: 0!important;
+  }
+  html[data-page="details"] #alertK .poster {
+    display: none;
+    width: 65vw;
+    height: 110vw;
+    background-color: white;
+    position: absolute;
+    left: 17.5vw;
+    top: 45%;
+    transform: translateY(-50%);
+  }
+  html[data-page="details"] #alertK .poster.active {
+    display: block;
+  }
+  html[data-page="details"] #alertK .poster > img:first-child {
+    width: 5vw;
+    height: 5vw;
+    margin: 3vw auto 2vw;
+    display: block;
+  }
+  html[data-page="details"] #alertK .poster > div:nth-of-type(1) {
+    margin-left: 5vw;
+    width: 55vw;
+    height: 81vw;
+    border: 1px solid #CCCCCC;
+  }
+  html[data-page="details"] #alertK .poster > div:nth-of-type(1) > img {
+    width: 100%;
+    height: 60vw;
+    margin-bottom: 2vw;
+  }
+  html[data-page="details"] #alertK .poster > div:nth-of-type(1) > div {
+    text-align: center;
+    margin-bottom: 2vw;
+  }
+  html[data-page="details"] #alertK .poster > div:nth-of-type(1) > div:nth-of-type(1) {
+    font-size: 3.2vw;
+    color: #333333;
+    font-weight: normal;
+    font-family: Arial;
+    margin-bottom: 1.5vw;
+  }
+  html[data-page="details"] #alertK .poster > div:nth-of-type(1) > div:nth-of-type(2) {
+    font-size: 2.2vw;
+    color: #666666;
+    font-weight: normal;
+    font-family: Arial;
+  }
+  html[data-page="details"] #alertK .poster > div:nth-of-type(1) > div:last-child {
+    width: 50vw;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  html[data-page="details"] #alertK .poster > div:nth-of-type(1) > div:last-child > div {
+    float: left;
+    width: 23vw;
+    height: auto;
+    font-size: 2.2vw;
+    color: #333333;
+    font-weight: normal;
+    font-family: Arial;
+    line-height: 2.2vw;
+    padding: 1.5vw 1vw 1vw;
+    border-radius: 3.5vw;
+    border: 1px solid #333333;
+  }
+  html[data-page="details"] #alertK .poster > div:nth-of-type(1) > div:last-child > div > span {
+    font-size: 3vw;
+  }
+  html[data-page="details"] #alertK .poster > div:nth-of-type(1) > div:last-child > div:first-child {
+    padding: 1.6vw 1vw 1vw;
+    border: none;
+    margin-right: 4vw;
+    color: white;
+    background-color: #D9001F;
+  }
+  html[data-page="details"] #alertK .poster > div:nth-of-type(2) {
+    margin-left: 5vw;
+    margin-top: 3vw;
+    position: relative;
+  }
+  html[data-page="details"] #alertK .poster > div:nth-of-type(2) > img {
+    width: 13vw;
+    height: 13vw;
+  }
+  html[data-page="details"] #alertK .poster > div:nth-of-type(2) > div {
+    width: 30vw;
+    height: auto;
+    font-size: 2vw;
+    color: #999999;
+    font-weight: normal;
+    font-family: Arial;
+    position: absolute;
+    bottom: 0;
+    left: 15vw;
+  }
+  html[data-page="details"] #alertK .poster > div:last-child {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+  html[data-page="details"] #alertK .poster > div:last-child .spinner {
+    width: 20vw;
+    height: 20vw;
+    background-color: #67CF22;
+    margin: 55vw auto 0;
+    animation: rotateplane 0.8s infinite ease-in-out;
+  }
+  html[data-page="details"] #alertK .poster > div:last-child .cale {
+    animation: scale1 0.6s ease-in-out forwards;
+  }
+  @keyframes scale1 {
+    100% {
+      width: 100%;
+      height: 100%;
+      margin-top: 0;
+      opacity: 0.5;
+    }
+  }
+  @keyframes rotateplane {
+    0% {
+      transform: perspective(40vw) rotateX(0deg) rotateY(0deg);
+      -webkit-transform: perspective(40vw) rotateX(0deg) rotateY(0deg);
+    }
+    50% {
+      background-color: deepskyblue;
+      transform: perspective(40vw) rotateX(-180deg) rotateY(0deg);
+      -webkit-transform: perspective(40vw) rotateX(-180deg) rotateY(0deg);
+    }
+    100% {
+      transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+      -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+    }
+  }
+  html[data-page="details"] #alertK .poster > #shareImg {
+    width: 100%;
+    height: 100%;
+  }
+}
 /*# sourceMappingURL=details.css.map */

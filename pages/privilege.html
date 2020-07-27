@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" data-page="privilege">
+<head>
+    <meta charset="UTF-8">
+    <title>我的会员</title>
+
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--<link rel="stylesheet/less" type="text/css" href="../css/privilege.less" />-->
+    <link rel="stylesheet" href="../css/privilege.css" >
+
+    <!--<script src="lib/rem.js"></script>-->
+    <script src="../lib/jquery-2.2.3.min.js"></script>
+    <script src="../lib/less.js"></script>
+    <script src="../lib/less.min.js"></script>
+
+    <!--<link rel="stylesheet/less" type="text/css" href="../css/bg.less" />-->
+    <link rel="stylesheet" href="../css/bg.css" >
+    <script src="../js/bg.js"></script>
+
+    <!--<link rel="stylesheet" href="lib/layui/css/layui.css">-->
+    <!--<script src="lib/layui/layui.js"></script>-->
+
+</head>
+<body>
+<div id="bgt"></div>
+<a href="javascript:history.back(-1)" class="backPage"></a>
+
+<!--view-->
+<section id="view">
+    <!--bg-->
+    <section id="bg"></section>
+
+    <!--information-->
+    <section id="information">
+        <div>
+            <div data-user="userHead" style='background-image: url("../img/personal/userHead.png");'></div>
+            <div data-user="userAccount">13588888888</div>
+            <div data-user="userRemainder">可用积分<span>800</span></div>
+        </div>
+    </section>
+    <!--type-->
+    <section id="type">
+        <a href="javascript:void(0)">
+            <div style='background-image: url("../img/privilege/type1.png")'></div>
+            <div>红包</div>
+        </a>
+        <a href="javascript:void(0)">
+            <div style='background-image: url("../img/privilege/type2.png")'></div>
+            <div>礼品</div>
+        </a>
+        <a href="javascript:void(0)">
+            <div style='background-image: url("../img/privilege/type3.png")'></div>
+            <div>积分专区</div>
+        </a>
+        <a href="javascript:void(0)">
+            <div style='background-image: url("../img/privilege/type4.png")'></div>
+            <div>VIP专区</div>
+        </a>
+        <a href="javascript:void(0)">
+            <div style='background-image: url("../img/privilege/type5.png")'></div>
+            <div>升级会员</div>
+        </a>
+    </section>
+    <!--welfare-->
+    <section id="welfare">
+        <div>VIP福利</div>
+        <a href="javascript:void(0)" style='background-image: url("../img/privilege/welfare_1.png");'></a>
+        <a href="javascript:void(0)" style='background-image: url("../img/privilege/welfare_2.png");'></a>
+    </section>
+    <!--tab-->
+    <section id="tab">
+        <div class="act">红包</div>
+        <div>VIP专区</div>
+        <div>积分商城</div>
+    </section>
+    <!--list-->
+    <section id="list">
+        <!--红包-->
+        <div class="red-packet" style='background-image: url("../img/personal/coupon_bg2.png")'>
+            <a style="display: none" class="code" href="javascript:void(0)"></a>
+            <a class="go-use" href="javascript:void(0)">领取</a>
+            <div class="discount">
+                <div>￥<span>100</span></div>
+                <div>满<span>99</span>元即可使用</div>
+            </div>
+            <div class="date">
+                <div>使用日期：<span>2019.10.10</span>-<span>2019.10.22</span></div>
+            </div>
+            <div class="claim">使用要求：<span>限唐目云店使用，可用商品下单时可见有优惠券使用提示</span></div>
+
+        </div>
+        <!--VIP-->
+        <div class="VIP" style='background-image: url("../img/privilege/privilege_bg2.png")'>
+            <div style='background-image: url("../img/personal/goodsImg.png");'></div>
+            <div>
+                <div>￥<span>20</span></div>
+                <div>限唐目线上服装类商品可使用</div>
+                <div><span>2020.01.01</span>-<span>2020.01.31</span></div>
+            </div>
+            <div>
+                <div><span>20</span>积分</div>
+                <a href="javascript:void(0)">兑换</a>
+            </div>
+        </div>
+        <!--积分商城-->
+        <div class="remainder-market">
+            <div style='background-image: url("../img/personal/goodsImg.png");'></div>
+            <div>
+                <div>2019新款冬季黑色毛衣潮薄款针织套头衫修身显瘦长袖上…</div>
+                <div>
+                    <span><span>250</span>积分</span>
+                    <span>￥<span>299</span></span>
+                </div>
+            </div>
+            <div>
+                <a href="javascript:void(0)">兑换</a>
+                <div>已兑<span>100</span>件</div>
+            </div>
+        </div>
+
+    </section>
+
+</section>
+
+
+
+
+<script src="../js/privilege.js"></script>
+</body>
+</html>

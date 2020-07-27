@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" data-page="moneyExtract">
+<head>
+    <meta charset="UTF-8">
+    <title>金额提现</title>
+
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+    <!--<link rel="stylesheet/less" type="text/css" href="../css/myMoney.less" />-->
+    <link rel="stylesheet" href="../css/myMoney.css" >
+
+    <!--<script src="lib/rem.js"></script>-->
+    <script src="../lib/jquery-2.2.3.min.js"></script>
+    <script src="../lib/less.js"></script>
+    <script src="../lib/less.min.js"></script>
+
+    <!--<link rel="stylesheet/less" type="text/css" href="../css/bg.less" />-->
+    <link rel="stylesheet" href="../css/bg.css" >
+    <script src="../js/bg.js"></script>
+
+    <!--<link rel="stylesheet" href="lib/layui/css/layui.css">-->
+    <!--<script src="lib/layui/layui.js"></script>-->
+
+</head>
+<body>
+<div id="bgt"></div>
+
+<a href="javascript:history.back(-1)" class="backPage"></a>
+
+<!--moneyExtractDetails-->
+<section id="moneyExtractDetails">
+    <div>
+        <div>金额到账账户</div>
+        <a id="payMethod" href="javascript:$('#alertK').show()">
+            <div class="payImg" style='background-image: url("../img/VIP/moneyExtract_1.png");'></div>
+            <div class="payName">微信</div>
+            <div></div>
+            <p></p>
+        </a>
+        <p></p>
+    </div>
+    <div>
+        <div>提现金额</div>
+        <div>
+            <div></div>
+            <input id="moneyExtractMoney" type="text" oninput="clearNoNum(this)" autofocus>
+        </div>
+        <div>
+            <span>当前唐币余额<span>800.00</span>元</span>，<span data-money="800" onclick="allMoney(this)">全部提现</span>
+        </div>
+    </div>
+    <a href="javascript:void(0)">提现</a>
+</section>
+<!--alertK-->
+<section id="alertK">
+    <div class="chooseMethod">
+        <div data-pay="WeChat" onclick="radioChange(this)">
+            <div class="payImg" style='background-image: url("../img/VIP/moneyExtract_1.png")'></div>
+            <div class="payName">微信</div>
+            <div>
+                <input type="radio" id="radioWeChat" name="payRadio">
+                <label for="radioWeChat"></label>
+            </div>
+        </div>
+        <div data-pay="Alipay" onclick="radioChange(this)">
+            <div class="payImg" style='background-image: url("../img/VIP/moneyExtract_2.png");background-size: 90% 90%'></div>
+            <div class="payName">支付宝</div>
+            <div>
+                <input type="radio" id="radioAlipay" name="payRadio">
+                <label for="radioAlipay"></label>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="../js/myMoney.js"></script>
+<script>
+    //点击行切换支付方式
+    function radioChange(_this) {
+        $(_this).find('input[type=radio]').prop('checked',true);
+
+        var _payMethod=$('#payMethod');
+        var _name=$(_this).find('.payName').text();
+        var _img=$(_this).find('.payImg').css('background-image');
+        console.log(_name,' ccc ',_img);
+        $('#alertK').hide();
+        _payMethod.find('.payName').text(_name);
+        _payMethod.find('.payImg').css('background-image',_img);
+    }
+</script>
+</body>
+</html>

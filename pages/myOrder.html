@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en" data-page="myOrder">
+<head>
+    <meta charset="UTF-8">
+    <title>我的订单</title>
+
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--<link rel="stylesheet/less" type="text/css" href="../css/myOrder.less" />-->
+    <link rel="stylesheet" href="../css/myOrder.css" >
+
+    <!--<script src="lib/rem.js"></script>-->
+    <script src="../lib/jquery-2.2.3.min.js"></script>
+    <script src="../lib/less.js"></script>
+    <script src="../lib/less.min.js"></script>
+
+    <!--<link rel="stylesheet/less" type="text/css" href="../css/bg.less" />-->
+    <link rel="stylesheet" href="../css/bg.css" >
+    <script src="../js/bg.js"></script>
+
+    <link rel="stylesheet" href="../lib/layui/css/layui.css">
+    <script src="../lib/layui/layui.js"></script>
+
+</head>
+<body>
+<div id="bgt"></div>
+
+<a href="javascript:history.back(-1)" class="backPgae"></a>
+<!--tab-->
+<section id="tab">
+    <a data-status="0" href="javascript:void(0)">全部<p></p></a>
+    <a data-status="-1" href="javascript:void(0)">待付款<p></p></a>
+    <a data-status="1" href="javascript:void(0)">待发货<p></p></a>
+    <a data-status="2" href="javascript:void(0)">待收货<p></p></a>
+    <a data-status="3" href="javascript:void(0)">待评价<p></p></a>
+</section>
+<!--list-->
+<section id="list">
+    <!--待付款-->
+    <a href="orderDetails.html">
+        <div>
+            <div>
+                <span class="check">
+                    <input type="checkbox" id="checkboxId1">
+                    <label for="checkboxId1"></label>
+                </span>
+                下单时间：<span>2019-10-10</span></div>
+            <div class="nope">等待买家付款</div>
+        </div>
+        <div>
+            <div style='background-image: url("../img/personal/goodsImg2.png")'></div>
+            <div>
+                <div>2019新款冬季黑色毛衣潮薄款针 织套头衫修身显瘦长袖上衣</div>
+                <div>
+                    <div><span>黑色</span>；<span>S</span></div>
+                </div>
+            </div>
+            <p class="money">￥<span>297</span></p>
+            <p class="number">×<span>1</span></p>
+        </div>
+        <div>
+            <!--<span>-->
+                <!--实付：<span>￥299<span>.00</span></span><span>共<span>1</span>件</span>-->
+            <!--</span>-->
+            <span class="time">
+                剩余支付时间：<span class="hour">00</span>:<span class="min">14</span>:<span class="sec">59</span>
+            </span>
+        </div>
+        <div>
+            <object data="" type="">
+                <a class="act" href="javascript:void(0)">付款</a>
+                <a href="javascript:void(0)">取消订单</a>
+                <a href="javascript:void(0)">修改地址</a>
+            </object>
+        </div>
+    </a>
+    <a href="orderDetails.html">
+        <div>
+            <div>
+                <span class="check">
+                    <input type="checkbox" id="checkboxId2">
+                    <label for="checkboxId2"></label>
+                </span>
+                下单时间：<span>2019-10-10</span></div>
+            <div class="nope">等待买家付款</div>
+        </div>
+        <div>
+            <div style='background-image: url("../img/personal/goodsImg2.png")'></div>
+            <div>
+                <div>2019新款冬季黑色毛衣潮薄款针 织套头衫修身显瘦长袖上衣</div>
+                <div>
+                    <div><span>黑色</span>；<span>S</span></div>
+                </div>
+            </div>
+            <p class="money">￥<span>254</span></p>
+            <p class="number">×<span>1</span></p>
+        </div>
+        <div>
+            <!--<span>-->
+                <!--实付：<span>￥299<span>.00</span></span><span>共<span>1</span>件</span>-->
+            <!--</span>-->
+            <span class="time">
+                剩余支付时间：<span class="hour">00</span>:<span class="min">14</span>:<span class="sec">59</span>
+            </span>
+        </div>
+        <div>
+            <object data="" type="">
+                <a class="act" href="javascript:void(0)">付款</a>
+                <a href="javascript:void(0)">取消订单</a>
+                <a href="javascript:void(0)">修改地址</a>
+            </object>
+        </div>
+    </a>
+    <!--待发货-->
+    <a href="orderDetails.html">
+        <div>
+            <div>下单时间：<span>2019-10-10</span></div>
+            <div>买家已付款</div>
+        </div>
+        <div>
+            <div style='background-image: url("../img/personal/goodsImg2.png")'></div>
+            <div>
+                <div>2019新款冬季黑色毛衣潮薄款针 织套头衫修身显瘦长袖上衣</div>
+                <div>
+                    <div><span>黑色</span>；<span>S</span></div>
+                </div>
+            </div>
+            <p class="money">￥<span>297</span></p>
+            <p class="number">×<span>1</span></p>
+            <object data="" type="">
+                <a href="orderPostSale1.html">申请售后</a>
+            </object>
+        </div>
+        <div></div>
+        <div>
+            <!--<p>共<span>1</span>件商品&nbsp;&nbsp;实付:<span>￥299<span>.00</span></span></p>-->
+        </div>
+    </a>
+    <!--待收货-->
+    <a href="orderDetails.html">
+        <div>
+            <div>下单时间：<span>2019-10-10</span></div>
+            <div>等待买家收货</div>
+        </div>
+        <div>
+            <div style='background-image: url("../img/personal/goodsImg2.png")'></div>
+            <div>
+                <div>2019新款冬季黑色毛衣潮薄款针 织套头衫修身显瘦长袖上衣</div>
+                <div>
+                    <div><span>黑色</span>；<span>S</span></div>
+                </div>
+            </div>
+            <p class="money">￥<span>297</span></p>
+            <p class="number">×<span>1</span></p>
+            <object data="" type="">
+                <a href="orderPostSale1.html">申请售后</a>
+            </object>
+        </div>
+        <div>
+            <!--<span>-->
+                <!--实付：<span>￥299<span>.00</span></span><span>共<span>1</span>件</span>-->
+            <!--</span>-->
+        </div>
+        <div>
+            <object data="" type="">
+                <a class="act" href="javascript:void(0)">确认收货</a>
+                <a href="orderLogistics.html">查看物流</a>
+                <a href="javascript:void(0)">延长收货</a>
+            </object>
+        </div>
+    </a>
+    <!--待评价-->
+    <a href="orderDetails.html">
+        <div>
+            <div>下单时间：<span>2019-10-10</span></div>
+            <div>交易成功</div>
+        </div>
+        <div>
+            <div style='background-image: url("../img/personal/goodsImg2.png")'></div>
+            <div>
+                <div>2019新款冬季黑色毛衣潮薄款针 织套头衫修身显瘦长袖上衣</div>
+                <div>
+                    <div><span>黑色</span>；<span>S</span></div>
+                </div>
+            </div>
+            <p class="money">￥<span>297</span></p>
+            <p class="number">×<span>1</span></p>
+            <object data="" type="">
+                <a href="orderPostSale1.html">申请售后</a>
+            </object>
+        </div>
+        <div>
+            <!--<span>-->
+                <!--实付：<span>￥299<span>.00</span></span><span>共<span>1</span>件</span>-->
+            <!--</span>-->
+        </div>
+        <div>
+            <object data="" type="">
+                <a class="act" href="orderEvaluate.html">评价</a>
+            </object>
+        </div>
+    </a>
+    <!--已评价-->
+    <a href="orderDetails.html">
+        <div>
+            <div>下单时间：<span>2019-10-10</span></div>
+            <div>交易成功</div>
+        </div>
+        <div>
+            <div style='background-image: url("../img/personal/goodsImg2.png")'></div>
+            <div>
+                <div>2019新款冬季黑色毛衣潮薄款针 织套头衫修身显瘦长袖上衣</div>
+                <div>
+                    <div><span>黑色</span>；<span>S</span></div>
+                </div>
+            </div>
+            <p class="money">￥<span>297</span></p>
+            <p class="number">×<span>1</span></p>
+            <object data="" type="">
+                <a href="orderPostSale1.html">申请售后</a>
+            </object>
+        </div>
+        <div>
+            <!--<span>-->
+                <!--实付：<span>￥299<span>.00</span></span><span>共<span>1</span>件</span>-->
+            <!--</span>-->
+        </div>
+    </a>
+
+</section>
+
+<!--待付款下单footer-->
+<section id="footer">
+    <a href="javascript:void(0)" style='background-image: url("../img/order/goBuy2.png");'></a>
+    <div class="checkAll">
+        <input type="checkbox" id="checkAll">
+        <label for="checkAll"></label>
+        <label class="txt" for="checkAll">全选</label>
+    </div>
+    <div class="money">合并付款：￥<span>0</span></div>
+</section>
+
+<script src="../js/myOrder.js"></script>
+</body>
+</html>

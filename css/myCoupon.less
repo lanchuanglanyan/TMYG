@@ -1,0 +1,352 @@
+.div(@width:100%,@height:auto){
+  width: @width;
+  height: @height;
+}
+.fonts(@fs:0.16rem,@color:black,@fw:normal,@ff:Arial){font-size: @fs;color: @color;font-weight: @fw;font-family: @ff;line-height: @fs}
+@hide:{display: none};
+.backimg(@x:100%,@y:100%){
+  background-size: @x @y;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+.scroll(){
+  overflow: scroll;
+  &::-webkit-scrollbar{
+    display: none;
+    opacity: 0;
+    color: transparent;
+  }
+  scrollbar-track-color: transparent;
+  -ms-scrollbar-track-color: transparent;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  //background-color: transparent;
+}
+html,body{
+  .div(100%,100%);
+  //background-color: transparent;
+  -moz-user-select:none;/*火狐*/
+  -webkit-user-select:none;/*webkit浏览器*/
+  -ms-user-select:none;/*IE10*/
+  //user-select:none;
+}
+
+div,img,input,textarea,span,a{
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+div,input,textarea,span,a:focus,a:active,a:hover{
+  text-decoration: none;
+  //background-color: rgba(0,0,0,1);
+}
+
+
+html[data-page='myCoupon'] {
+  background-color: #F5F5F5;
+  padding-top: 5.3vw;
+
+  .backPage{
+    .div(5vw,9vw);
+    background-image: url("../img/back.png");
+    .backimg(50%,50%);
+    position: fixed;
+    left: 1.5vw;
+    top: 1.2vw;
+    z-index: 3;
+  }
+
+  #tab{
+    .div(100vw);
+    padding: 4vw 5vw 0;
+    overflow: hidden;
+    background-color: white;
+    margin-bottom: 1.3vw;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    box-shadow: 0 0 3vw rgba(0,0,0,0.1);
+    &>a{
+      float: left;
+      .div(30vw);
+      text-align: center;
+      .fonts(3.5vw,#333333);
+      &>p{
+        .div(8vw,0.8vw);
+        background-color: transparent;
+        margin: 3vw auto 0;
+        transition: background-color .12s;
+      }
+      transition: font-size .12s;
+      &:focus{
+        font-size: 4.8vw;
+        &>p{
+          background-color: #D9001F;
+        }
+      }
+      &.active{
+        font-size: 4.8vw;
+        &>p{
+          background-color: #D9001F;
+        }
+      }
+    }
+  }
+  #list{
+    padding-top: 10vw;
+    &>div{
+      .div(94.7vw,27.6vw);
+      margin: 0 auto 2.7vw;
+      border-radius: 1.3vw;
+      .backimg();
+      position: relative;
+      overflow: hidden;
+
+      &.gift-voucher>div{
+        float: left;
+        &:first-child{
+          .div(29.1vw,27.6vw);
+          .backimg();
+        }
+        &:last-child{
+
+          &>.code{
+            display: block;
+            .div(5.3vw,5.3vw);
+            background-image: url("../img/personal/coupon_code1.png");
+            .backimg();
+            position: absolute;
+            right: 2.1vw;
+            top: 2.1vw;
+          }
+          &>.go-use{
+            display: block;
+            .fonts(3.5vw,#D50F2A);
+            background-color: white;
+            padding: 1.5vw 2.7vw 1.3vw;
+            border-radius: 0.5vw;
+            position: absolute;
+            right: 5.3vw;
+            top: 9.5vw;
+          }
+          &>.name{
+            position: absolute;
+            left: 50vw;
+            top: 5vw;
+            transform: translate(-50%);
+            &>div{
+              text-align: center;
+              .fonts(2.7vw,white);
+              line-height: 3.2vw;
+              margin-bottom: 2.7vw;
+              &:first-child{
+                .fonts(6.7vw,white);
+                letter-spacing: 1vw;
+              }
+            }
+          }
+          &>.claim{
+            .div(60vw);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            position: absolute;
+            bottom: 0;
+            right: 5vw;
+            .fonts(2.7vw,white);
+            padding-top: 0.5vw;
+            transform: translateY(-35%);
+          }
+          &>.go{
+            display: block;
+            .div(1.6vw,2.7vw);
+            background-image: url("../img/personal/g3.png");
+            .backimg();
+            position: absolute;
+            bottom: 0;
+            right: 2.1vw;
+            transform: translateY(-40%);
+
+          }
+
+        }
+      }
+      &.red-packet{
+        &>.code{
+          display: block;
+          .div(5.3vw,5.3vw);
+          background-image: url("../img/personal/coupon_code2.png");
+          .backimg();
+          position: absolute;
+          right: 2.1vw;
+          top: 2.1vw;
+        }
+        &>.go-use{
+          display: block;
+          .fonts(3.5vw,white);
+          background-color: #D50F2A;
+          padding: 1.5vw 2.7vw 1.3vw;
+          border-radius: 0.5vw;
+          position: absolute;
+          right: 5.3vw;
+          top: 9.5vw;
+        }
+        &>.discount{
+          //.div(28vw,21vw);
+          float: left;
+          margin-top: 4vw;
+          margin-left: 2vw;
+          &>div{
+            text-align: center;
+            &:first-child{
+              .fonts(4.6vw,#D50F2A);
+              &>span{
+                .fonts(11vw,#D50F2A);
+              }
+              line-height: 8vw;
+            }
+            &:last-child{
+              .fonts(2.7vw,#666666);
+            }
+          }
+        }
+        &>.date{
+          position: absolute;
+          left: 50vw;
+          top: 11vw;
+          transform: translate(-50%);
+          .fonts(2.7vw,#666666);
+        }
+        &>.claim{
+          .div(90.5vw);
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          position: absolute;
+          bottom: 0;
+          left: 2.1vw;
+          .fonts(2.7vw,white);
+          padding-top: 0.5vw;
+          transform: translateY(-35%);
+        }
+
+      }
+      &.free-postage{
+        &>.go-use{
+          display: block;
+          .fonts(3.5vw,#D50F2A);
+          background-color: white;
+          padding: 1.5vw 2.7vw 1.3vw;
+          border-radius: 0.5vw;
+          position: absolute;
+          right: 5.3vw;
+          top: 9.5vw;
+        }
+        &>.name{
+          text-align: center;
+          .fonts(6.7vw,white);
+          width: 27.6vw;
+          position: absolute;
+          top: 45%;
+          left: 0;
+          transform: translateY(-50%);
+        }
+        &>.date{
+          .div(35vw);
+          position: absolute;
+          left: 50vw;
+          top: 40%;
+          transform: translate(-50%,-20%);
+          .fonts(2.7vw,white);
+          &>div:last-child{
+            margin-top: 1vw;
+            padding-top: 0.5vw;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+        }
+        &>.claim{
+          .div(90.5vw);
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          position: absolute;
+          bottom: 0;
+          left: 2.1vw;
+          .fonts(2.7vw,white);
+          padding-top: 0.5vw;
+          transform: translateY(-35%);
+        }
+
+      }
+
+    }
+  }
+
+  #alertK{
+    //display: block;
+    &>.qrCode{
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+
+      .div(90vw,125vw);
+      background-image: url("../img/personal/coupon_bg3.png");
+      .backimg();
+
+      &>a{
+        .div(4.5vw,4.5vw);
+        background-image: url("../img/back2.png");
+        .backimg();
+        position: absolute;
+        right: 4vw;
+        top: 4vw;
+      }
+      &>img{
+        display: block;
+        .div(62vw);
+        border: none;
+        margin: 15.2vw auto 2.7vw;
+      }
+      &>.qr-code{
+        text-align: center;
+        .fonts(4vw,#333333);
+      }
+      &>.claim{
+        margin: 12.6vw auto 0;
+        .div(62vw);
+        .fonts(2.7vw,#333333);
+        line-height: 4vw;
+        &>div{
+          overflow: hidden;
+          &:first-child{
+            margin-bottom: 2.7vw;
+          }
+          &>div{
+            float: left;
+            &:first-child{
+              width: 14vw;
+            }
+            &:last-child{
+              width: 48vw;
+            }
+
+          }
+        }
+      }
+
+    }
+  }
+
+}

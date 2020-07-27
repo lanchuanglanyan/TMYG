@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" data-page="orderPay">
+<head>
+    <meta charset="UTF-8">
+    <title>支付选择</title>
+
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--<link rel="stylesheet/less" type="text/css" href="../css/orderPay.less" />-->
+    <link rel="stylesheet" href="../css/orderPay.css" >
+
+    <!--<script src="lib/rem.js"></script>-->
+    <script src="../lib/jquery-2.2.3.min.js"></script>
+    <script src="../lib/less.js"></script>
+    <script src="../lib/less.min.js"></script>
+
+    <!--<link rel="stylesheet/less" type="text/css" href="../css/bg.less" />-->
+    <link rel="stylesheet" href="../css/bg.css" >
+    <script src="../js/bg.js"></script>
+
+    <link rel="stylesheet" href="../lib/layui/css/layui.css">
+    <script src="../lib/layui/layui.js"></script>
+
+</head>
+<body>
+<div id="bgt"></div>
+<!--message-->
+<section id="message">
+    <a href="javascript:history.back(-1)"></a>
+    <div>￥<span>299<span>.00</span></span></div>
+    <div>剩余支付时间：<span class="hour">00</span>:<span class="min">00</span>:<span class="sec">00</span></div>
+    <a href="javascript:void(0)">订单详情<span></span></a>
+</section>
+<!--payList-->
+<section id="payList">
+    <a href="javascript:void(0)" onclick="changeRadio(this)" data-pay="surplus">
+        <div style='background-image: url("../img/order/surplus.png")'></div>
+        <div>余额支付</div>
+        <div>
+            <input type="radio" name="pay" id="pay1" checked>
+            <label for="pay1"></label>
+        </div>
+    </a>
+    <a href="javascript:void(0)" onclick="changeRadio(this)" data-pay="surplus">
+        <div style='background-image: url("../img/order/alipay.png");background-size: 100% 80%'></div>
+        <div>支付宝</div>
+        <div>
+            <input type="radio" name="pay" id="pay2">
+            <label for="pay2"></label>
+        </div>
+    </a>
+    <a href="javascript:void(0)" onclick="changeRadio(this)" data-pay="surplus">
+        <div style='background-image: url("../img/order/wechat.png");background-size: 100% 80%'></div>
+        <div>微信支付</div>
+        <div>
+            <input type="radio" name="pay" id="pay3">
+            <label for="pay3"></label>
+        </div>
+    </a>
+</section>
+<!--payOrder-->
+<a href="orderPayOK.html" id="payOrder"></a>
+<script>
+    function changeRadio(_this) {
+        $(_this).find('input[type=radio]').prop('checked',true);
+    }
+</script>
+</body>
+</html>

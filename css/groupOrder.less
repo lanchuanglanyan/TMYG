@@ -1,0 +1,186 @@
+.div(@width:100%,@height:auto){
+  width: @width;
+  height: @height;
+}
+.fonts(@fs:0.16rem,@color:black,@fw:normal,@ff:Arial){font-size: @fs;color: @color;font-weight: @fw;font-family: @ff}
+@hide:{display: none};
+.backimg(@x:100%,@y:100%){
+  background-size: @x @y;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+.scroll(@bgc:transparent,@none:none){
+  overflow: scroll;
+  &::-webkit-scrollbar{
+    display: @none;
+    opacity: 0;
+    color: @bgc;
+  }
+  scrollbar-track-color: @bgc;
+  -ms-scrollbar-track-color: @bgc;
+  scrollbar-width: @none;
+  -ms-overflow-style: @none;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  //background-color: transparent;
+}
+html,body{
+  .div(100%,100%);
+  //background-color: transparent;
+  -moz-user-select:none;/*火狐*/
+  -webkit-user-select:none;/*webkit浏览器*/
+  -ms-user-select:none;/*IE10*/
+  //user-select:none;
+}
+
+div,img,input,textarea,span,a{
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+div,input,textarea,span,a:focus,a:active,a:hover{
+  text-decoration: none;
+  //background-color: rgba(0,0,0,1);
+}
+
+
+html[data-page="groupOrder"]{
+  background-color: #F5F5F5;
+
+  .backPgae{
+    .div(5vw,9vw);
+    background-image: url("../img/details/back1.png");
+    .backimg(50%,50%);
+    position: fixed;
+    left: 1.5vw;
+    top: 1.2vw;
+    z-index: 2;
+  }
+
+  #tab{
+    .div(100vw);
+    padding: 4vw 5vw 0;
+    overflow: hidden;
+    background-color: white;
+    margin-bottom: 1.3vw;
+    position: fixed;
+    left: 0;
+    top: 0;
+    box-shadow: 0 0 3vw rgba(0,0,0,0.1);
+    &>a{
+      float: left;
+      .div(30vw);
+      text-align: center;
+      .fonts(3.5vw,#333333);
+      line-height: 3.5vw;
+      &>p{
+        .div(8vw,0.8vw);
+        background-color: transparent;
+        margin: 3vw auto 0;
+        transition: background-color .2s;
+      }
+      transition: font-size .2s;
+      &:focus{
+        font-size: 4.8vw;
+        &>p{
+          background-color: #D9001F;
+        }
+      }
+      &.active{
+        .fonts(4.8vw,#333333);
+        &>p{
+          background-color: #D9001F;
+        }
+      }
+    }
+  }
+  #list{
+    padding-top: 14vw;
+    .div(100%,100%);
+    .scroll();
+    &>a{
+      display: block;
+      margin: 0 auto 2vw;
+      .div(94.7vw);
+      padding: 2.7vw;
+      background-color: white;
+      border-radius: 1.3vw;
+
+      &>div{
+        &:first-child{
+          overflow: hidden;
+          &>div{
+            .fonts(3.5vw,#333333);
+            &:first-child{
+              .div(75%);
+              float: left;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+            }
+            &:last-child{
+              .div(25%);
+              color: #DD0100;
+              float: right;
+              text-align: right;
+            }
+          }
+          margin-bottom: 2.7vw;
+        }
+        &:nth-of-type(2){
+          overflow: hidden;
+          &>div{
+            float: left;
+            &:first-child{
+              .div(21.5vw,21.5vw);
+              .backimg();
+              margin-right: 2.5vw;
+            }
+            &:last-child{
+              .div(65.3vw);
+              &>div{
+                &:first-child{
+                  .fonts(3.5vw,#333333);
+                  line-height: 6vw;
+                  margin-bottom: 3vw;
+                }
+                &:last-child{
+                  overflow: hidden;
+                  &>div{
+                    .fonts(3.5vw,#333333);
+                    float: left;
+                    line-height: 7vw;
+                  }
+                  &>object>a{
+                    display: block;
+                    float: right;
+                    .fonts(3.5vw,white);
+                    background-color: #DD0100;
+                    border-radius: 1.3vw;
+                    padding: 1.3vw 2.7vw;
+                  }
+                }
+              }
+            }
+          }
+        }
+        &:last-child{
+          margin-top: 2.7vw;
+          .fonts(2.7vw,#999999);
+        }
+
+      }
+
+    }
+  }
+
+
+}
+
+

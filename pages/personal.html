@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en" data-page="personal">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心</title>
+
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--<link rel="stylesheet/less" type="text/css" href="../css/personal.less" />-->
+    <link rel="stylesheet" href="../css/personal.css" >
+
+    <!--<script src="lib/rem.js"></script>-->
+    <script src="../lib/jquery-2.2.3.min.js"></script>
+    <script src="../lib/less.js"></script>
+    <script src="../lib/less.min.js"></script>
+
+    <!--<link rel="stylesheet/less" type="text/css" href="../css/bg.less" />-->
+    <link rel="stylesheet" href="../css/bg.css" >
+    <script src="../js/bg.js"></script>
+
+    <!--<link rel="stylesheet" href="lib/layui/css/layui.css">-->
+    <!--<script src="lib/layui/layui.js"></script>-->
+
+</head>
+<body>
+<div id="bgt"></div>
+<!--view-->
+<section id="view">
+    <!--bg-->
+    <section id="bg">
+        <a href="install.html" id="install"></a>
+    </section>
+    <!--information-->
+    <section id="information">
+        <div>
+            <a href="privilege.html" class="personal">
+                <div class="userHead" style='background-image: url("../img/personal/userHead.png")'></div>
+                <div class="userName">这是一个微信用户名称</div>
+                <span class="VIP">VIP会员</span>
+            </a>
+            <a href="javascript:void(0)" class="qrCode">
+                <div></div>
+                <div>会员付款码</div>
+            </a>
+            <p style="clear: both"></p>
+        </div>
+        <div>
+            <a href="myMoney.html" class="virtual_coin">
+                <div id="virtualCoinNumber">800</div>
+                <div>唐币</div>
+            </a>
+            <a href="spread.html" class="balance">
+                <div id="balanceNumber">800</div>
+                <div>(待分佣金:<span id="extractBalance">142.00</span>)</div>
+                <div>余额</div>
+            </a>
+            <a href="javascript:void(0)" class="integral">
+                <div class="integralNumber">2</div>
+                <div>积分</div>
+            </a>
+        </div>
+    </section>
+    <!--welfare-->
+    <section id="welfare">
+        <!--class='subscript' 是角标-->
+        <div>我的福利</div>
+        <div>
+            <a href="myCoupon.html?status=1">
+                <div>
+                    <div style='background-image: url("../img/personal/gift_voucher.png")'></div>
+                    <p class="subscript">2</p>
+                </div>
+                <div>礼品券</div>
+            </a>
+            <a href="myCoupon.html?status=2">
+                <div>
+                    <div style='background-image: url("../img/personal/red_packet.png");background-size: 6.1vw 6.7vw'></div>
+                    <p class="subscript">1</p>
+                </div>
+                <div>红包</div>
+            </a>
+            <a href="myCoupon.html?status=3">
+                <div>
+                    <div style='background-image: url("../img/personal/free_postage.png");background-size: 8.5vw 6.7vw'></div>
+                    <p class="subscript" style="margin-left: 17vw">9</p>
+                </div>
+                <div>免邮券</div>
+            </a>
+        </div>
+    </section>
+    <!--order-->
+    <section id="order">
+        <!--class='subscript' 是角标-->
+        <div>
+            <div>我的订单</div>
+            <a href="myOrder.html?status=0">全部订单 <span></span></a>
+        </div>
+        <div>
+            <a href="myOrder.html?status=-1">
+                <div style='background-image: url("../img/personal/states1.png");background-size: 6vw 5.3vw'><p class="subscript">1</p></div>
+                待付款
+            </a>
+            <a href="myOrder.html?status=1">
+                <div style='background-image: url("../img/personal/states2.png");background-size: 6vw 5.3vw'><p class="subscript">2</p></div>
+                待发货
+            </a>
+            <a href="myOrder.html?status=2">
+                <div style='background-image: url("../img/personal/states3.png");background-size: 6vw 5.3vw'><p class="subscript">9</p></div>
+                待收货
+            </a>
+            <a href="myOrder.html?status=3">
+                <div style='background-image: url("../img/personal/states4.png");background-size: 5.6vw 5.6vw'><p class="subscript">13</p></div>
+                待评价
+            </a>
+            <a href="javascript:void(0)">
+                <div style='background-image: url("../img/personal/states5.png");background-size: 6.2vw 6vw'><p class="subscript">99</p></div>
+                退款/售后
+            </a>
+            <p style="clear: both"></p>
+        </div>
+        <!--最新状态订单显示-->
+        <a href="javascript:void(0)">
+            <div>
+                <img class="up_to_date" src="../img/personal/up_to_date.png" alt="">
+            </div>
+            <div>
+                <div>
+                    <div><span style='background-image: url("../img/personal/status.png")'></span>已签收</div>
+                    <div class="date">10-10</div>
+                </div>
+                <div>已签收，签收人凭借货码签收。</div>
+            </div>
+        </a>
+    </section>
+    <!--groupInformation-->
+    <section id="groupInformation">
+        <!--显示最新团购信息-->
+        <a href="groupOrder.html">
+            <div>
+                <img class="up_to_date" src="../img/personal/up_to_date.png" alt="">
+            </div>
+            <div>
+                <div>
+                    <div><span style='background-image: url("../img/personal/group.png")'></span>已签收</div>
+                    <div class="date">10-10</div>
+                </div>
+                <div>已签收，签收人凭借货码签收。</div>
+            </div>
+        </a>
+    </section>
+    <!--VIP-->
+    <a href="getVIP.html" id="getVIP" style='background-image: url("../img/personal/VIP.png")'></a>
+    <!--spread-->
+    <section id="spread">
+        <div>
+            <div>我的推广</div>
+            <a href="spread.html"></a>
+        </div>
+        <div>
+            <a href="spread.html">
+                <div style='background-image: url("../img/personal/spread1.png");background-size: 8vw 6.7vw'></div>
+                <div>推广中心</div>
+            </a>
+            <a href="javascript:void(0)">
+                <div style='background-image: url("../img/personal/spreadCode.png")'></div>
+                <div>我的推广码</div>
+            </a>
+            <a href="spreadReward.html">
+                <div style='background-image: url("../img/personal/spreadReward.png")'></div>
+                <div>销售奖励</div>
+            </a>
+            <a href="spreadTeam.html">
+                <div style='background-image: url("../img/personal/spreadTeam.png")'></div>
+                <div>我的团队</div>
+            </a>
+        </div>
+    </section>
+    <!--more-->
+    <section id="more">
+        <div>
+            <a href="groupOrder.html">
+                <div style='background-image: url("../img/personal/more1.png");background-size: 5.6vw 5.3vw'></div>
+                <div>拼团订单</div>
+            </a>
+            <a href="getVIP.html">
+                <div style='background-image: url("../img/personal/more2.png");background-size: 5.6vw 5.6vw'></div>
+                <div>开通VIP</div>
+            </a>
+            <a href="javascript:void(0)">
+                <div style='background-image: url("../img/personal/more3.png");background-size: 4.5vw 5.6vw'></div>
+                <div>新人有礼</div>
+            </a>
+            <a href="javascript:void(0)">
+                <div style='background-image: url("../img/personal/more4.png")'></div>
+                <div>帮助中心</div>
+            </a>
+        </div>
+        <div>
+            <a href="javascript:void(0)">
+                <div style='background-image: url("../img/personal/more5.png");background-size: 5.3vw 6.1vw'></div>
+                <div>收货地址</div>
+            </a>
+            <a href="javascript:void(0)">
+                <div style='background-image: url("../img/personal/more6.png");background-size: 5.6vw 5.6vw'></div>
+                <div>下载APP</div>
+            </a>
+            <a href="javascript:void(0)">
+                <div style='background-image: url("../img/personal/more7.png");background-size: 5.6vw 5.6vw'></div>
+                <div>关于我们</div>
+            </a>
+            <a href="javascript:void(0)">
+                <div style='background-image: url("../img/personal/more8.png");background-size: 5.6vw 5.6vw'></div>
+                <div>设置</div>
+            </a>
+        </div>
+    </section>
+    <!--goodsList-->
+    <section id="goodsList">
+        <div class="tab">
+            <div class="active">专属推荐</div>
+            <div>最近浏览</div>
+            <div>我的收藏</div>
+        </div>
+        <div id="goods_list">
+            <a href="javascript:void(0)" data-id="goodsId">
+                <div style='background-image: url("../img/personal/goodsImg.png")'></div>
+                <div class="name">2019秋冬新款西装领宽松针织外…</div>
+                <div>
+                    <div>￥<span class="original_price">499</span></div>
+                    <div>
+                        <div>VIP￥<span class="present_price">399</span></div>
+                        <div><span class="payment_number">30</span>人付款</div>
+                    </div>
+                </div>
+            </a>
+            <a href="javascript:void(0)" data-id="goodsId">
+                <div style='background-image: url("../img/personal/goodsImg.png")'></div>
+                <div class="name">2019秋冬新款西装领宽松针织外…</div>
+                <div>
+                    <div>￥<span class="original_price">499</span></div>
+                    <div>
+                        <div>VIP￥<span class="present_price">399</span></div>
+                        <div><span class="payment_number">30</span>人付款</div>
+                    </div>
+                </div>
+            </a>
+            <a href="javascript:void(0)" data-id="goodsId">
+                <div style='background-image: url("../img/personal/goodsImg.png")'></div>
+                <div class="name">2019秋冬新款西装领宽松针织外…</div>
+                <div>
+                    <div>￥<span class="original_price">499</span></div>
+                    <div>
+                        <div>VIP￥<span class="present_price">399</span></div>
+                        <div><span class="payment_number">30</span>人付款</div>
+                    </div>
+                </div>
+            </a>
+            <a href="javascript:void(0)" data-id="goodsId">
+                <div style='background-image: url("../img/personal/goodsImg.png")'></div>
+                <div class="name">2019秋冬新款西装领宽松针织外…</div>
+                <div>
+                    <div>￥<span class="original_price">499</span></div>
+                    <div>
+                        <div>VIP￥<span class="present_price">399</span></div>
+                        <div><span class="payment_number">30</span>人付款</div>
+                    </div>
+                </div>
+            </a>
+            <a href="javascript:void(0)" data-id="goodsId">
+                <div style='background-image: url("../img/personal/goodsImg.png")'></div>
+                <div class="name">2019秋冬新款西装领宽松针织外…</div>
+                <div>
+                    <div>￥<span class="original_price">499</span></div>
+                    <div>
+                        <div>VIP￥<span class="present_price">399</span></div>
+                        <div><span class="payment_number">30</span>人付款</div>
+                    </div>
+                </div>
+            </a>
+            <a href="javascript:void(0)" data-id="goodsId">
+                <div style='background-image: url("../img/personal/goodsImg.png")'></div>
+                <div class="name">2019秋冬新款西装领宽松针织外…</div>
+                <div>
+                    <div>￥<span class="original_price">499</span></div>
+                    <div>
+                        <div>VIP￥<span class="present_price">399</span></div>
+                        <div><span class="payment_number">30</span>人付款</div>
+                    </div>
+                </div>
+            </a>
+
+            <!--<a href="javascript:void(0)" data-id="goodsId">-->
+            <!--<div style='background-image: url("img/personal/goodsImg.png")'></div>-->
+            <!--<div class="name">2019秋冬新款西装领宽松针织外…</div>-->
+            <!--<div>-->
+            <!--<div>￥<span class="original_price">499</span></div>-->
+            <!--<div>VIP￥<span class="present_price">399</span></div>-->
+            <!--<div><span class="payment_number">30</span>人付款</div>-->
+            <!--</div>-->
+            <!--</a>-->
+
+        </div>
+    </section>
+
+</section>
+
+<!--footer-->
+<section id="footer">
+    <a href="choice.html"></a>
+    <div>
+        <a href="../index.html">
+            <div class="nav1" style='background-image: url("../img/nav/nav1_1.png");background-size: 36%,36%;'></div>
+            <div class="nav2" style='background-image: url("../img/nav/nav1_2.png");background-size: 36%,36%;'></div>
+            <div class="txt">首页</div>
+        </a>
+        <a href="classification.html">
+            <div class="nav1" style='background-image: url("../img/nav/nav2_1.png");background-size: 33%,33%;'></div>
+            <div class="nav2" style='background-image: url("../img/nav/nav2_2.png");background-size: 33%,33%;'></div>
+            <div class="txt">分类</div>
+        </a>
+        <a href="choice.html">优选</a>
+        <a href="shoppingCart.html">
+            <div class="nav1" style='background-image: url("../img/nav/nav3_1.png");background-size: 40%,30%;'></div>
+            <div class="nav2" style='background-image: url("../img/nav/nav3_2.png");background-size: 40%,30%;'></div>
+            <div class="txt">购物车</div>
+            <!--<p id="goodsNumber">1</p>-->
+        </a>
+        <a class="active" href="javascript:void(0)">
+            <div class="nav1" style='background-image: url("../img/nav/nav4_1.png");background-size: 30%,30%;'></div>
+            <div class="nav2" style='background-image: url("../img/nav/nav4_2.png");background-size: 30%,30%;'></div>
+            <div class="txt">个人</div>
+        </a>
+    </div>
+</section>
+
+<script src="../js/personal.js"></script>
+</body>
+</html>

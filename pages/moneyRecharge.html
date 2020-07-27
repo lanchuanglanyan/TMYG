@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" data-page="moneyRecharge">
+<head>
+    <meta charset="UTF-8">
+    <title>金额充值</title>
+
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+    <!--<link rel="stylesheet/less" type="text/css" href="../css/myMoney.less" />-->
+    <link rel="stylesheet" href="../css/myMoney.css" >
+
+    <!--<script src="lib/rem.js"></script>-->
+    <script src="../lib/jquery-2.2.3.min.js"></script>
+    <script src="../lib/less.js"></script>
+    <script src="../lib/less.min.js"></script>
+
+    <!--<link rel="stylesheet/less" type="text/css" href="../css/bg.less" />-->
+    <link rel="stylesheet" href="../css/bg.css" >
+    <script src="../js/bg.js"></script>
+
+    <!--<link rel="stylesheet" href="lib/layui/css/layui.css">-->
+    <!--<script src="lib/layui/layui.js"></script>-->
+
+</head>
+<body>
+<div id="bgt"></div>
+
+<a href="javascript:history.back(-1)" class="backPage"></a>
+<!--moneyRechargeK-->
+<section id="moneyRechargeK">
+    <div>唐币余额</div>
+    <div>800.00</div>
+</section>
+<!--moneyRechargeSelect-->
+<section id="moneyRechargeSelect">
+    <a class="act" href="javascript:void(0)">
+        <div>
+            <div><span class="recharge">100</span>元</div>
+            <div>充<span class="rechargeM">1000</span>送<span class="rechargeS">50</span>唐币</div>
+        </div>
+    </a>
+    <a href="javascript:void(0)">
+        <div>
+            <div><span class="recharge">200</span>元</div>
+            <div>充<span class="rechargeM">1000</span>送<span class="rechargeS">50</span>唐币</div>
+        </div>
+    </a>
+    <a href="javascript:void(0)">
+        <div>
+            <div><span class="recharge">300</span>元</div>
+            <div>充<span class="rechargeM">1000</span>送<span class="rechargeS">50</span>唐币</div>
+        </div>
+    </a>
+    <a href="javascript:void(0)">
+        <div>
+            <div><span class="recharge">500</span>元</div>
+            <div>充<span class="rechargeM">1000</span>送<span class="rechargeS">50</span>唐币</div>
+        </div>
+    </a>
+    <a href="javascript:void(0)">
+        <div>
+            <div><span class="recharge">1000</span>元</div>
+            <div>充<span class="rechargeM">1000</span>送<span class="rechargeS">50</span>唐币</div>
+        </div>
+    </a>
+    <a href="javascript:void(0)">
+        <div>
+            <div><span class="recharge">2000</span>元</div>
+            <div>充<span class="rechargeM">1000</span>送<span class="rechargeS">50</span>唐币</div>
+        </div>
+    </a>
+</section>
+<!--moneyRechargeMethod-->
+<section id="moneyRechargeMethod">
+    <div>支付方式</div>
+    <div>
+        <div onclick="radioChange(this)">
+            <div style='background-image: url("../img/order/alipay.png");background-size: 100% 90%'></div>
+            <div>支付宝</div>
+            <div>
+                <input type="radio" id="radioAlipay" name="payRadio">
+                <label for="radioAlipay"></label>
+            </div>
+        </div>
+        <div onclick="radioChange(this)">
+            <div style='background-image: url("../img/order/wechat.png")'></div>
+            <div>微信支付</div>
+            <div>
+                <input type="radio" id="radioWeChat" name="payRadio">
+                <label for="radioWeChat"></label>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Yeape-->
+<a href="javascript:void(0)" id="payYeape"></a>
+<script src="../js/myMoney.js"></script>
+<script>
+    var $body=$('body');
+    //点击行切换支付方式
+    function radioChange(_this) {
+        $(_this).find('input[type=radio]').prop('checked',true);
+    }
+
+
+
+</script>
+</body>
+</html>

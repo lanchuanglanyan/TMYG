@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" data-page="install3">
+<head>
+    <meta charset="UTF-8">
+    <title>意见反馈</title>
+
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet/less" type="text/css" href="../css/install.less" />
+    <!--<link rel="stylesheet" href="../css/install.css" >-->
+
+    <!--<script src="lib/rem.js"></script>-->
+    <script src="../lib/jquery-2.2.3.min.js"></script>
+    <script src="../lib/less.js"></script>
+    <script src="../lib/less.min.js"></script>
+
+    <!--<link rel="stylesheet/less" type="text/css" href="../css/bg.less" />-->
+    <link rel="stylesheet" href="../css/bg.css" >
+    <script src="../js/bg.js"></script>
+
+    <link rel="stylesheet" href="../lib/layui/css/layui.css">
+    <script src="../lib/layui/layui.js"></script>
+
+</head>
+<body>
+<div id="bgt"></div>
+<!--back-->
+<section id="back">
+    <a href="javascript:history.back(-1)"></a>
+</section>
+<!--block-->
+<section class="block">
+    <a onclick="checkThis(this)" href="javascript:void(0)">
+        <div><input type="radio" checked name="feedback" id="feedback1"><label for="feedback1"></label></div>
+        <span>功能异常：功能故障或不可用</span>
+    </a>
+    <a onclick="checkThis(this)" href="javascript:void(0)">
+        <div><input type="radio" name="feedback" id="feedback2"><label for="feedback2"></label></div>
+        <span>产品建议：用的不舒服，我有建议</span>
+    </a>
+    <a onclick="checkThis(this)" href="javascript:void(0)">
+        <div><input type="radio" name="feedback" id="feedback3"><label for="feedback3"></label></div>
+        <span>安全问题：密码、隐私、欺诈等</span>
+    </a>
+    <a onclick="checkThis(this)" href="javascript:void(0)">
+        <div><input type="radio" name="feedback" id="feedback4"><label for="feedback4"></label></div>
+        <span>商户终端异常：无法支付、支付慢等</span>
+    </a>
+    <a onclick="checkThis(this)" href="javascript:void(0)">
+        <div><input type="radio" name="feedback" id="feedback5"><label for="feedback5"></label></div>
+        <span>其他问题</span>
+    </a>
+</section>
+<p class="txt">请补充详细问题和意见</p>
+<section class="text">
+    <textarea maxlength="250" placeholder="请输入不少于10个字的描述" oninput="txtNumber(this)"></textarea>
+    <p><span>0</span>/250</p>
+</section>
+
+<section id="submit">提&nbsp;交</section>
+
+<script>
+    let $body=$('body');
+
+    function checkThis(_this) {
+        $(_this).siblings().find('input').prop('checked',false);
+        $(_this).find('input').prop('checked',true);
+    }
+
+    function txtNumber(_this) {
+        $(_this).siblings().find('span').text($(_this).val().length);
+        if( 250 - $(_this).val().length <= 0 ){
+
+        }
+    }
+</script>
+</body>
+</html>

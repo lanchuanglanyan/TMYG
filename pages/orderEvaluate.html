@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" data-page="orderEvaluate">
+<head>
+    <meta charset="UTF-8">
+    <title>订单评价</title>
+
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--<link rel="stylesheet/less" type="text/css" href="../css/orderEvaluate.less" />-->
+    <link rel="stylesheet" href="../css/orderEvaluate.css" >
+
+    <!--<script src="lib/rem.js"></script>-->
+    <script src="../lib/jquery-2.2.3.min.js"></script>
+    <script src="../lib/less.js"></script>
+    <script src="../lib/less.min.js"></script>
+
+    <!--<link rel="stylesheet/less" type="text/css" href="../css/bg.less" />-->
+    <link rel="stylesheet" href="../css/bg.css" >
+    <script src="../js/bg.js"></script>
+
+    <link rel="stylesheet" href="../lib/layui/css/layui.css">
+    <script src="../lib/layui/layui.js"></script>
+
+</head>
+<body>
+<div id="bgt"></div>
+
+<!--title-->
+<section id="title">
+    <a href="javascript:history.back(-1)"><span></span>发表评价</a>
+</section>
+<!--view-->
+<section id="view">
+    <!--goodsGrade-->
+    <section id="goodsGrade">
+        <div style='background-image: url("../img/personal/goodsImg2.png")'></div>
+        <div>
+            <div>2019新款冬季黑色毛衣潮薄款针织套头 衫修身显瘦长袖上衣</div>
+            <div><span>黑色</span>；<span>S</span></div>
+            <div class="grade">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <p></p>
+    </section>
+    <!--evaluate-->
+    <section id="evaluate">
+        <textarea name="" oninput="evaluateLength(this)" maxlength="150" placeholder="请输入您的评论"></textarea>
+        <div>还可以输入<span>150</span>字</div>
+    </section>
+    <!--uploadImg-->
+    <section id="uploadImg">
+        <div>
+            <div style='background-image: url("../img/personal/goodsImg2.png");'>
+                <p></p>
+            </div>
+            <div style='background-image: url("../img/personal/goodsImg2.png");'>
+                <p></p>
+            </div>
+            <div class="addImg">
+                <input type="file" accept="image/*" name="file" id="addImg">
+            </div>
+            <p></p>
+        </div>
+        <!--<div>-->
+        <!--<input type="checkbox" id="anonymous">-->
+        <!--<label for="anonymous"></label>-->
+        <!--<label for="anonymous">匿名评价</label>-->
+        <!--</div>-->
+    </section>
+    <!--otherGrade-->
+    <section id="otherGrade"></section>
+
+</section>
+<!--getEvaluate-->
+<a href="javascript:void(0)" id="getEvaluate"></a>
+<script src="../js/orderEvaluate.js"></script>
+</body>
+</html>

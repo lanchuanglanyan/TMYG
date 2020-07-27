@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" data-page="searchPage">
+<head>
+    <meta charset="UTF-8">
+    <title>搜索</title>
+
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--<link rel="stylesheet/less" type="text/css" href="../css/searchPage.less" />-->
+    <link rel="stylesheet" href="../css/searchPage.css" >
+
+    <!--<script src="lib/rem.js"></script>-->
+    <script src="../lib/jquery-2.2.3.min.js"></script>
+    <script src="../lib/less.js"></script>
+    <script src="../lib/less.min.js"></script>
+
+    <!--<link rel="stylesheet/less" type="text/css" href="../css/bg.less" />-->
+    <link rel="stylesheet" href="../css/bg.css" >
+    <script src="../js/bg.js"></script>
+
+    <!--<link rel="stylesheet" href="lib/layui/css/layui.css">-->
+    <!--<script src="lib/layui/layui.js"></script>-->
+</head>
+<body>
+
+<section id="search">
+    <a href="javascript:history.back(-1)"></a>
+    <div>
+        <input id="searchTxt" type="text" placeholder="有品质放心买，价格优放开买……">
+        <div onclick="searchGo()"></div>
+    </div>
+</section>
+<section class="block history">
+    <div class="title">最近搜索</div>
+    <div class="delete" onclick="deleteTab(this)"></div>
+    <a href="searchList.html?searchName=耳机">耳机</a>
+    <a href="searchList.html?searchName=手机">手机</a>
+    <a href="searchList.html?searchName=相机">相机</a>
+    <a href="searchList.html?searchName=吹风机">吹风机</a>
+    <a href="searchList.html?searchName=打火机">打火机</a>
+    <a href="searchList.html?searchName=洗衣机">洗衣机</a>
+</section>
+<section class="block hot">
+    <div class="title">热门搜索</div>
+    <a href="searchList.html?searchName=春装">春装</a>
+    <a href="searchList.html?searchName=牛仔裤">牛仔裤</a>
+    <a href="searchList.html?searchName=风衣">风衣</a>
+    <a href="searchList.html?searchName=衬衫">衬衫</a>
+    <a href="searchList.html?searchName=身体乳">身体乳</a>
+    <a href="searchList.html?searchName=水杯">水杯</a>
+    <a href="searchList.html?searchName=消毒水">消毒水</a>
+    <a href="searchList.html?searchName=口罩">口罩</a>
+
+</section>
+
+
+<script>
+    /*获取链接参数
+    * http://www.baidu.com?a=1&b=2&c=3 ==> {a:1,b:2,c:3}
+    * */
+    function urlSearch() {
+        var str=decodeURI(location.href); //取得整个地址栏
+        var num=str.split('?');
+        var arr;
+        var data={};
+        var name;
+        $.each(num,function (ind,val) {
+            if(ind>0){
+                if(val.split('&').length>1){
+                    for(var i=0;i<val.split('&').length;i++){
+                        arr=val.split('&')[i].split('=');
+                        name=arr[0];
+                        data[name]=arr[1];
+                    }
+                }else {
+                    arr=val.split('=');
+                    var name=arr[0];
+                    data[name]=arr[1];
+                }
+            }
+        });
+        return data;
+    }
+    let urlData=urlSearch();
+    console.log(urlData);
+    $('#searchTxt').val(urlData.searchName).trigger('click').focus();
+
+    function searchGo() {
+        let value=$('#searchTxt').val();
+        document.location.href='searchList.html?searchName='+encodeURI(value);
+    }
+
+    function deleteTab(_this) {
+        $(_this).parent().find('a').remove()
+    }
+</script>
+</body>
+</html>

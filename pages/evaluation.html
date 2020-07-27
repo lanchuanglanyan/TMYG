@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" data-page="evaluation">
+<head>
+    <meta charset="UTF-8">
+    <title>用户评价</title>
+
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--<link rel="stylesheet/less" type="text/css" href="../css/evaluation.less" />-->
+    <link rel="stylesheet" href="../css/evaluation.css" >
+
+    <!--<script src="lib/rem.js"></script>-->
+    <script src="../lib/jquery-2.2.3.min.js"></script>
+    <script src="../lib/less.js"></script>
+    <script src="../lib/less.min.js"></script>
+
+    <link rel="stylesheet" href="../lib/layui/css/layui.css">
+    <script src="../lib/layui/layui.js"></script>
+
+    <!--element-ui-->
+    <!-- 引入vue-->
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui@2.13.0/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui@2.13.0/lib/index.js"></script>
+
+</head>
+<body>
+<!--title-->
+<a href="javascript:history.back(-1)" class="backPgae"></a>
+<section id="title">
+    <div>用户评价</div>
+    <div>
+        <span data-evaluation="all" class="active">全部</span>
+        <span data-evaluation="good">好评(400)</span>
+        <span data-evaluation="normal">中评(258)</span>
+        <span data-evaluation="bad">差评(11)</span>
+        <span data-evaluation="img">有图(19)</span>
+    </div>
+</section>
+<!--view-->
+<section id="view">
+    <div data-id="id1">
+        <div >
+            <div>
+                <div data-user="userHead" style='background-image: url("../img/details/userHead2.png")'></div>
+                <div>
+                    <div data-user="userName" style='background-image: url("../img/details/userK.png")'>爱生活的九月</div>
+                    <div data-user="userCredit">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+            <div><span data-user="userTime">2019.09.10 11:00</span>&nbsp;<span data-user="userSelect">黄色；M</span></div>
+        </div>
+        <div data-user="userComment">
+            <div>
+                <div>垂感很好，面料亲肤柔软轻薄透气，穿着舒适。垂感很好，面料亲肤柔软轻薄透气，穿着舒适。</div>
+                <div>
+                    <img src="../img/evaluation/evaluationImg.png" alt="">
+                    <img src="../img/evaluation/evaluationImg.png" alt="">
+                    <img src="../img/evaluation/evaluationImg.png" alt="">
+                </div>
+            </div>
+            <div class="append">
+                <div>用户<span>25</span>天后追评</div>
+                <div>垂感很好，面料亲肤柔软轻薄透气，穿着舒适。</div>
+                <div>
+                    <img src="../img/evaluation/evaluationImg.png" alt="">
+                    <img src="../img/evaluation/evaluationImg.png" alt="">
+                    <img src="../img/evaluation/evaluationImg.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div>浏览<span>100</span>次</div>
+    </div>
+    <div data-id="id2">
+        <div >
+            <div>
+                <div data-user="userHead" style='background-image: url("../img/details/userHead2.png")'></div>
+                <div>
+                    <div data-user="userName" style='background-image: url("../img/details/userK.png")'>爱生活的九月</div>
+                    <div data-user="userCredit">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+            <div><span data-user="userTime">2019.09.10 11:00</span>&nbsp;<span data-user="userSelect">黄色；M</span></div>
+        </div>
+        <div data-user="userComment">
+            <div>
+                <div>垂感很好，面料亲肤柔软轻薄透气，穿着舒适。垂感很好，面料亲肤柔软轻薄透气，穿着舒适。</div>
+                <div>
+                    <img src="../img/evaluation/evaluationImg.png" alt="">
+                    <img src="../img/evaluation/evaluationImg.png" alt="">
+                    <img src="../img/evaluation/evaluationImg.png" alt="">
+                </div>
+            </div>
+            <div class="append">
+                <div>用户<span>25</span>天后追评</div>
+                <div>垂感很好，面料亲肤柔软轻薄透气，穿着舒适。</div>
+                <div>
+                    <img src="../img/evaluation/evaluationImg.png" alt="">
+                    <img src="../img/evaluation/evaluationImg.png" alt="">
+                    <img src="../img/evaluation/evaluationImg.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div>浏览<span>100</span>次</div>
+    </div>
+    <div data-id="id2">
+        <div >
+            <div>
+                <div data-user="userHead" style='background-image: url("../img/details/userHead2.png")'></div>
+                <div>
+                    <div data-user="userName" style='background-image: url("../img/details/userK.png")'>爱生活的九月</div>
+                    <div data-user="userCredit">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+            <div><span data-user="userTime">2019.09.10 11:00</span>&nbsp;<span data-user="userSelect">黄色；M</span></div>
+        </div>
+        <div data-user="userComment">
+            <div>
+                <div>垂感很好，面料亲肤柔软轻薄透气，穿着舒适。垂感很好，面料亲肤柔软轻薄透气，穿着舒适。</div>
+                <div>
+                    <img src="../img/evaluation/evaluationImg.png" alt="">
+                    <img src="../img/evaluation/evaluationImg.png" alt="">
+                    <img src="../img/evaluation/evaluationImg.png" alt="">
+                </div>
+            </div>
+            <div class="append">
+                <div>用户<span>25</span>天后追评</div>
+                <div>垂感很好，面料亲肤柔软轻薄透气，穿着舒适。</div>
+                <div>
+                    <img src="../img/evaluation/evaluationImg.png" alt="">
+                    <img src="../img/evaluation/evaluationImg.png" alt="">
+                    <img src="../img/evaluation/evaluationImg.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div>浏览<span>100</span>次</div>
+    </div>
+</section>
+
+<!--&lt;!&ndash;footer&ndash;&gt;-->
+<!--<section id="footer">-->
+    <!--<a id="customer" href="javascript:void(0)" style='background-image: url("img/details/customer.png")'></a>-->
+    <!--<a id="collection" href="javascript:void(0)" style='background-image: url("img/details/love.png")'></a>-->
+    <!--<a id="buy" class="activity" data-activity="id1" href="javascript:void(0)" onclick="pay($(this))" style='background-image: url("img/details/buy.png")'></a>-->
+    <!--<a id="assemble" class="activity active" data-activity="id2" href="javascript:void(0)" onclick="pay($(this))" style='background-image: url("img/details/assemble.png")'></a>-->
+    <!--<a id="shopCart" href="javascript:void(0)" onclick="pay($(this))" style='background-image: url("img/details/shopping_cart.png")'></a>-->
+<!--</section>-->
+<!--alert-->
+<section id="alertK">
+    <!--选择-->
+    <div class="alert choose">
+        <div class="back"></div>
+        <div class="chooseMessage">
+            <div>
+                <img src="../img/details/messageK.png" id="chooseImgK">
+            </div>
+            <div>
+                <div id="chooseMoney">
+                    <span>VIP￥<span class="present_price">99</span></span>
+                    <span>￥<span class="original_price">199</span></span>
+                </div>
+                <div>库存<span id="stock">100</span>件</div>
+                <div id="chooseThis">已选&nbsp;&nbsp;
+                    <span data-choose="id1">红色</span>&nbsp;/
+                    <span data-choose="id2">M</span>
+                </div>
+            </div>
+        </div>
+        <div class="chooseSpecs">
+            <div id="chooseK">
+                <div class="chooseK" data-choose="id1">
+                    <div>颜色</div>
+                    <div>
+                        <span class="active">黑色</span>
+                        <span>红色</span>
+                        <span>白色</span>
+                        <span>黄色</span>
+                        <span>蓝色</span>
+                        <span>灰色</span>
+                    </div>
+                </div>
+                <div class="chooseK" data-choose="id2">
+                    <div>尺码</div>
+                    <div>
+                        <span class="active">S</span>
+                        <span>M</span>
+                        <span>L</span>
+                        <span>XL</span>
+                        <span>XXL</span>
+                    </div>
+                </div>
+                <div class="chooseNumber">
+                    <div>数量</div>
+                    <div id="chooseNumber">
+                        <template>
+                            <el-input-number size="mini" v-model="num" @change="handleChange" :min="1"></el-input-number>
+                        </template>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--<div id="chooseYep">-->
+
+        <!--</div>-->
+    </div>
+
+</section>
+
+<script src="../js/evaluation.js"></script>
+</body>
+</html>

@@ -1,0 +1,278 @@
+.div(@width:100%,@height:auto){
+  width: @width;
+  height: @height;
+}
+.fonts(@fs:0.16rem,@color:black,@fw:normal,@ff:Arial){font-size: @fs;color: @color;font-weight: @fw;font-family: @ff}
+@hide:{display: none};
+.backimg(@x:100%,@y:100%){
+  background-size: @x @y;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+.scroll(){
+  &::-webkit-scrollbar{
+    display: none;
+    opacity: 0;
+    color: transparent;
+  }
+  scrollbar-track-color: transparent;
+  -ms-scrollbar-track-color: transparent;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  //background-color: transparent;
+}
+html,body{
+  .div(100%,100%);
+  //background-color: transparent;
+  -moz-user-select:none;/*火狐*/
+  -webkit-user-select:none;/*webkit浏览器*/
+  -ms-user-select:none;/*IE10*/
+  //user-select:none;
+}
+
+
+div,img,input,textarea,span,a{
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+div,input,textarea,span,a:focus,a:active,a:hover{
+  text-decoration: none;
+  //background-color: rgba(0,0,0,1);
+}
+
+
+html[data-page="classification"]{
+  background-color: #F5F5F5;
+
+  #bgt{
+    .div(100%,100%);
+    //display: none;
+    background-color: white;
+    position: fixed;
+    z-index: 4;
+    left: 0;
+    top: 0;
+  }
+
+  #search{
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    .div(100%,12vw);
+    //background-color: red;
+    background-image: url("../img/index/nav.png");
+    .backimg();
+    padding-top: 2vw;
+    box-shadow: 0 0 3vw rgba(197, 195, 196, 1);
+    &>div{
+      .div(94.6vw,8vw);
+      margin: 0 auto;
+      border-radius: 4vw;
+      background-color: rgba(255,255,255,0.5);
+      overflow: hidden;
+      position: relative;
+      //padding: 2vw 3.6vw;
+      &>div{
+        float: left;
+        .div(73.8vw,8vw);
+        &>input{
+          display: block;
+          .div(100%,100%);
+          background-color: transparent;
+
+          border: none;
+          .fonts(3.8vw,rgba(0,0,0,0.5));
+          padding-left: 3.6vw;
+          &::-webkit-input-placeholder{
+            color: rgba(255,255,255,0.5);
+          }
+        }
+      }
+      &>a{
+        display: block;
+        float: right;
+        .div(4.8vw,5.7vw);
+        background-image: url("../img/index/search.png");
+        .backimg();
+        position: relative;
+        right: 6.4vw;
+        top: 1.2vw;
+      }
+    }
+  }
+  #view{
+    .div(100%,100%);
+    padding: 12vw 0 13.3vw;
+
+    overflow: hidden;
+    &>div{
+      float: left;
+      overflow: scroll;
+      &::-webkit-scrollbar{
+        display: none;
+        opacity: 0;
+        color: transparent;
+      }
+      scrollbar-track-color: transparent;
+      -ms-scrollbar-track-color: transparent;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+
+      &:first-child{
+        .div(24vw,100%);
+        &>a{
+          display: block;
+          .div(100%,13.3vw);
+          //position: relative;
+          .fonts(3.5vw,#666666);
+          text-align: center;
+          line-height: 13.3vw;
+          background-color: transparent;
+          transition: background-color .1s;
+          &>p{
+            float: left;
+            .div(0.8vw,13.3vw);
+            background-color: transparent;
+            transition: background-color .1s;
+          }
+          &:focus,&.active{
+            background-color: white;
+            &>p{
+              background-color: #D9001F;
+            }
+          }
+        }
+      }
+      &:last-child{
+        .div(76vw,100%);
+        background-color: white;
+        padding: 5.3vw;
+        &>a{
+          display: block;
+          .div(65.4vw,26.7vw);
+          .backimg();
+          margin-bottom: 2.7vw;
+        }
+        &>div{
+          .div(65.4vw);
+          overflow: hidden;
+          &>a{
+            float: left;
+            display: block;
+            .div(18.7vw);
+            margin-bottom: 5.3vw;
+            text-align: center;
+            &:nth-of-type(3n-1){
+              margin-left: 4.65vw;
+              margin-right: 4.65vw;
+            }
+
+            &>div{
+              &:first-child{
+                .div(18.7vw,18.7vw);
+                .backimg();
+              }
+              &:last-child{
+                .fonts(2.9vw,#666666);
+                margin-top: 2.7vw;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #footer{
+    .div(100%,18.3vw);
+    //background-color: white;
+    background-image: url("../img/nav/nav2.png");
+    .backimg();
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 3;
+    padding-top: 5vw;
+
+    &>a{
+      display: block;
+      .div(13.5vw,13.3vw);
+      background-image: url("../img/nav/add2.png");
+      .backimg();
+      position: fixed;
+      left: 50vw;
+      bottom: 9.1vw;
+      z-index: 3;
+      transform: translateX(-50%);
+    }
+
+    &>div{
+      &>a{
+        .div(20%,13.1vw);
+        float: left;
+        text-align: center;
+        &:nth-of-type(3){
+          .fonts(2.7vw,#333333);
+          line-height: 17vw;
+        }
+        &:not(:nth-of-type(3)){
+          position: relative;
+          &>div{
+            &.nav1{
+              display: none;
+              .div(20vw,8.2vw);
+              .backimg();
+              background-position: 50% 90%;
+            }
+            &.nav2{
+              .div(20vw,8.2vw);
+              .backimg();
+              background-position: 50% 90%;
+            }
+            &.txt{
+              .fonts(2.7vw,#333333);
+              text-align: center;
+              line-height: 5.1vw;
+            }
+          }
+
+          &.active>div{
+            &.nav1{display: block}
+            &.nav2{display: none}
+          }
+
+          &>p{
+            background-color: #D9001F;
+            border-radius: 50%;
+            .div(5vw,5vw);
+            .fonts(3.5vw,white);
+            line-height: 4.4vw;
+            padding: 0.1vw 1.2vw;
+            position: absolute;
+            right: 3.5vw;
+            top: 0.5vw;
+            box-sizing: border-box;
+            border: 0.4vw solid white;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+
+
+
+
+

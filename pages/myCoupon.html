@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" data-page="myCoupon">
+<head>
+    <meta charset="UTF-8">
+    <title>我的优惠</title>
+
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--<link rel="stylesheet/less" type="text/css" href="../css/myCoupon.less" />-->
+    <link rel="stylesheet" href="../css/myCoupon.css" >
+
+    <!--<script src="lib/rem.js"></script>-->
+    <script src="../lib/jquery-2.2.3.min.js"></script>
+    <script src="../lib/less.js"></script>
+    <script src="../lib/less.min.js"></script>
+
+    <!--<link rel="stylesheet/less" type="text/css" href="../css/bg.less" />-->
+    <link rel="stylesheet" href="../css/bg.css" >
+    <script src="../js/bg.js"></script>
+
+    <!--<link rel="stylesheet" href="lib/layui/css/layui.css">-->
+    <!--<script src="lib/layui/layui.js"></script>-->
+
+</head>
+<body>
+<div id="bgt"></div>
+
+<a class="backPage" href="javascript:history.back(-1)"></a>
+<!--tab-->
+<section id="tab">
+    <a data-status="1" href="javascript:void(0)">礼品券<p></p></a>
+    <a data-status="2" href="javascript:void(0)">红包<p></p></a>
+    <a data-status="3" href="javascript:void(0)">包邮券<p></p></a>
+</section>
+<!--list-->
+<section id="list">
+    <!--礼品券-->
+    <div class="gift-voucher" style='background-image: url("../img/personal/coupon_bg1.png")'>
+        <div style='background-image: url("../img/personal/coupon_img.png");'></div>
+        <div>
+            <a class="code" href="javascript:void(0)"></a>
+            <a class="go-use" href="javascript:void(0)">去使用</a>
+            <div class="name">
+                <div>礼品券</div>
+                <div>XXXX礼品一份</div>
+            </div>
+            <div class="claim">使用要求：<span>限2020.1.4-2020.1.7</span>,<span>唐目优购安乡店</span></div>
+            <span class="go"></span>
+        </div>
+    </div>
+    <!--红包-->
+    <div class="red-packet" style='background-image: url("../img/personal/coupon_bg2.png")'>
+        <a class="code" href="javascript:void(0)"></a>
+        <a class="go-use" href="javascript:void(0)">去使用</a>
+        <div class="discount">
+            <div>￥<span>100</span></div>
+            <div>满<span>99</span>元即可使用</div>
+        </div>
+        <div class="date">
+            <div>使用日期：<span>2019.10.10</span>-<span>2019.10.22</span></div>
+        </div>
+        <div class="claim">使用要求：<span>限唐目云店使用，可用商品下单时可见有优惠券使用提示</span></div>
+
+    </div>
+    <!--包邮券-->
+    <div class="free-postage" style='background-image: url("../img/personal/coupon_bg1.png")'>
+        <a class="go-use" href="javascript:void(0)">去使用</a>
+        <div class="name">包邮券</div>
+        <div class="date">
+            <div><span>2019.10.10</span>-<span>2019.10.22</span></div>
+            <div>编号：<span>CHBOH2BPYCHBOH2BPYECHBOH2BPYE</span></div>
+        </div>
+        <div class="claim">使用要求：<span>限唐目商城产品可用，可用商品下单时可见有优惠券使用提示</span></div>
+
+    </div>
+</section>
+
+<!--alertK-->
+<section id="alertK">
+    <div class="qrCode">
+            <a href="javascript:void(0)" onclick="$(this).parents('#alertK').hide()"></a>
+            <img class="qr-code-img" src="../img/personal/coupon_qrCode.png">
+            <div class="qr-code">CHBOH2BPYECHBOH2</div>
+            <div class="claim">
+                <div>
+                    <div>使用日期：</div>
+                    <div><span>2019.10.10</span>-<span>2019.10.22</span></div>
+                </div>
+                <div>
+                    <div>使用说明：</div>
+                    <div>限唐目优购成都店使用，可用商品下单时可见有优惠券使用提示</div></div>
+            </div>
+        </div>
+</section>
+
+
+<script src="../js/myCoupon.js"></script>
+</body>
+</html>

@@ -1,0 +1,386 @@
+.div(@width:100%,@height:auto){
+  width: @width;
+  height: @height;
+}
+.fonts(@fs:0.16rem,@color:black,@fw:normal,@ff:Arial){font-size: @fs;color: @color;font-weight: @fw;font-family: @ff}
+@hide:{display: none};
+.backimg(@x:100%,@y:100%){
+  background-size: @x @y;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+.scroll(@bgc:transparent,@none:none){
+  overflow: scroll;
+  &::-webkit-scrollbar{
+    display: @none;
+    opacity: 0;
+    color: @bgc;
+  }
+  scrollbar-track-color: @bgc;
+  -ms-scrollbar-track-color: @bgc;
+  scrollbar-width: @none;
+  -ms-overflow-style: @none;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  //background-color: transparent;
+}
+html,body{
+  .div(100%,100%);
+  //background-color: transparent;
+  -moz-user-select:none;/*火狐*/
+  -webkit-user-select:none;/*webkit浏览器*/
+  -ms-user-select:none;/*IE10*/
+  //user-select:none;
+}
+
+
+div,img,input,textarea,span,a{
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+div,input,textarea,span,a:focus,a:active,a:hover{
+  text-decoration: none;
+  //background-color: rgba(0,0,0,1);
+}
+
+
+
+html[data-page="orderConfirm"]{
+  background-color: #F5F5F5;
+
+  #bgt{
+    .div(100%,100%);
+    //display: none;
+    background-color: white;
+    position: fixed;
+    z-index: 4;
+    left: 0;
+    top: 0;
+  }
+
+  #title{
+    .div();
+    padding: 4vw 2.7vw;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    background-color: #F5F5F5;
+    &>a{
+      display: block;
+      .fonts(5.9vw);
+      line-height: 5.9vw;
+      &>span{
+        display: inline-block;
+        .div(2.7vw,5.3vw);
+        background-image: url("../img/back.png");
+        .backimg();
+        position: relative;
+        top: 0.5vw;
+        margin-right: 2.7vw;
+      }
+    }
+  }
+  #address{
+    .div();
+    position: fixed;
+    left: 0;
+    top: 14vw;
+    background-color: #F5F5F5;
+    z-index: 2;
+    padding-bottom: 2.7vw;
+    &>a{
+      .div(94.7vw,17.1vw);
+      margin: 0 auto;
+      padding: 2.7vw;
+      position: relative;
+      display: none;
+      background-color: white;
+      overflow: hidden;
+      border-radius: 2.7vw 2.7vw 0 0;
+      &.active{
+        display: block;
+      }
+
+      &>div{
+        float: left;
+      }
+      &>.go{
+        float: right;
+        .div(1.8vw,3.2vw);
+        background-image: url("../img/order/go.png");
+        .backimg();
+        position: relative;
+        top: 4.2vw;
+      }
+      &>.border{
+        .div(100%,0.5vw);
+        background-image: url("../img/order/border.png");
+        .backimg();
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+      &.null>.txt{
+        .fonts(3.5vw,#333333);
+        line-height: 11.7vw;
+      }
+      &.had>div:first-child{
+        .div(95%);
+        &>div{
+          .div(100%,5.8vw);
+          .fonts(3.5vw,#333333);
+          line-height: 5.8vw;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+  #orderGoodsList{
+    .div(100%,100%);
+    padding: 34vw 0 13.5vw;
+    .scroll();
+    &>div{
+      .div(94.7vw);
+      margin: 0 auto 2.7vw;
+      background-color: white;
+      border-radius: 1.3vw;
+      padding: 4vw 2.7vw 2.7vw;
+
+      &>div{
+        position: relative;
+        overflow: hidden;
+        &.goods{
+          &>div{
+            float: left;
+            &:first-child{
+              .div(21.7vw,21.7vw);
+              .backimg();
+              margin-right: 2.7vw;
+            }
+            &:nth-of-type(2){
+              .div(60vw);
+              &>div{
+                .fonts(3.5vw,#333333);
+                margin-bottom: 4vw;
+                &:nth-of-type(2){
+                  color: #999999;
+                }
+                &:last-child{
+                  .fonts(4vw,#333333);
+                }
+              }
+            }
+          }
+          &>p{
+            position: absolute;
+            right: 0;
+            top: 0.5vw;
+            .fonts(3.5vw,#999999);
+          }
+        }
+
+        &.delivery,&.red-packet,&.token,&.gift,&.remarks{
+          margin-bottom: 5vw;
+          &>div{
+            margin-top: 0.5vw;
+            .fonts(3.5vw,#333333);
+            line-height: 3.5vw;
+            float: left;
+            &:first-child{
+              margin-right: 5.3vw;
+            }
+            &:nth-of-type(2){
+              color: #999999;
+              .div(50%);
+              &>input{
+                display: block;
+                .div(100%,100%);
+                border: none;
+                .fonts(3.5vw,#666666);
+                line-height: 3.5vw;
+                &::placeholder,&::-webkit-input-placeholder{
+                  .fonts(3.5vw,#999999);
+                  line-height: 3.5vw;
+                }
+              }
+            }
+            &:nth-of-type(3){
+              .div(23%);
+              color: #D9001F;
+              text-align: right;
+              margin-right: 2%;
+            }
+            &:nth-of-type(4){
+              .div(1.8vw,3.4vw);
+              background-image: url("../img/order/go.png");
+              .backimg();
+              position: relative;
+              //bottom: 0.3vw;
+            }
+          }
+          &.delivery>div:nth-of-type(3){
+            color: #666666;
+          }
+        }
+
+        &.subtotal{
+          //margin-bottom: 2vw;
+          text-align: right;
+          .fonts(4vw,#666666);
+          &>span{
+            &:last-child{
+              color: #333333;
+              &>span{
+                color: #D9001F;
+                .money_decimal{
+                  font-size: 2.7vw;
+                }
+              }
+            }
+          }
+        }
+      }
+
+    }
+    &>p{
+      .fonts(3.5vw,#D9001F);
+      margin-bottom: 2.7vw;
+      margin-left: 2.7vw;
+    }
+  }
+  #goBuy{
+    .div(100%,13.3vw);
+    background-color: white;
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    padding: 1.4vw;
+    &>div{
+      position: relative;
+      top: 2.7vw;
+      float: left;
+      .fonts(3.5vw,#666666);
+      &:first-child{
+        margin-left: 15.3vw;
+        margin-right: 5.3vw;
+      }
+      &:nth-of-type(2){
+        color: #D9001F;
+        & .money_decimal{
+          .fonts(2.1vw,#D9001F);
+        }
+      }
+    }
+    &>a{
+      display: block;
+      .div(34.7vw,10.4vw);
+      float: right;
+      background-image: url("../img/order/goBuy.png");
+      .backimg();
+    }
+  }
+
+  #alertK{
+    display: none;
+    .div(100%,100%);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    background-color: rgba(0,0,0,0.7);
+
+    &>div{
+      .div(90vw);
+      background-color: #F0F0F0;
+      border-radius: 1.3vw;
+      padding: 2.7vw 0 0;
+      position: fixed;
+      left: 5vw;
+      top: 50%;
+      transform: translateY(-50%);
+
+      &>a{
+        display: block;
+        .div(4.5vw,4.5vw);
+        background-image: url("../img/back2.png");
+        .backimg();
+        float: right;
+        transform: translateX(-50%);
+      }
+      &>div{
+        .div(80vw,78.2vw);
+        margin: 10vw auto;
+        .scroll();
+
+        &>div{
+          .div(80vw,18.5vw);
+          background-image: url("../img/order/red_packet_bg.png");
+          .backimg();
+          margin-bottom: 1.3vw;
+          padding: 1.3vw 2.7vw 0;
+          position: relative;
+
+          &>div{
+            &:first-child{
+              .fonts(3.5vw,#EA384D);
+              margin-left: 2.7vw;
+              &>span{
+                font-size: 8.5vw;
+              }
+            }
+            &:nth-of-type(2){
+              margin-left: 3.4vw;
+              .fonts(2.1vw,#333333);
+              margin-top: -0.6vw;
+              margin-bottom: 0.6vw;
+            }
+            &:nth-of-type(3){
+              .fonts(2.1vw,#333333);
+            }
+
+          }
+
+          &.active::after{
+            content: " ";
+            display: block;
+            .div(6.7vw,6.7vw);
+            position: absolute;
+            right: 0;
+            top: 0;
+            background-image: url("../img/order/red_packet_selected.png");
+            .backimg();
+          }
+
+        }
+      }
+    }
+  }
+
+
+  @media screen and (min-width:600px) and (max-width:1024px) {
+    #alertK{
+
+    }
+
+  }
+
+
+
+
+
+
+
+
+}
